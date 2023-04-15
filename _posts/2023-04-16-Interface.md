@@ -11,3 +11,4 @@ author: Armando Maynez
 description: "Interface가 무엇인지, 종류와 Java언어로 기본적인 인터페이스 구성을 알아보자"
 ---
 
+<h2>Interface란?</h2>
