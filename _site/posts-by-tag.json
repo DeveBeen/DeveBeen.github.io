@@ -17,6 +17,16 @@
     
       
   {
+  "tag" : "basic",
+  "posts" : [
+      
+      "./Interface.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "coding",
   "posts" : [
       
@@ -59,6 +69,16 @@
   "posts" : [
       
       "./neural-network-optimization-methods.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "front-end",
+  "posts" : [
+      
+      "./Interface.html"
       
     ]
   } ,
