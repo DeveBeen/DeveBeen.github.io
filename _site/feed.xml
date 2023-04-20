@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-16T04:19:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Minimum Viable Model</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">Interface란?</title><link href="http://localhost:4000/Interface.html" rel="alternate" type="text/html" title="Interface란?" /><published>2023-04-16T00:00:00+09:00</published><updated>2023-04-16T00:00:00+09:00</updated><id>http://localhost:4000/Interface</id><content type="html" xml:base="http://localhost:4000/Interface.html"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-18T15:29:34+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Minimum Viable Model</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">Interface란?</title><link href="http://localhost:4000/Interface.html" rel="alternate" type="text/html" title="Interface란?" /><published>2023-04-16T00:00:00+09:00</published><updated>2023-04-16T00:00:00+09:00</updated><id>http://localhost:4000/Interface</id><content type="html" xml:base="http://localhost:4000/Interface.html"><![CDATA[<hr />
 <h2 id="1-interface란">1. Interface란?</h2>
 <ul>
   <li>인터페이스(interface)란 서로 다른 두 개 이상의 독립된 시스템 또는 장치 간의 정보를 교환하는 <a href="#단어정리">공유경계(shared boundary)</a>를 말한다.</li>
@@ -56,7 +56,28 @@
   <li>공유경계(shared boundary) : 특정기준으로 나누어진 사물 또는 공간을 공유하는 교집합의 빈 공간을 말한다. 즉, A와 B의 교집합이 공집합인 A와 B의 공유경계 S는 각각 A,B의 교집합 관계에서 공집합을 가지지 않음을 말한다.</li>
 </ul>
 
-<p><img src="assets/img/posts/20230416/shared_boundary.jepg" alt="shared boundary" title="shared boundary" /></p>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[Interface가 무엇인지, 종류와 Java언어로 기본적인 인터페이스 구성을 알아보자]]></summary></entry><entry><title type="html">Who owns the copyright for an AI generated creative work?</title><link href="http://localhost:4000/AI-and-intellectual-property.html" rel="alternate" type="text/html" title="Who owns the copyright for an AI generated creative work?" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>http://localhost:4000/AI-and-intellectual-property</id><content type="html" xml:base="http://localhost:4000/AI-and-intellectual-property.html"><![CDATA[<p>실험</p>
+<p><img src="./assets/img/posts/20230416/shared_boundary.jpeg" alt="shared boundary" /></p>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[Interface가 무엇인지, 종류와 Java언어로 기본적인 인터페이스 구성을 알아보자]]></summary></entry><entry><title type="html">CSR/SSR,MAP/SPA</title><link href="http://localhost:4000/CSR-SSR-MAP-SPA.html" rel="alternate" type="text/html" title="CSR/SSR,MAP/SPA" /><published>2023-04-16T00:00:00+09:00</published><updated>2023-04-16T00:00:00+09:00</updated><id>http://localhost:4000/CSR-SSR-MAP-SPA</id><content type="html" xml:base="http://localhost:4000/CSR-SSR-MAP-SPA.html"><![CDATA[<hr />
+<h2 id="1-csr-client-side-renderring">1. CSR (Client Side Renderring)</h2>
+<ul>
+  <li>CSR(Client Side Rendering)은 말 그대로 Client 측에서 <a href="#단어정리">렌더링(Rendering)</a>이 이루어지는 방식을 말한다. CSR의 작업은 다음과 같은 순서로 이루어진다.<br />
+    <blockquote>
+      <p>1) 브라우저가 웹 서버에게</p>
+      <h2 id="2-ssr-server-side-rendering">2. SSR (Server Side Rendering)</h2>
+      <h2 id="3-spa-single-page-aplication">3. SPA (Single Page Aplication)</h2>
+      <h2 id="4-mpa-multiple-page-application">4. MPA (Multiple Page Application)</h2>
+      <h2 id="단어정리">단어정리</h2>
+    </blockquote>
+  </li>
+  <li>렌더링(Rendering) : html.js 파일을 각 단계를 거쳐 User에게 보여주는 것으로 각 단계는 아래와 같다.
+    <blockquote>
+      <p>1) Parsing : 브라우저가 html 파일을 읽어 트리 자료형으로 해석하는 단계<br /> 
+2) Style : parsing 단계에서 만들어진 트리에서 실제로 브라우저에 띄울 데이터를 트리로 자료형으로 정리해주는 단계<br />
+3) Layout : Style 작업으로 만들어진 트리의 요소를 화면에 어떻게 배치할지 계산해주는 단계<br />
+4) Paint : Layout 단계에서 계산된 값을 화면상에 실제 픽셀로 찍어주는 단계<br />
+5) Composite : Paint 단계에서 생성된 레이어를 최종 합성해서 화면에 띄워주는 단계</p>
+    </blockquote>
+  </li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[CSR/SSR,MAP/SPA이 각각 무엇인지 그 차이가 뭔지 알아보자.]]></summary></entry><entry><title type="html">Who owns the copyright for an AI generated creative work?</title><link href="http://localhost:4000/AI-and-intellectual-property.html" rel="alternate" type="text/html" title="Who owns the copyright for an AI generated creative work?" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>http://localhost:4000/AI-and-intellectual-property</id><content type="html" xml:base="http://localhost:4000/AI-and-intellectual-property.html"><![CDATA[<p>실험</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tjzOzuKQhSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 

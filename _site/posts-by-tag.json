@@ -20,6 +20,8 @@
   "tag" : "basic",
   "posts" : [
       
+      "./CSR-SSR-MAP-SPA.html",
+      
       "./Interface.html"
       
     ]
@@ -77,6 +79,8 @@
   {
   "tag" : "front-end",
   "posts" : [
+      
+      "./CSR-SSR-MAP-SPA.html",
       
       "./Interface.html"
       

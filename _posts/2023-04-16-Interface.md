@@ -4,7 +4,7 @@ read_time: true
 show_date: true
 title: "Interface란?"
 date: 2023-04-16
-img: posts/20230416/interface.jpg
+img: ./assets/posts/20230416/interface.png
 tags: [front-end, basic]
 category: opinion
 author: Armando Maynez
@@ -56,4 +56,4 @@ description: "Interface가 무엇인지, 종류와 Java언어로 기본적인 �
 ## 단어정리
 * 공유경계(shared boundary) : 특정기준으로 나누어진 사물 또는 공간을 공유하는 교집합의 빈 공간을 말한다. 즉, A와 B의 교집합이 공집합인 A와 B의 공유경계 S는 각각 A,B의 교집합 관계에서 공집합을 가지지 않음을 말한다.
 
-![shared boundary](assets/img/posts/20230416/shared_boundary.jepg "shared boundary")
+![shared boundary](./assets/img/posts/20230416/shared_boundary.jpeg)
