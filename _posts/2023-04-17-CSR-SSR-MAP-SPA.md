@@ -3,7 +3,7 @@ layout: post
 read_time: true
 show_date: true
 title: "CSR/SSR,MAP/SPA"
-date: 2023-04-16
+date: 2023-04-17
 img: ./assets/posts/20230416/interface.png
 tags: [front-end, basic]
 category: opinion
