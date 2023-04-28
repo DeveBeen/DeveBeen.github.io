@@ -2,13 +2,13 @@
 layout: post
 read_time: true
 show_date: true
-title: "Interface란?"
-date: 2023-04-16
-img: ./assets/posts/20230416/interface.png
-tags: [front-end, basic]
-category: opinion
+title:  Machine Learning Library in Python from scratch
+date:   2021-02-28 12:32:20 -0600
+description: Single neuron perceptron that classifies elements learning quite quickly.
+img: posts/20210228/MLLibrary.jpg 
+tags: [machine learning, coding, neural networks, python]
 author: Armando Maynez
-description: "Interface가 무엇인지, 종류와 Java언어로 기본적인 인터페이스 구성을 알아보자"
+github: amaynez/GenericNeuralNetwork/
 ---
 ---
 ## 1. Interface란?
