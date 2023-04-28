@@ -1,6 +1,8 @@
 {
   "posts" : [
     
+    "./JSON-XML-YAML.html",
+    
     "./CSR-SSR-MAP-SPA.html",
     
     "./Interface.html",

@@ -1,62 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-23T14:16:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Minimum Viable Model</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">Interface란?</title><link href="http://localhost:4000/Interface.html" rel="alternate" type="text/html" title="Interface란?" /><published>2023-04-16T00:00:00+09:00</published><updated>2023-04-16T00:00:00+09:00</updated><id>http://localhost:4000/Interface</id><content type="html" xml:base="http://localhost:4000/Interface.html"><![CDATA[<hr />
-<h2 id="1-interface란">1. Interface란?</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-29T03:10:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Minimum Viable Model</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">JSON,XML,YAML</title><link href="http://localhost:4000/JSON-XML-YAML.html" rel="alternate" type="text/html" title="JSON,XML,YAML" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/JSON-XML-YAML</id><content type="html" xml:base="http://localhost:4000/JSON-XML-YAML.html"><![CDATA[<hr />
+<h2 id="1-json-javascript-object-notation">1. JSON (JavaScript Object Notation)</h2>
 <ul>
-  <li>인터페이스(interface)란 서로 다른 두 개 이상의 독립된 시스템 또는 장치 간의 정보를 교환하는 <a href="#단어정리">공유경계(shared boundary)</a>를 말한다.</li>
-  <li>컴퓨터와 사용자의 간에 통신이 가능하도록 하는 프로그램 또는 장치를 말한다.</li>
-  <li>이러한 interface는 상호작용하는 대상 관계에 따라 크게 하드웨어 인터페이스, 소프트웨어 인터페이스, 사용자 인터페이스로 3가지로 나눌 수 있습니다.</li>
+  <li>데이터를 저장, 전송할 때 사용되는 경량의 DATA 교환 형식 JavaScript에서 객체를 만들 때 사용하는 단순한 텍스트 형식인 표현식이다.</li>
+  <li>클라이언트와 서버가 주고 받는 요청(Request)와 응답(Response) 사이에 담겨있는 데이터의 형식 중 하나이다.
+-JSON은 데이터 포멧일 뿐이고 단순히 데이터를 표시하는 방법이다.</li>
 </ul>
 
-<hr />
-<h2 id="2-하드웨어-인터페이스-hardware-interface">2. 하드웨어 인터페이스 (Hardware Interface)</h2>
+<p>[JSON 형식의 장점]</p>
 <ul>
-  <li>상호작용하는 대상이 물리적인 기기인 인터페이스로 서로 다른 물리적인 기기를 연결해주는 역할을 한다.</li>
-  <li>대표적인 하드웨어 인터페이스로는 <b>USB Interface</b>가 있다.</li>
-  <li>USB는 ‘Universal Serial Bus’의 약자로 컴퓨터와 주변 장치를 연결하기 위해 1996년에 만들어진 통일된 연결방법으로 대표적인 하드웨어 인터페이스이다.</li>
+  <li>대부분의 프로그래밍 언어에서 JSON을 핸들링할 수 있도록 라이브러리를 제공한다.</li>
+  <li>XML보다 최소한의 용량으로 데이터 전송이 가능하며, 구조 정의의 용이성과 가독성이 좋다.</li>
+  <li>내용이 최소한의 정보만 가지고 있기에 용량이 줄어들고 빠른 속도를 가지며, 언어가 독립적이고 사용하기 쉽다.</li>
 </ul>
 
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FTzZyj%2FbtqUM9hdCm0%2FuiBwRgXts1ewIdv5s5fUG1%2Fimg.png" alt="Hartware Interface" title="하드웨어 인터페이스" /></p>
-
-<hr />
-<h2 id="3-소프트웨어-인터페이스-software-interface">3. 소프트웨어 인터페이스 (Software Interface)</h2>
+<p>[JSON 형식의 단점]</p>
 <ul>
-  <li>상호작용하는 대상이 소프트웨어와 하드웨어로 이를 소프트웨어를 통하여 하드웨어의 동작을 지시하고 제어할 수 있도록 연결해주는 역할을 한다.</li>
-  <li>대표적인 소프트웨어 인터페이스로는 <b>API</b>가 있다.</li>
-  <li>API는 ‘Application Programming Interface’의 약자로 응용 프로그램 간에 호환이 가능하도록 상호 작용하는 방식을 정해둔 대표적인 소프트웨어 인터페이스이다.</li>
+  <li>장점과 반대로 내용이 최소한의 정보만 가지고 있어 의미파악이 힘들다.</li>
+  <li>경량의 데이터 교환형식이기에 대용량의 데이터 송수신에는 부적합하다.</li>
+  <li>XML은 사용처마다 요구되는 구조와 형태를 잘 갖췄는지 스키마를 이용해 검증이 가능하지만 JSON은 해당 기능을 지원하지 않는다.</li>
+  <li>주석을 달지 못하고, 문법 오류에 취약하다.</li>
 </ul>
 
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbMG3RQ%2FbtqUMatVnP5%2FIcOnawRkZ9lr9nQ2Jp7uB0%2Fimg.png" alt="Software Interface" title="소프트웨어 인터페이스" /></p>
+<p><img src="https://media.licdn.com/dms/image/C560DAQEXmiSIYftM5Q/learning-public-crop_288_512/0/1629482233685?e=2147483647&amp;v=beta&amp;t=Cxx1JriYNY21m914uW3MS3YEhig1ezopPqS0941wD7s" alt="image" /></p>
 
-<hr />
-<h2 id="4-사용자-인터페이스-user-interface">4. 사용자 인터페이스 (User Interface)</h2>
+<p>[JSON 형식의 구조]</p>
 <ul>
-  <li>상호작용하는 대상이 사람과 컴퓨터로 사용자가 컴퓨터를 제어할 수 있도록 연결해주는 역할을 한다.</li>
-  <li>초기에는 CLI(Command Line Interface)라는 인터페이스를 통하여 사용자가 컴퓨터가 수행할 작업을 지시하고 제어했으나 사용하기 까다로워 사용자가 사용하기에 어렵지 않은 대표적인 사용자 인터페이스인 <b>GUI</b>를 만들었다.</li>
-  <li>GUI는 ‘Graphical User Interface’의 약자로 그래픽 요소를 사용해 컴퓨터에게 보내는 명령을 직관적으로 알기 쉽게 아이콘 등으로 나타낸 대표적인 사용자 인터페이스이다.</li>
+  <li>JSON 형식의 구조는 key:value 형태의 구조를 가지고 있다. 중괄호 {}로 감싸며, 이는 객체(Object)가 나올 것을 의미한다.
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "나이":30,
+  "이름":"홍길동",
+  "특기":["달리기","수영"]
+}
+</code></pre></div>    </div>
+    <hr />
+    <h2 id="2-xml-extensible-markup-language">2. XML (Extensible Markup Language)</h2>
+  </li>
+  <li>XML은 데이터를 정의하는 규칙을 제공하는 markup 언어로 다른 프로그래밍 언어와는 다르게 자체적으로 컴퓨팅하는 작업을 수행할 수 없다.</li>
+  <li>대신 구조적 데이터 관리를 위해 모든 프로그래밍 언어 또는 소프트웨어를 구현할 수 있다.</li>
+  <li>태그라는 markup 기호를 사용하여 문서 내용에 영향을 주지 않고 사용하여 데이터의 유용성을 높인다.</li>
 </ul>
 
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQkIFN%2FbtqUzuU3ogu%2FnHCg9G9BDJ5ueKfCUn9eP1%2Fimg.png" alt="User Interface" title="사용자 인터페이스" /></p>
-
-<hr />
-<h2 id="5-interface-마무리">5. Interface 마무리</h2>
+<p>[XML의 특징]</p>
 <ul>
-  <li>본 게시글은 위와 같이 Interface란 무엇인지에 관하여 사전적 의미를 정리했다. 하지만 앞으로 front-end 개발을 위해 정의 뿐만 아니라 Interface를 어떻게 구성해야 하는지 알고 넘어갈 필요가 있다.</li>
-  <li>Interface의 중요한 점은 직관성(Intution)이다. 다음 사진을 보고 어디에 사용하는 물건인지 생각해보자.
-<img src="https://www.dhresource.com/0x0/f2/albu/g4/M01/5B/B8/rBVaEFnA4CCAPRiYAAC8hVrHylQ515.jpg" alt="PopcornMachine" title="PopcornMachine" /></li>
-  <li>사진을 보았을 땐 폭탄이 터질 것 같은 모습에 압력 장치, 잠금 장치도 보이는 흡사 무시무시한 무기를 저장할 것 같은 그런 기계로 보인다. 하지만 놀랍게도 이는 그냥 팝콘 튀기는 장치이다. 대부분의 사람들은 팝콘을 알지만 저 물건을 맞춘 사람은 소수일 것이다.</li>
-  <li>이는 저 기계가 사용자가 사용하기엔 직관성이 떨어지는 인터페이스들을 가지고 있기 때문이다. 이번엔 다른 예시를 보자.
-<img src="https://ditoday.com/wp-content/uploads/2019/04/1904-digital-insight-know-how-user.x-ui-03.jpg" alt="다리미" title="다리미" /></li>
-  <li>이 사진을 보자마자 여러분은 이것이 어디에 사용하는 물건인지 바로 알아차렸을 것이라 생각한다. 두꺼운 철판과 손잡이 그리고 버튼들 이 인터페이스의 구성으로 우리는 하드웨어의 정체성을 바로 파악할 수 있었다.</li>
-  <li>이처럼 인터페이스는 상호작용의 경계면의 역할 뿐이 아니라 존재 자체로 우리에게 정보를 전달 해주는 역할도 한다고 볼 수 있다.</li>
-  <li>위와 같은 예시로 Interface를 통하여 생각보다 많은 정보를 사용자에게 줄 수 있다는 점에서 다양한 시각으로 구성해야 한다는 점을 알 수 있다.</li>
+  <li>표준성 : <a href="#단어정리">W3C</a>에서 표준화를 주도, SGML과 HTML의 한계를 극복하기 위해 만든 표준 인터넷 언어이다.</li>
+  <li>분리성 : 표현과 내용이 분리되어 있고 XML 문서는 데이터의 구조와 내용을 기술하고 있으며, 스타일 시트를 이용하여 다양한 방식으로 데이터를 표현한다.</li>
+  <li>단순성 : XML 문서는 텍스트로 간단하게 되어 있어 하드웨어나 소프트웨어에 의존하지 않고 읽어 들일 수 있다는 장점이 있다.</li>
+  <li>호환성 : 위 단순성의 특성으로 다양한 시스템간에 상호 작용을 중계하는데 XML 사용이 가능하다.</li>
+  <li>수용성 : HTML과 같이 현재 인터넷에서 가장 많이 사용되는 HTTP 프로토콜을 이용하여 전달한다.</li>
+  <li>확장성 : XML은 확장성 있는 태그를 사용, 어떤 분야의 데이터도 명확하게 기술이 가능하다.</li>
+  <li>SEQ : 문서의 의미 있는 태그를 사용하여 원하는 데이터를 쉽게 찾을 수 있는 장점이 있어 검색엔진최적화(SEQ)에 유리하다.
+<img src="https://i0.wp.com/hanamon.kr/wp-content/uploads/2021/06/HTML-vs-XML.png?fit=1280%2C844&amp;ssl=1" alt="image" />
+    <blockquote>
+      <h3 id="xml과-html">[XML과 HTML]<br /></h3>
+      <ul>
+        <li>XML은 Data를 전달하는 것에 포커스를 맞춘 언어라면 HTML은 Data를 표현하는 것에 포커스를 맞춘 언어이다. <br /></li>
+        <li>HTML의 태그는 이미 약속한 태그만 사용이 가능하지만 XML은 사용자가 임의로 만들어서 사용이 가능합니다.
+~~~
+&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</li>
+      </ul>
+    </blockquote>
+  </li>
 </ul>
+<마트>
+    <과일류>
+        사과, 바나나
+    </과일류>
+    <채소류>
+        양배추
+    </채소류>
+    <라면류>
+        일품라면
+    </라면류>
+</마트>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+## 3. YAML (YAML Ain't Makeup Language)
+- YAML도 데이터 표현 양식의 한 종류이며 아래와 같은 특징을 가진다.
 
-<hr />
+[YAML의 특징]
+- yaml은 인간이 보고 이해하기 쉬운 형태를 가지고 있어 최근 많이 활용되는 데이터 포멧입니다.
+- 기본적으로 들여쓰기를 원칙으로 하며 JSON과 비슷하게 Key:Value 형태를 가지고 있다.
+
+</code></pre></div></div>
+<p>Servers:
+    - name : Server1
+      administrator : Kim
+      created : 20050103132749
+      status : active
+    - name : Server2
+      administrator : Lee
+      created : 20210101000000
+      status : active
+~~~</p>
+
 <h2 id="단어정리">단어정리</h2>
 <ul>
-  <li>공유경계(shared boundary) : 특정기준으로 나누어진 사물 또는 공간을 공유하는 교집합의 빈 공간을 말한다. 즉, A와 B의 교집합이 공집합인 A와 B의 공유경계 S는 각각 A,B의 교집합 관계에서 공집합을 가지지 않음을 말한다.</li>
-</ul>
-
-<p><img src="./assets/img/posts/20230416/shared_boundary.jpeg" alt="shared boundary" /></p>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[Interface가 무엇인지, 종류와 Java언어로 기본적인 인터페이스 구성을 알아보자]]></summary></entry><entry><title type="html">CSR/SSR,MAP/SPA</title><link href="http://localhost:4000/CSR-SSR-MAP-SPA.html" rel="alternate" type="text/html" title="CSR/SSR,MAP/SPA" /><published>2023-04-16T00:00:00+09:00</published><updated>2023-04-16T00:00:00+09:00</updated><id>http://localhost:4000/CSR-SSR-MAP-SPA</id><content type="html" xml:base="http://localhost:4000/CSR-SSR-MAP-SPA.html"><![CDATA[<hr />
+  <li>W3C(World Wide Web Consortium) : 월드 와이드 웹을 위한 표준을 개발하고 관리하는 조직으로 팀 버너스리를 중심으로 설립된 조직이다.</li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아보자.]]></summary></entry><entry><title type="html">CSR/SSR,MAP/SPA</title><link href="http://localhost:4000/CSR-SSR-MAP-SPA.html" rel="alternate" type="text/html" title="CSR/SSR,MAP/SPA" /><published>2023-04-17T00:00:00+09:00</published><updated>2023-04-17T00:00:00+09:00</updated><id>http://localhost:4000/CSR-SSR-MAP-SPA</id><content type="html" xml:base="http://localhost:4000/CSR-SSR-MAP-SPA.html"><![CDATA[<hr />
 <h2 id="1-csr-client-side-renderring">1. CSR (Client Side Renderring)</h2>
 <ul>
   <li>CSR(Client Side Rendering)은 말 그대로 Client 측에서 <a href="#단어정리">렌더링(Rendering)</a>이 이루어지는 방식을 말한다. CSR의 작업은 다음과 같은 순서로 이루어진다.<br />
@@ -163,7 +202,65 @@
   <li>TTV(Time To View) : 사용자가 웹 사이트를 볼 수 있는 시간이다.</li>
   <li>TTI(Time To Interact) : 사용자가 웹에서 동적인 활동이 가능하게 되는 시간이다.</li>
   <li>UX(User Experience) : 단어의 뜻 그래도 사용자의 경험이란 뜻으로 UI에서 느끼는 사용자들의 느낌, 태도, 행동 등을 말하며 UX가 좋을 수록 사용자는 UI에서 편안함을 느낀다 할 수 있따.</li>
-</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[CSR/SSR,MAP/SPA이 각각 무엇인지 그 차이가 뭔지 알아보자.]]></summary></entry><entry><title type="html">Who owns the copyright for an AI generated creative work?</title><link href="http://localhost:4000/AI-and-intellectual-property.html" rel="alternate" type="text/html" title="Who owns the copyright for an AI generated creative work?" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>http://localhost:4000/AI-and-intellectual-property</id><content type="html" xml:base="http://localhost:4000/AI-and-intellectual-property.html"><![CDATA[<p>실험</p>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[CSR/SSR,MAP/SPA이 각각 무엇인지 그 차이가 뭔지 알아보자.]]></summary></entry><entry><title type="html">Interface란?</title><link href="http://localhost:4000/Interface.html" rel="alternate" type="text/html" title="Interface란?" /><published>2023-04-16T00:00:00+09:00</published><updated>2023-04-16T00:00:00+09:00</updated><id>http://localhost:4000/Interface</id><content type="html" xml:base="http://localhost:4000/Interface.html"><![CDATA[<hr />
+<h2 id="1-interface란">1. Interface란?</h2>
+<ul>
+  <li>인터페이스(interface)란 서로 다른 두 개 이상의 독립된 시스템 또는 장치 간의 정보를 교환하는 <a href="#단어정리">공유경계(shared boundary)</a>를 말한다.</li>
+  <li>컴퓨터와 사용자의 간에 통신이 가능하도록 하는 프로그램 또는 장치를 말한다.</li>
+  <li>이러한 interface는 상호작용하는 대상 관계에 따라 크게 하드웨어 인터페이스, 소프트웨어 인터페이스, 사용자 인터페이스로 3가지로 나눌 수 있습니다.</li>
+</ul>
+
+<hr />
+<h2 id="2-하드웨어-인터페이스-hardware-interface">2. 하드웨어 인터페이스 (Hardware Interface)</h2>
+<ul>
+  <li>상호작용하는 대상이 물리적인 기기인 인터페이스로 서로 다른 물리적인 기기를 연결해주는 역할을 한다.</li>
+  <li>대표적인 하드웨어 인터페이스로는 <b>USB Interface</b>가 있다.</li>
+  <li>USB는 ‘Universal Serial Bus’의 약자로 컴퓨터와 주변 장치를 연결하기 위해 1996년에 만들어진 통일된 연결방법으로 대표적인 하드웨어 인터페이스이다.</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FTzZyj%2FbtqUM9hdCm0%2FuiBwRgXts1ewIdv5s5fUG1%2Fimg.png" alt="Hartware Interface" title="하드웨어 인터페이스" /></p>
+
+<hr />
+<h2 id="3-소프트웨어-인터페이스-software-interface">3. 소프트웨어 인터페이스 (Software Interface)</h2>
+<ul>
+  <li>상호작용하는 대상이 소프트웨어와 하드웨어로 이를 소프트웨어를 통하여 하드웨어의 동작을 지시하고 제어할 수 있도록 연결해주는 역할을 한다.</li>
+  <li>대표적인 소프트웨어 인터페이스로는 <b>API</b>가 있다.</li>
+  <li>API는 ‘Application Programming Interface’의 약자로 응용 프로그램 간에 호환이 가능하도록 상호 작용하는 방식을 정해둔 대표적인 소프트웨어 인터페이스이다.</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbMG3RQ%2FbtqUMatVnP5%2FIcOnawRkZ9lr9nQ2Jp7uB0%2Fimg.png" alt="Software Interface" title="소프트웨어 인터페이스" /></p>
+
+<hr />
+<h2 id="4-사용자-인터페이스-user-interface">4. 사용자 인터페이스 (User Interface)</h2>
+<ul>
+  <li>상호작용하는 대상이 사람과 컴퓨터로 사용자가 컴퓨터를 제어할 수 있도록 연결해주는 역할을 한다.</li>
+  <li>초기에는 CLI(Command Line Interface)라는 인터페이스를 통하여 사용자가 컴퓨터가 수행할 작업을 지시하고 제어했으나 사용하기 까다로워 사용자가 사용하기에 어렵지 않은 대표적인 사용자 인터페이스인 <b>GUI</b>를 만들었다.</li>
+  <li>GUI는 ‘Graphical User Interface’의 약자로 그래픽 요소를 사용해 컴퓨터에게 보내는 명령을 직관적으로 알기 쉽게 아이콘 등으로 나타낸 대표적인 사용자 인터페이스이다.</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FbQkIFN%2FbtqUzuU3ogu%2FnHCg9G9BDJ5ueKfCUn9eP1%2Fimg.png" alt="User Interface" title="사용자 인터페이스" /></p>
+
+<hr />
+<h2 id="5-interface-마무리">5. Interface 마무리</h2>
+<ul>
+  <li>본 게시글은 위와 같이 Interface란 무엇인지에 관하여 사전적 의미를 정리했다. 하지만 앞으로 front-end 개발을 위해 정의 뿐만 아니라 Interface를 어떻게 구성해야 하는지 알고 넘어갈 필요가 있다.</li>
+  <li>Interface의 중요한 점은 직관성(Intution)이다. 다음 사진을 보고 어디에 사용하는 물건인지 생각해보자.
+<img src="https://www.dhresource.com/0x0/f2/albu/g4/M01/5B/B8/rBVaEFnA4CCAPRiYAAC8hVrHylQ515.jpg" alt="PopcornMachine" title="PopcornMachine" /></li>
+  <li>사진을 보았을 땐 폭탄이 터질 것 같은 모습에 압력 장치, 잠금 장치도 보이는 흡사 무시무시한 무기를 저장할 것 같은 그런 기계로 보인다. 하지만 놀랍게도 이는 그냥 팝콘 튀기는 장치이다. 대부분의 사람들은 팝콘을 알지만 저 물건을 맞춘 사람은 소수일 것이다.</li>
+  <li>이는 저 기계가 사용자가 사용하기엔 직관성이 떨어지는 인터페이스들을 가지고 있기 때문이다. 이번엔 다른 예시를 보자.
+<img src="https://ditoday.com/wp-content/uploads/2019/04/1904-digital-insight-know-how-user.x-ui-03.jpg" alt="다리미" title="다리미" /></li>
+  <li>이 사진을 보자마자 여러분은 이것이 어디에 사용하는 물건인지 바로 알아차렸을 것이라 생각한다. 두꺼운 철판과 손잡이 그리고 버튼들 이 인터페이스의 구성으로 우리는 하드웨어의 정체성을 바로 파악할 수 있었다.</li>
+  <li>이처럼 인터페이스는 상호작용의 경계면의 역할 뿐이 아니라 존재 자체로 우리에게 정보를 전달 해주는 역할도 한다고 볼 수 있다.</li>
+  <li>위와 같은 예시로 Interface를 통하여 생각보다 많은 정보를 사용자에게 줄 수 있다는 점에서 다양한 시각으로 구성해야 한다는 점을 알 수 있다.</li>
+</ul>
+
+<hr />
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>공유경계(shared boundary) : 특정기준으로 나누어진 사물 또는 공간을 공유하는 교집합의 빈 공간을 말한다. 즉, A와 B의 교집합이 공집합인 A와 B의 공유경계 S는 각각 A,B의 교집합 관계에서 공집합을 가지지 않음을 말한다.</li>
+</ul>
+
+<p><img src="./assets/img/posts/20230416/shared_boundary.jpeg" alt="shared boundary" /></p>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="basic" /><summary type="html"><![CDATA[Interface가 무엇인지, 종류와 Java언어로 기본적인 인터페이스 구성을 알아보자]]></summary></entry><entry><title type="html">Who owns the copyright for an AI generated creative work?</title><link href="http://localhost:4000/AI-and-intellectual-property.html" rel="alternate" type="text/html" title="Who owns the copyright for an AI generated creative work?" /><published>2021-04-20T00:00:00+09:00</published><updated>2021-04-20T00:00:00+09:00</updated><id>http://localhost:4000/AI-and-intellectual-property</id><content type="html" xml:base="http://localhost:4000/AI-and-intellectual-property.html"><![CDATA[<p>실험</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tjzOzuKQhSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
@@ -8028,123 +8125,4 @@ qXRvbwAAAB1kYXRhAAAAAQAAAABMYXZmNTguNDUuMTAw
 
 <p>Notice that since I am keeping an array of the coordinates of only the cells who are alive, I could apply just 3 rules, die of loneliness, die of overpopulation and become alive from reproduction (exactly 3 alive neighbors) because the ones who have 2 or 3 neighbors and are already alive, can remain alive in the next iteration.</p>
 
-<p>I&nbsp;found it very interesting to implement the Game of Life like this, it was quite a refreshing challenge and I am beginning to feel my coding skills ramping up again.</p>]]></content><author><name>Armando Maynez</name></author><category term="coding" /><category term="python" /><summary type="html"><![CDATA[Taking on the challenge of picking up coding again through interesting small projects, this time it is the turn of Conway's Game of Life.]]></summary></entry><entry><title type="html">Single Neuron Perceptron</title><link href="http://localhost:4000/single-neuron-perceptron.html" rel="alternate" type="text/html" title="Single Neuron Perceptron" /><published>2021-01-26T04:32:20+09:00</published><updated>2021-01-26T04:32:20+09:00</updated><id>http://localhost:4000/single-neuron-perceptron</id><content type="html" xml:base="http://localhost:4000/single-neuron-perceptron.html"><![CDATA[<p>As an entry point to learning python and getting into Machine Learning, I decided to code from scratch the Hello World! of the field, a single neuron perceptron.</p>
-
-<h2 id="what-is-a-perceptron">What is a perceptron?</h2>
-
-<p>A perceptron is the basic building block of a neural network, it can be compared to a neuron, And its conception is what detonated the vast field of Artificial Intelligence nowadays.</p>
-
-<p>Back in the late 1950’s, a young <a href="https://en.wikipedia.org/wiki/Frank_Rosenblatt">Frank Rosenblatt</a> devised a very simple algorithm as a foundation to construct a machine that could learn to perform different tasks.</p>
-
-<p>In its essence, a perceptron is nothing more than a collection of values and rules for passing information through them, but in its simplicity lies its power.</p>
-
-<center><img src="./assets/img/posts/20210125/Perceptron.png" /></center>
-
-<p>Imagine you have a ‘neuron’ and to ‘activate’ it, you pass through several input signals, each signal connects to the neuron through a synapse, once the signal is aggregated in the perceptron, it is then passed on to one or as many outputs as defined. A perceptron is but a neuron and its collection of synapses to get a signal into it and to modify a signal to pass on.</p>
-
-<p>In more mathematical terms, a perceptron is an array of values (let’s call them weights), and the rules to apply such values to an input signal.</p>
-
-<p>For instance a perceptron could get 3 different inputs as in the image, lets pretend that the inputs it receives as signal are: $x_1 = 1, \; x_2 = 2\; and \; x_3 = 3$, if it’s weights are $w_1 = 0.5,\; w_2 = 1\; and \; w_3 = -1$ respectively, then what the perceptron will do when the signal is received is to multiply each input value by its corresponding weight, then add them up.</p>
-
-<p style="text-align:center">\(<br />
-\begin{align}
-\begin{split}
-\left(x_1 * w_1\right) + \left(x_2 * w_2\right) + \left(x_3 * w_3\right)
-\end{split}
-\end{align}
-\)</p>
-
-<p style="text-align:center">\(<br />
-\begin{align}<br />
-\begin{split}<br />
-\left(0.5 * 1\right) + \left(1 * 2\right) + \left(-1 * 3\right) = 0.5 + 2 - 3 = -0.5
-\end{split}<br />
-\end{align}<br />
-\)</p>
-
-<p>Typically when this value is obtained, we need to apply an “activation” function to smooth the output, but let’s say that our activation function is linear, meaning that we keep the value as it is, then that’s it, that is the output of the perceptron, -0.5.</p>
-
-<p>In a practical application, the output means something, perhaps we want our perceptron to classify a set of data and if the perceptron outputs a negative number, then we know the data is of type A, and if it is a positive number then it is of type B.</p>
-
-<p>Once we understand this, the magic starts to happen through a process called backpropagation, where we “educate” our tiny one neuron brain to have it learn how to do its job.</p>
-
-<tweet>The magic starts to happen through a process called backpropagation, where we "educate" our tiny one neuron brain to have it learn how to do its job.</tweet>
-
-<p>For this we need a set of data that it is already classified, we call this a training set. This data has inputs and their corresponding correct output. So we can tell the little brain when it misses in its prediction, and by doing so, we also adjust the weights a bit in the direction where we know the perceptron committed the mistake hoping that after many iterations like this the weights will be so that most of the predictions will be correct.</p>
-
-<p>After the model trains successfully we can have it classify data it has never seen before, and we have a fairly high confidence that it will do so correctly.</p>
-
-<p>The math behind this magical property of the perceptron is called gradient descent, and is just a bit of differential calculus that helps us convert the error the brain is having into tiny nudges of value of the weights towards their optimum. <a href="https://www.youtube.com/watch?v=aircAruvnKk&amp;list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">This video series by 3 blue 1 brown explains it wonderfuly.</a></p>
-
-<p>My program creates a single neuron neural network tuned to guess if a point is above or below a randomly generated line and generates a visualization based on graphs to see how the neural network is learning through time.</p>
-
-<p>The neuron has 3 inputs and weights to calculate its output:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>input 1 is the X coordinate of the point,
-Input 2 is the y coordinate of the point,
-Input 3 is the bias and it is always 1
-
-Input 3 or the bias is required for lines that do not cross the origin (0,0)
-</code></pre></div></div>
-
-<p>The Perceptron starts with weights all set to zero and learns by using 1,000 random points per each iteration.</p>
-
-<p>The output of the perceptron is calculated with the following activation function:
-    if x * weight_x + y weight_y + weight_bias is positive then 1 else 0</p>
-
-<p>The error for each point is calculated as the expected outcome of the perceptron minus the real outcome therefore there are only 3 possible error values:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Expected</th>
-      <th style="text-align: center">Calculated</th>
-      <th style="text-align: center">Error</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">-1</td>
-      <td style="text-align: center">1</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">0</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">-1</td>
-      <td style="text-align: center">-1</td>
-      <td style="text-align: center">0</td>
-    </tr>
-    <tr>
-      <td style="text-align: center">-1</td>
-      <td style="text-align: center">1</td>
-      <td style="text-align: center">-1</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>With every point that is learned if the error is not 0 the weights are adjusted according to:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>New_weight = Old_weight + error * input * learning_rate
-for example: New_weight_x = Old_weight_x + error * x * learning rate
-</code></pre></div></div>
-
-<p>A very useful parameter in all of neural networks is teh learning rate, which is basically a measure on how tiny our nudge to the weights is going to be.</p>
-
-<p>In this particular case, I coded the learning_rate to decrease with every iteration as follows:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>learning_rate = 0.01 / (iteration + 1)
-</code></pre></div></div>
-
-<p>this is important to ensure that once the weights are nearing the optimal values the adjustment in each iteration is subsequently more subtle.</p>
-
-<center><img src="./assets/img/posts/20210125/Learning_1000_points_per_iteration.jpg" /></center>
-
-<p>In the end, the perceptron always converges into a solution and finds with great precision the line we are looking for.</p>
-
-<p>Perceptrons are quite a revelation in that they can resolve equations by learning, however they are very limited. By their nature they can only resolve linear equations, so their problem space is quite narrow.</p>
-
-<p>Nowadays the neural networks consist of combinations of many perceptrons, in many layers, and other types of “neurons”, like convolution, recurrent, etc. increasing significantly the types of problems they solve.</p>]]></content><author><name>Armando Maynez</name></author><category term="machine learning" /><category term="coding" /><category term="neural networks" /><summary type="html"><![CDATA[Single neuron perceptron that classifies elements learning quite quickly.]]></summary></entry></feed>
+<p>I&nbsp;found it very interesting to implement the Game of Life like this, it was quite a refreshing challenge and I am beginning to feel my coding skills ramping up again.</p>]]></content><author><name>Armando Maynez</name></author><category term="coding" /><category term="python" /><summary type="html"><![CDATA[Taking on the challenge of picking up coding again through interesting small projects, this time it is the turn of Conway's Game of Life.]]></summary></entry></feed>

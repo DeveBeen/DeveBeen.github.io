@@ -20,6 +20,8 @@
   "tag" : "basic",
   "posts" : [
       
+      "./JSON-XML-YAML.html",
+      
       "./CSR-SSR-MAP-SPA.html",
       
       "./Interface.html"
@@ -79,6 +81,8 @@
   {
   "tag" : "front-end",
   "posts" : [
+      
+      "./JSON-XML-YAML.html",
       
       "./CSR-SSR-MAP-SPA.html",
       
