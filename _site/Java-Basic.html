@@ -22,7 +22,7 @@
   "headline": "JavaBasic",
   "abstract": "Java가 무엇인지 알아보고 기초 문법에 대해 알아보자.",
     "keywords": "front-end, java, basic",
-    "wordcount": "0",
+    "wordcount": "577",
     "image": ["http://localhost:4000/assets/img./assets/posts/20230416/interface.png"],
   "datePublished": "2023-04-29 00:00:00 +0900",
   "dateModified": "2023-04-29 00:00:00 +0900",
@@ -62,7 +62,7 @@
 <meta name="twitter:description" content="Java가 무엇인지 알아보고 기초 문법에 대해 알아보자.">
 <meta name="twitter:creator" content="">
 <meta data-rh="true" name="twitter:label1" content="Word count"/>
-<meta data-rh="true" name="twitter:data1" content="0"/>
+<meta data-rh="true" name="twitter:data1" content="577"/>
 <meta name="twitter:image:src" content="http://localhost:4000/assets/img/./assets/posts/20230416/interface.png">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#311e3e">
@@ -163,7 +163,7 @@
     
     <span class="page_meta-readtime">
       
-        less than 1 minute read
+        2 minute read
       
     </span>
   
@@ -171,7 +171,7 @@
   </span>
 
         <div class="post-excerpt">
-            <a class="read-more" href="./Java-Basic.html"> read more</a>
+            <hr /><h2 id="1-java란">1. Java란?</h2><ul> <li>1991년 제임스 고슬링을 비롯한 선 마이크로 시스템스 연구원들이 처음 개발한 프로그래밍 언어로 가전, 휴대용 장치에 사용되는 소프트웨어 언어로 개발되었다.</li> <li>객체지향언어이기에 유지보수가 쉽고 확장성이좋다.</li> <li>프로그램이 안정적이 풍부한 기능을 제공하는 오픈 소스이다.</li></ul><hr /><h2 id="2-java-변수-선언">2. Java, 변수 선언</h2><ul> <li>변수를 사용하는 이유는 컴퓨터 메모리 특정 공간에 값을 집어 넣고 상자처럼 사용하기 위해서이다.</li></ul><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeBCVuv%2Fbtq1XUZo7IP%2FWKEm9vaFG5nQxc3cOGk2F1%2Fimg.png" alt="image" /></p><ul> <li>java의 변수선언 방법은 아래와 같이 “자료형 변수명”으로 선언한다. 아래 코드는 “String(자료형) message(변수명)”으로 선언한 것이다. <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">message</span><span class="o">;</span></code></pre></div> </div> </li> <li>변수를 선언하면 변수를 초기화 해야지 사용할 수 있다. 변수 초기화는 아래와 같이 할 수 있다.</li> <li>또한 다중으로 선언이 가능하다. <div...<a class="read-more" href="./Java-Basic.html"> read more</a>
         </div>
   </div>
 </section>
@@ -303,7 +303,7 @@
     
     <span class="page_meta-readtime">
       
-        less than 1 minute read
+        2 minute read
       
     </span>
   
@@ -349,7 +349,186 @@
 
         
         
-        
+        <hr />
+
+<h2 id="1-java란">1. Java란?</h2>
+<ul>
+  <li>1991년 제임스 고슬링을 비롯한 선 마이크로 시스템스 연구원들이 처음 개발한 프로그래밍 언어로 가전, 휴대용 장치에 사용되는 소프트웨어 언어로 개발되었다.</li>
+  <li>객체지향언어이기에 유지보수가 쉽고 확장성이좋다.</li>
+  <li>프로그램이 안정적이 풍부한 기능을 제공하는 오픈 소스이다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-java-변수-선언">2. Java, 변수 선언</h2>
+<ul>
+  <li>변수를 사용하는 이유는 컴퓨터 메모리 특정 공간에 값을 집어 넣고 상자처럼 사용하기 위해서이다.</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeBCVuv%2Fbtq1XUZo7IP%2FWKEm9vaFG5nQxc3cOGk2F1%2Fimg.png" alt="image" /></p>
+
+<ul>
+  <li>java의 변수선언 방법은 아래와 같이 “자료형 변수명”으로 선언한다. 아래 코드는 “String(자료형) message(변수명)”으로 선언한 것이다.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">message</span><span class="o">;</span>
+</code></pre></div>    </div>
+  </li>
+  <li>변수를 선언하면 변수를 초기화 해야지 사용할 수 있다. 변수 초기화는 아래와 같이 할 수 있다.</li>
+  <li>또한 다중으로 선언이 가능하다.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">message1</span><span class="o">;</span>
+<span class="n">message1</span> <span class="o">=</span> <span class="s">"Kimwonbin"</span>
+<span class="c1">// 선언 후 초기화</span>
+<span class="nc">String</span> <span class="n">message2</span> <span class="o">=</span> <span class="s">"Kimwonbin"</span><span class="o">;</span>
+<span class="c1">// 선언과 동시에 초기화</span>
+<span class="nc">String</span> <span class="n">message3</span><span class="o">,</span> <span class="n">message4</span><span class="o">;</span>
+<span class="c1">// 다중 선언</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="3-java-scope">3. Java, Scope?</h2>
+<ul>
+  <li>java는 Scope라는 개념이 있다. 이는 유효범위라는 뜻으로 사용하는 이유는 간단하게 말해 명령 충돌을 막기 위해 존재한다. 아래의 예시를 보자.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">left</span><span class="o">;</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">left</span><span class="o">()</span> <span class="o">{}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>위 코드 처럼 left라는 명령이 출돌하는 사태를 막기위해 자바는 유효범위를 사용합니다.</li>
+  <li>아직까지는 잘 감이 안올 것이니 코드를 보면서 이해해보자.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoScope</span> <span class="o">{</span>
+ <span class="kd">static</span> <span class="kt">void</span> <span class="nf">reset</span> <span class="o">()</span> <span class="o">{</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+ <span class="o">}</span>
+
+ <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+       <span class="n">reset</span><span class="o">();</span>
+       <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="o">}</span>
+ <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>위 코드는 reset이라는 함수가 i=0으로 계속 초기화하기에 main함수에서 for문에 조건식을 만족하지 못해 무한루프에 빠지게 된다. 라고 생각 할 수 있다. 하지만 java는 scope 기능이 있기에 위 코드는 0,1,2,3,4가 출력된 후 종료된다.</li>
+  <li>그러면 다음 코드를 보자.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoScope</span> <span class="o">{</span>
+  <span class="kd">static</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="kd">static</span> <span class="kt">void</span> <span class="nf">reset</span> <span class="o">()</span> <span class="o">{</span>
+      <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+     <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+          <span class="n">reset</span><span class="o">();</span>
+          <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+      <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>위 코드는 어떻게 실행될 것 같은가? 맞다 흐름상 위 코드는 무한루프에 빠지게 된다. 그 이유는 scope의 우선순위에 있다. scope의 우선순위는 지역변수 다음 멤버변수이기 때문에 위 코드는 무한루프에 빠지게 되는 것이다.</li>
+  <li>
+    <p>그렇다면 둘 다 있을 때, 이 scope를 유연하게 사용해보자.
+~~~java
+class Demo {
+  int v = 10;</p>
+
+    <p>void m() {
+      int v = 20;
+      System.out.println(v);
+  }
+}</p>
+  </li>
+</ul>
+
+<p>public class DemoScope2 {</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void main(String[] args) {
+    Demo c1 = new Demo();
+    c1.m();
+}
+</code></pre></div></div>
+
+<p>}</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 위 코드를 보면 출력값이 어떻게 나올 것 같은가? 복잡하게 보이지만 간단하게 생각하여 우선순위를 타고 가면 c1.m()이 실행될 때, v = 20이 되고 출력되기에 20이 출력된다.
+- 그러면 우리는 멤버변수의 값을 출력하고 싶다하면 어떻게 해야하는가? 그렇다 멤버변수를 가르키면 된다. 멤버변수를 가르키는 키워드는 "this."이다.
+~~~java
+void m() {
+        int v = 20;
+        System.out.println(this.v);
+    }
+</code></pre></div></div>
+<ul>
+  <li>위처럼 코드를 수정하고 출력하면 10이 출력된다.</li>
+</ul>
+
+<hr />
+
+<h2 id="4-java-제어문">4. Java, 제어문</h2>
+<ul>
+  <li>자, 이제 java언어에 대하여 워밍업이 조금 되었을 것이다. 이제 본격적으로 다른 프로그래밍 언어에도 있는 제어문에 대하여 익혀보자.</li>
+  <li>제어문은 말 그래도 코드의 실행흐름을 바꾸는 역할을 하는 코드들로 아래와 같은 종류가 있다.
+<img src="https://velog.velcdn.com/images%2Fdamhee6624%2Fpost%2Fba4e285e-7ce7-4a9e-b025-0d89bd0cb714%2F%EC%A1%B0%EA%B1%B4%EB%AC%B8.png" alt="image" /></li>
+</ul>
+
+<p>[조건문 사용법]</p>
+<ul>
+  <li>C언어와 거의 똑같은 형태를 가지고 있다.</li>
+  <li>먼저 if문의 사용법 부터 알아보자.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">75</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"A"</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"B"</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"C"</span><span class="o">);</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"공부 좀 하세요."</span><span class="o">);</span> 
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>다음은 switch문의 사용법이다.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
+  <span class="k">switch</span><span class="o">(</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="mi">20</span><span class="o">:</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"20"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+  <span class="k">case</span> <span class="mi">30</span><span class="o">:</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"30"</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+  <span class="k">default</span><span class="o">:</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
+      <span class="k">break</span><span class="o">;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>보면 C언어 아니야? 할 정도로 똑같다. 이는 반복문 또한 똑같다.
+    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// for 문</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+<span class="c1">// while 문</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="k">while</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">,</span><span class="n">println</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
+      <span class="n">a</span><span class="o">++;</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li>이처럼 반복문 또한 C언어와 매우 유사한 것을 볼 수 있다.</li>
+</ul>
 
         <aside class="sidebar inline" id="post-end">
     
@@ -444,7 +623,7 @@
     
     <p class="page_meta-readtime">
       
-        less than 1 minute read
+        2 minute read
       
     </p>
   

@@ -56,7 +56,7 @@ description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아�
 > ### [XML과 HTML]<br>
 >- XML은 Data를 전달하는 것에 포커스를 맞춘 언어라면 HTML은 Data를 표현하는 것에 포커스를 맞춘 언어이다. <br>
 >- HTML의 태그는 이미 약속한 태그만 사용이 가능하지만 XML은 사용자가 임의로 만들어서 사용이 가능합니다.
-~~~
+~~~xml
 <?xml version="1.0" encoding="UTF-8"?>
 <마트>
     <과일류>
@@ -78,7 +78,7 @@ description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아�
 - yaml은 인간이 보고 이해하기 쉬운 형태를 가지고 있어 최근 많이 활용되는 데이터 포멧입니다.
 - 기본적으로 들여쓰기를 원칙으로 하며 JSON과 비슷하게 Key:Value 형태를 가지고 있다.
 
-~~~
+~~~yaml
 Servers:
     - name : Server1
       administrator : Kim
