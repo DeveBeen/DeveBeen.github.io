@@ -1,6 +1,10 @@
 {
   "posts" : [
     
+    "./Java-Basic.html",
+    
+    "./Git-Github.html",
+    
     "./JSON-XML-YAML.html",
     
     "./CSR-SSR-MAP-SPA.html",

@@ -5,7 +5,7 @@ show_date: true
 title: "JSON,XML,YAML"
 date: 2023-04-28
 img: ./assets/posts/20230416/interface.png
-tags: [front-end, basic]
+tags: [front-end, datatype, basic]
 category: opinion
 author: Armando Maynez
 description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아보자."
@@ -70,7 +70,7 @@ description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아�
     </라면류>
 </마트>
 ~~~
-
+---
 ## 3. YAML (YAML Ain't Makeup Language)
 - YAML도 데이터 표현 양식의 한 종류이며 아래와 같은 특징을 가진다.
 
@@ -89,7 +89,7 @@ Servers:
       created : 20210101000000
       status : active
 ~~~
-
+---
 ## 단어정리
 - W3C(World Wide Web Consortium) : 월드 와이드 웹을 위한 표준을 개발하고 관리하는 조직으로 팀 버너스리를 중심으로 설립된 조직이다.
 

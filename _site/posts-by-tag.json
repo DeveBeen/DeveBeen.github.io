@@ -20,6 +20,10 @@
   "tag" : "basic",
   "posts" : [
       
+      "./Java-Basic.html",
+      
+      "./Git-Github.html",
+      
       "./JSON-XML-YAML.html",
       
       "./CSR-SSR-MAP-SPA.html",
@@ -69,6 +73,16 @@
     
       
   {
+  "tag" : "datatype",
+  "posts" : [
+      
+      "./JSON-XML-YAML.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "deep Neural networks",
   "posts" : [
       
@@ -81,6 +95,10 @@
   {
   "tag" : "front-end",
   "posts" : [
+      
+      "./Java-Basic.html",
+      
+      "./Git-Github.html",
       
       "./JSON-XML-YAML.html",
       
@@ -97,6 +115,26 @@
   "posts" : [
       
       "./starting-the-adventure.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "git",
+  "posts" : [
+      
+      "./Git-Github.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "java",
+  "posts" : [
+      
+      "./Java-Basic.html"
       
     ]
   } ,
