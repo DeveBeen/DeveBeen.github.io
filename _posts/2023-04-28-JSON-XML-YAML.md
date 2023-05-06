@@ -10,7 +10,9 @@ category: opinion
 author: Armando Maynez
 description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아보자."
 ---
+
 ---
+
 ## 1. JSON (JavaScript Object Notation)
 - 데이터를 저장, 전송할 때 사용되는 경량의 DATA 교환 형식 JavaScript에서 객체를 만들 때 사용하는 단순한 텍스트 형식인 표현식이다.
 - 클라이언트와 서버가 주고 받는 요청(Request)와 응답(Response) 사이에 담겨있는 데이터의 형식 중 하나이다.
@@ -38,7 +40,9 @@ description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아�
     "특기":["달리기","수영"]
 }
 ```
+
 ---
+
 ## 2. XML (Extensible Markup Language)
 - XML은 데이터를 정의하는 규칙을 제공하는 markup 언어로 다른 프로그래밍 언어와는 다르게 자체적으로 컴퓨팅하는 작업을 수행할 수 없다.
 - 대신 구조적 데이터 관리를 위해 모든 프로그래밍 언어 또는 소프트웨어를 구현할 수 있다.
@@ -70,7 +74,9 @@ description: "JSON,XML,YAML이 각각 무엇인지 그 차이가 뭔지 알아�
     </라면류>
 </마트>
 ~~~
+
 ---
+
 ## 3. YAML (YAML Ain't Makeup Language)
 - YAML도 데이터 표현 양식의 한 종류이며 아래와 같은 특징을 가진다.
 
@@ -89,7 +95,9 @@ Servers:
       created : 20210101000000
       status : active
 ~~~
+
 ---
+
 ## 단어정리
 - W3C(World Wide Web Consortium) : 월드 와이드 웹을 위한 표준을 개발하고 관리하는 조직으로 팀 버너스리를 중심으로 설립된 조직이다.
 
