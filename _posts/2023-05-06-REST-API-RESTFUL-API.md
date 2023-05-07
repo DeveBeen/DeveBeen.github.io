@@ -10,7 +10,7 @@ category: opinion
 author: Armando Maynez
 description: "REST-API, RESTFUL-API가 무엇인지 알아보자."
 ---
-
+---
 ## 1. REST란 무엇인가?
 - REST(REpresentational State Transfer)는 정보를 주고 받는 방식에 있어 개발자들이 널리 쓰이는 일종의 형식으로 기본적으로 웹의 기존 기술과 HTTP 기술을 그대로 사용하기에 웹의 장점을 최대한 사용할 수 있는 아키텍쳐 스타일이다.
 
@@ -31,6 +31,8 @@ description: "REST-API, RESTFUL-API가 무엇인지 알아보자."
 - 어플리케이션의 분리 통합을 위해서 필요하다.
 - 다양한 클라이언트의 등장으로 다양한 브라우저와 모바일에서도 통신이 가능해야 한다.
 
+---
+
 ## 2. REST API?
 - API는 인터넷상에서 데이터를 전송하고 이용할 수 있게 하는 소프트웨어 인터페이스이다.
 - REST 개념과 합쳐서 REST API는 REST 기반 API이다. REST API를 사용하는 이유는 REST 기반으로 시스템을 분산해 확장성과 재사용성을 높여 유지보수와 운용을 편리하게 하기 위함이다.
@@ -43,6 +45,8 @@ description: "REST-API, RESTFUL-API가 무엇인지 알아보자."
 [REST API 설계 방법]
 1. URI은 정보의 자원을 표현 해야 한다.
 2. 자원에 대한 행위는 HTTP method로 표현하며 이는 URI에 포함되지 않는다.
+
+---
 
 ## 3. RESTFUL API?
 - REST API는 아래와 같은 설계규칙이 있다.
@@ -58,6 +62,8 @@ description: "REST-API, RESTFUL-API가 무엇인지 알아보자."
 - RESTFUL API는 이러한 설계규칙을 잘 지켜서 설계된 REST API를 말한다.
 
 ![image](https://velog.velcdn.com/images/gomuzom/post/4d78ca3b-d4ee-4723-b55b-6a12d5566e30/image.png)
+
+---
 
 ## 단어정리
 <br>
