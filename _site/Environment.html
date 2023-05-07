@@ -7,9 +7,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Archive - The Minimum Viable Model</title>
-	<link rel="canonical" href="http://localhost:4000/archive.html">
-	<meta name="description" content="Artificial Intelligence trends and concepts made easy.">
+	<title>Node.js 환경 VS 브라우저 환경 - The Minimum Viable Model</title>
+	<link rel="canonical" href="http://localhost:4000/Environment.html">
+	<meta name="description" content="Node.js 환경 VS 브라우저 환경">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 <script type="application/ld+json">
@@ -19,16 +19,16 @@
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "http://localhost:4000"},
-  "headline": "Archive",
-  "abstract": "",
-    "keywords": "",
-    "wordcount": "43",
-    "image": ["http://localhost:4000/assets/img"],
-  "datePublished": "",
-  "dateModified": "",
+  "headline": "Node.js 환경 VS 브라우저 환경",
+  "abstract": "Node.js 환경 VS 브라우저 환경",
+    "keywords": "front-end, node.js, browser, basic",
+    "wordcount": "482",
+    "image": ["http://localhost:4000/assets/img./assets/posts/20230416/interface.png"],
+  "datePublished": "2023-05-07 00:00:00 +0900",
+  "dateModified": "2023-05-07 00:00:00 +0900",
   "author": {
     "@type": "Person",
-    "name": ""},
+    "name": "Armando Maynez"},
   "publisher": {
     "@type":  "Organization",
     "logo": {
@@ -40,30 +40,30 @@
 }
 </script>
 <!-- Open Graph data -->
-<meta property="og:url" content="http://localhost:4000/archive.html"/>
+<meta property="og:url" content="http://localhost:4000/Environment.html"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="Archive"/>
-<meta property="og:description" content=""/>
-<meta property="og:image" content="http://localhost:4000/assets/img"/>
-<meta property="og:image:alt" content="Archive"/>
+<meta property="og:title" content="Node.js 환경 VS 브라우저 환경"/>
+<meta property="og:description" content="Node.js 환경 VS 브라우저 환경"/>
+<meta property="og:image" content="http://localhost:4000/assets/img./assets/posts/20230416/interface.png"/>
+<meta property="og:image:alt" content="Node.js 환경 VS 브라우저 환경"/>
 <meta property="og:site_name" content="The Minimum Viable Model" />
-<meta property="article:published_time" content="" />
-<meta property="article:modified_time" content="" />
-<meta property="article:tag" content="" />
+<meta property="article:published_time" content="2023-05-07 00:00:00 +0900" />
+<meta property="article:modified_time" content="2023-05-07 00:00:00 +0900" />
+<meta property="article:tag" content="front-end, node.js, browser, basic" />
 <meta property="fb:admins" content="ar.maybach" />
 <!-- Schema.org markup for Google -->
-<meta itemprop="name" content="Archive">
-<meta itemprop="description" content="">
-<meta itemprop="image" content="http://localhost:4000/assets/img">
+<meta itemprop="name" content="Node.js 환경 VS 브라우저 환경">
+<meta itemprop="description" content="Node.js 환경 VS 브라우저 환경">
+<meta itemprop="image" content="http://localhost:4000/assets/img./assets/posts/20230416/interface.png">
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@MvmThe">
-<meta name="twitter:title" content="Archive">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Node.js 환경 VS 브라우저 환경">
+<meta name="twitter:description" content="Node.js 환경 VS 브라우저 환경">
 <meta name="twitter:creator" content="">
 <meta data-rh="true" name="twitter:label1" content="Word count"/>
-<meta data-rh="true" name="twitter:data1" content="43"/>
-<meta name="twitter:image:src" content="http://localhost:4000/assets/img/">
+<meta data-rh="true" name="twitter:data1" content="482"/>
+<meta name="twitter:image:src" content="http://localhost:4000/assets/img/./assets/posts/20230416/interface.png">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#311e3e">
 	<!-- iOS Safari -->
@@ -127,10 +127,55 @@
 <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/favicon/favicon.ico">
 <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/favicon/favicon.ico">
 	
+	<link rel="stylesheet" href="./assets/css/highlighter/syntax-base16.monokai.dark.css">
+	
 </head>
 
   <body>
-    <div class="flex-container transparent">
+    
+
+
+
+
+<section class="hidden">
+  <div class="post">
+      <a  class="post-list-title" href="./Environment.html">Node.js 환경 VS 브라우저 환경</a>
+      
+
+  <span class = "post-card-meta">
+  
+  
+    <span class="meta-pre"></span>
+  
+  
+    
+      
+      <span class="page_meta-date">
+        <time datetime="2023-05-07T00:00:00+09:00">May 7, 2023</time>
+      </span>
+    
+    
+      <span class="meta-sep"></span>
+    
+  
+  
+    
+    
+    <span class="page_meta-readtime">
+      
+        2 minute read
+      
+    </span>
+  
+  
+  </span>
+
+        <div class="post-excerpt">
+            <hr /><h2 id="1-nodejs란">1. Node.js란?</h2><ul> <li>Node.js는 <a href="#단어정리">V8 JavaScript 엔진</a>으로 빌드되어 외부에 있는 JavaScript 코드를 실행하는 오픈소스 <a href="#단어정리">크로스 플렛폼</a> 백엔드 <a href="#단어정리">런타임 환경</a>이다.</li> <li>Node.js를 사용하여 개발자는 자바스크립트를 사용해서 명령줄 도구를 작성하고 서버측 스크립팅을 실행하여 페이지를 사용자의 웹 브라우저로 보내기 전에 동적 웹 페이지 컨텐츠를 생성할 수 있다.</li> <li>즉, Node.js는 웹 어플리케이션을 통합하는 JS를 어디에서나 적용하고 쓸 수 있는 패러다임을 제공하는 서버측 스크립트, 클라이언트측 스크립트가 아닌 단일 프로그래밍 언어이다.</li> <li>Node.js는 이벤트 기반, 논 블로킹 I/O 모델이라는 특성으로 높은 처리 성능을 가지고 있다는 것이 특징이다.</li></ul><p>[이벤트 기반]<br /><img src="https://velog.velcdn.com/images%2Feunnbi%2Fpost%2Fd27f23af-53fd-44fc-81f3-74d10a2c6c7d%2Fimage.png" alt="image" /></p><ul> <li>이벤트 기반은 이벤트 루프를 통해 이벤트 발생 시 미리 지정한 작업을 수행하는...<a class="read-more" href="./Environment.html"> read more</a>
+        </div>
+  </div>
+</section>
+<div class="flex-container transparent">
   
 
 
@@ -223,30 +268,24 @@
   </div>
 </header> <!-- End Header -->
 
-  <div class="content wrapper">
-    
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Node.js 환경 VS 브라우저 환경">
+<meta itemprop="description" content="Node.js 환경 VS 브라우저 환경">
+<meta itemprop="datePublished" content="2023-05-07T00:00:00+09:00">
 
+    <div class="page-image">
+      <div class="cover-image" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;"></div>
+    </div>
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="header-page">
+          <h1 class="page-title">Node.js 환경 VS 브라우저 환경</h1>
+          
 
-
-<div class="archive tag-master">
-	<form class="search-form inline">
-		<div id="search-container">
-			<input type="text" id="search-input" class="search" placeholder="Search">
-		</div>
-	</form>
-	<ul id="results-container" class="results-search"></ul>
-	<div class="post-list">
-	
-		<div class="post">
-			
-
-			<a class="post-list-title" href="./Vue-React.html">Vue VS React</a>
-			
-
-  <span class = "post-card-meta">
+  <span class = "post-page-meta">
   
+    <p class="page_meta">
   
-    <span class="meta-pre"></span>
   
   
     
@@ -269,154 +308,362 @@
     </span>
   
   
+    </p>
+  
   </span>
 
-			<div class="post-excerpt">
-				<hr /><h2 id="1-vuejs">1. Vue.js?</h2><p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu5WAs%2Fbtr9qC5h0xP%2FfbpbQzd5tlxv3ilL6ukcAK%2Fimg.png" alt="image" /></p><ul> <li>웹 화면을 만들기 위한 프론트엔드 라이브러리이자 점진적 프레임워크이다.</li> <li>배우기 쉽게 만들어져 프로트엔드 개발에 있어 react와 함께 대중적인 오픈소스 js 프레임워크이다.</li> <li>SPA를 구축하는데 사용한다.</li> <li>MVVM패턴의 ViewModel에 해당하여, UI코드와 데이터제어 제어 로직을 분리했다.<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcVeP4L%2FbtrvZIubnnT%2FCZKbN7k7uHkvIssYIAgjWk%2Fimg.png" alt="image" /></li></ul><p>[구성요소]</p><ul> <li>View(html DOM): 사용자에게 보이는 화면이다.</li> <li>Model(JS): 데이터를 담는 용기로 보통은 서버에서 가져온 javascript 객체를 저장한다.</li> <li>ViewModel: View와 Model의 중간 영역으로 DomListener와 DataBinding을 제공하는 영역이다.</li> <li>DOM: HTML 문서에 들어가는 요소(tag, class, attribute 등)의 정보를 담고 있는 트리 형태의 데이터이다.</li> <li>DOM Listener: DOM의 변경에 대한 즉각적으로 반응하여 특정 로직을 수행하는 장치이다.</li> <li>Data Binding: View에 표시되는 내용과 모델의 데이터를 동기화한다.</li> <li> <p>Vue에서는...<a class="read-more" href="./Vue-React.html"> read more</a>
-			</div>
-		</div>
-	
-		<div class="post">
-			
+        </div>
+        <aside class="sidebar side" id="sidebar">
+    
 
-			<a class="post-list-title" href="./Environment.html">Node.js 환경 VS 브라우저 환경</a>
-			
 
-  <span class = "post-card-meta">
-  
-  
-    <span class="meta-pre"></span>
-  
-  
+
+<div class="tag-cloud">
+    
+        <ul class="tags side">
+            
+                <li><a href="./tag.html?tag=front-end" class="tag side">front-end</a></li>
+            
+                <li><a href="./tag.html?tag=node.js" class="tag side">node.js</a></li>
+            
+                <li><a href="./tag.html?tag=browser" class="tag side">browser</a></li>
+            
+                <li><a href="./tag.html?tag=basic" class="tag side">basic</a></li>
+            
+    
+        </ul>
+</div>
+    <div class="share-options side">
+    <div class="share-hover side">
+        <span class="share-button side"><svg fill="currentColor" width="25" height="25" class="side"><g fill-rule="evenodd"><path d="M15.6 5a.42.42 0 0 0 .17-.3.42.42 0 0 0-.12-.33l-2.8-2.79a.5.5 0 0 0-.7 0l-2.8 2.8a.4.4 0 0 0-.1.32c0 .12.07.23.16.3h.02a.45.45 0 0 0 .57-.04l2-2V10c0 .28.23.5.5.5s.5-.22.5-.5V2.93l2.02 2.02c.08.07.18.12.3.13.11.01.21-.02.3-.08v.01"></path><path d="M18 7h-1.5a.5.5 0 0 0 0 1h1.6c.5 0 .9.4.9.9v10.2c0 .5-.4.9-.9.9H6.9a.9.9 0 0 1-.9-.9V8.9c0-.5.4-.9.9-.9h1.6a.5.5 0 0 0 .35-.15A.5.5 0 0 0 9 7.5a.5.5 0 0 0-.15-.35A.5.5 0 0 0 8.5 7H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"></path></g></svg></span>
+        <div class="share-icons side" id="sidebar-icons">
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Node.js 환경 VS 브라우저 환경&url=http://localhost:4000/Environment.html" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="facebook" href="https://facebook.com/sharer.php?u=http://localhost:4000/Environment.html" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="reddit" href="http://www.reddit.com/submit?url=http://localhost:4000/Environment.html&title=Node.js 환경 VS 브라우저 환경" title="Submit to Reddit" rel="nofollow" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/Environment.html&title=Node.js 환경 VS 브라우저 환경&summary=Node.js 환경 VS 브라우저 환경&source=http://localhost:4000/Environment.html" title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="email" href="mailto:?subject=Node.js 환경 VS 브라우저 환경&body=Node.js 환경 VS 브라우저 환경%0A%0ARead more here: http://localhost:4000/Environment.html" title="Share via e-mail" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a class="copy-link" onclick="copyToClipboard()" title="Copy to clipboard" rel="nofollow" target="_blank"><svg width="20px" fill="currentColor" class="side" viewBox="0 0 18 18"><path d="M16.94 1.1A3.7 3.7 0 0 0 14.3 0c-1 0-1.94.39-2.64 1.1L7.43 5.3c-.91.92-2.09 3.2 0 5.27a.75.75 0 0 0 .82.16c.09-.03.17-.09.24-.15a.74.74 0 0 0 0-1.06c-1.16-1.15-.77-2.39-.02-3.16l4.24-4.22a2.2 2.2 0 0 1 1.58-.65c.6 0 1.16.23 1.58.65.86.87.86 2.29 0 3.16L12.7 8.47a.74.74 0 0 0 1.04 1.05l3.17-3.16a3.73 3.73 0 0 0 0-5.27h.03zM9.54 7.4a.74.74 0 0 0 0 1.06c1.16 1.15.76 2.39 0 3.16l-4.22 4.22c-.42.42-.99.65-1.59.65a2.23 2.23 0 0 1-1.58-3.82l3.17-3.16A.73.73 0 0 0 5.54 9a.78.78 0 0 0-.22-.52.77.77 0 0 0-1.05 0L1.1 11.64A3.72 3.72 0 0 0 3.74 18c1 0 1.94-.39 2.65-1.1l4.23-4.2c.21-.22.94-1.02 1.13-2.2.18-1.12-.2-2.15-1.12-3.07-.27-.27-.78-.27-1.06 0l-.02-.02z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></a>
+        </div>
+    </div>
+    <div class='alert' style='font-size:.6em;color:var(--accent);text-align:center;'></div>
+</div>
+</aside>
+
+        
+        
+        <hr />
+
+<h2 id="1-nodejs란">1. Node.js란?</h2>
+<ul>
+  <li>Node.js는 <a href="#단어정리">V8 JavaScript 엔진</a>으로 빌드되어 외부에 있는  JavaScript 코드를 실행하는 오픈소스 <a href="#단어정리">크로스 플렛폼</a> 백엔드 <a href="#단어정리">런타임 환경</a>이다.</li>
+  <li>Node.js를 사용하여 개발자는 자바스크립트를 사용해서 명령줄 도구를 작성하고 서버측 스크립팅을 실행하여 페이지를 사용자의 웹 브라우저로 보내기 전에 동적 웹 페이지 컨텐츠를 생성할 수 있다.</li>
+  <li>즉, Node.js는 웹 어플리케이션을 통합하는 JS를 어디에서나 적용하고 쓸 수 있는 패러다임을 제공하는 서버측 스크립트, 클라이언트측 스크립트가 아닌 단일 프로그래밍 언어이다.</li>
+  <li>Node.js는 이벤트 기반, 논 블로킹 I/O 모델이라는 특성으로 높은 처리 성능을 가지고 있다는 것이 특징이다.</li>
+</ul>
+
+<p>[이벤트 기반]<br />
+<img src="https://velog.velcdn.com/images%2Feunnbi%2Fpost%2Fd27f23af-53fd-44fc-81f3-74d10a2c6c7d%2Fimage.png" alt="image" /></p>
+<ul>
+  <li>이벤트 기반은 이벤트 루프를 통해 이벤트 발생 시 미리 지정한 작업을 수행하는 방식을 이야기 한다.</li>
+  <li>이벤트 루프는 여러 이벤트가 동시 발생할 때 어떤 것을 우선 처리할 지 우선순위를 판단하는 사이클이다.</li>
+  <li>Node.js는 이벤트가 종료될 때까지 이벤트 처리를 위한 작업을 반복한다.</li>
+</ul>
+
+<p>[논 블로킹 I/O 모델]<br /></p>
+<ul>
+  <li>작업에는 두 가지 종류가 있는데 동시에 실행될 수 있는 작업과 동시에 실행될 수 없는 작업이있다. 이 중 논 블로킹은 이전 작업이 완료될 때까지 대기하지 않고 다음 작업을 수행하는 것을 말한다.</li>
+  <li>Node.js는 싱글스레드 논 블로킹 방식으로 스레드는 하나지만 비동기식으로 이전작업의 완료를 기다리지 않고 다음 작업을 실행한다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-브라우저">2. 브라우저?</h2>
+<ul>
+  <li>브라우저 환경을 알기 위해서 먼저 브라우저가 정확히 뭔지 알아야한다.</li>
+  <li>브라우저는 사전적 의미로는 인터넷상에서 웹에 연결 시켜주는 윈도우 기반의 소프트웨어이다. 쉽게 말해서 사용자인 우리가 웹에 접근하기 위한 도구를 브라우저라고 정의한다.</li>
+  <li>아래 사진과 같이 우리가 아는 브라우저는 여러 종류가 있다.<br />
+<img src="https://t1.daumcdn.net/cfile/tistory/2670B14957BA8B2E0C" alt="image" /><br /></li>
+</ul>
+
+<hr />
+
+<h2 id="3-nodejs-브라우저-환경">3. Node.js, 브라우저 환경?</h2>
+<ul>
+  <li>그렇다면 여기에 환경을 붙이면 정확히 무엇을 말하는 것이냐? 우리가 보통 개발 환경하면은 어떤 뜻으로 해석하는가? 그렇다 개발을 위해 셋팅하는 환경을 말한다.</li>
+  <li>위에 두가지도 직역하자면 Node.js 환경은 Node.js를 사용하기 위해 셋팅하는 환경, 브라우저 환경은 브라우저를 사용하기 위해 셋팅하는 환경을 말한다.</li>
+  <li>그러면 셋팅을 누가 하느냐? 개발환경은 보통 개발자가 언어를 채택하여 셋팅하는 방식이지만 위에 두 환경은 그 셋팅 주체가 JavaScript로 통일(약속)되어 있다.
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*BPSx-c--z6r7tY29L19ukQ.png" alt="image" /></li>
+</ul>
+
+<hr />
+
+<h2 id="4-nodejs-환경과-브라우저-환경의-차이점">4. Node.js 환경과 브라우저 환경의 차이점</h2>
+<ul>
+  <li>이제 확실하게 Node.js 환경이 뭔지, 브라우저 환경이 무엇인지 알았을 것이다. 그렇다면 이 둘의 차이점이 무엇인지 알아보자.</li>
+</ul>
+
+<p>[Node.js와 브라우저의 차이점]</p>
+<ol>
+  <li>존재목적 : 브라우저는 HTML,CSS,JS를 실행하여 사용자의 웹 화면에 랜더링하는 것이 주 목적이지만 Node.js는 서버 개발 환경을 제공하는 것이 주목적이다. 이에 둘 다 JS의 코어인 <a href="#단어정리">ECMAScript</a>를 실행하나 이외 추가적인 API는 서로 호환되지 않는다.</li>
+  <li>API : 브라우저는 시각적 표현이 필요한 것과 다르게 node.js는 필요가 없어 UI관련 API에도 차이가 있고, Node.js는 브라우저에서 사용가능한 window,document 객체가 없어 웹 플렛폼 API가 Node.js에는 호환되지 않는다.</li>
+  <li>JS Engine : Node.js는 구글 Chrome 브라우저에서 사용하는 V8 엔진을 자바스크립트 실행 엔진으로 사용하지만 브라우저는 종류와 버전에 따라 엔진이 다양하다.</li>
+  <li>제어 : Node.js에서는 우리가 직접환경을 제어하여 버전 이동이 가능하지만 브라우저는 환경이 정해져 있기에 불가능하다.
+<br />
+<br />
+    <ul>
+      <li>이러한 차이점들로 Node.js는 컴퓨터의 깊은 부분을 제어하는 백엔드 기술에 최적화 되어 있음을 알 수 있다.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>V8 JavaScript 엔진 : 웹 브라우저를 만드는데 기반을 제공하는 오픈소스 자바스크립트 엔진으로 자바스크립트를 바이트 코드로 변환하여 읽어 웹 브라우저 내부의 속도 개선을 위해 만들어졌다.</li>
+  <li>크로스 플렛폼 : 컴퓨터 프로그램, 운영체제, 프로그래밍 언어 등 여러종류의 컴퓨터 플랫폼에서 동작할 수 있다는 뜻이다.</li>
+  <li>런타임 환경 : 런타임을 위해 시스템 적인 자원을 운영체제에게 요청하기 위해 엑세스할 수 있도록 해주는 환경을 말한다.</li>
+  <li>ECMAScript : Ecma International이 ECMA-262 기술 규격에 따라 정의하고 있는 표준화된 스크립트 프로그래밍 언어를 말하며 자바 스크립트를 표준화하기 위해 사용된다.</li>
+</ul>
+
+        <aside class="sidebar inline" id="post-end">
+    
+
+
+
+<div class="tag-cloud">
+    
+        <ul class="tags inline">
+            
+                <li><a href="./tag.html?tag=front-end" class="tag inline">front-end</a></li>
+            
+                <li><a href="./tag.html?tag=node.js" class="tag inline">node.js</a></li>
+            
+                <li><a href="./tag.html?tag=browser" class="tag inline">browser</a></li>
+            
+                <li><a href="./tag.html?tag=basic" class="tag inline">basic</a></li>
+            
+    
+        </ul>
+</div>
+    <div class="share-options inline">
+    <div class="share-hover inline">
+        <span class="share-button inline"><svg fill="currentColor" width="25" height="25" class="inline"><g fill-rule="evenodd"><path d="M15.6 5a.42.42 0 0 0 .17-.3.42.42 0 0 0-.12-.33l-2.8-2.79a.5.5 0 0 0-.7 0l-2.8 2.8a.4.4 0 0 0-.1.32c0 .12.07.23.16.3h.02a.45.45 0 0 0 .57-.04l2-2V10c0 .28.23.5.5.5s.5-.22.5-.5V2.93l2.02 2.02c.08.07.18.12.3.13.11.01.21-.02.3-.08v.01"></path><path d="M18 7h-1.5a.5.5 0 0 0 0 1h1.6c.5 0 .9.4.9.9v10.2c0 .5-.4.9-.9.9H6.9a.9.9 0 0 1-.9-.9V8.9c0-.5.4-.9.9-.9h1.6a.5.5 0 0 0 .35-.15A.5.5 0 0 0 9 7.5a.5.5 0 0 0-.15-.35A.5.5 0 0 0 8.5 7H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"></path></g></svg></span>
+        <div class="share-icons inline" id="post-end-icons">
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Node.js 환경 VS 브라우저 환경&url=http://localhost:4000/Environment.html" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="facebook" href="https://facebook.com/sharer.php?u=http://localhost:4000/Environment.html" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="reddit" href="http://www.reddit.com/submit?url=http://localhost:4000/Environment.html&title=Node.js 환경 VS 브라우저 환경" title="Submit to Reddit" rel="nofollow" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/Environment.html&title=Node.js 환경 VS 브라우저 환경&summary=Node.js 환경 VS 브라우저 환경&source=http://localhost:4000/Environment.html" title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="email" href="mailto:?subject=Node.js 환경 VS 브라우저 환경&body=Node.js 환경 VS 브라우저 환경%0A%0ARead more here: http://localhost:4000/Environment.html" title="Share via e-mail" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a class="copy-link" onclick="copyToClipboard()" title="Copy to clipboard" rel="nofollow" target="_blank"><svg width="20px" fill="currentColor" class="inline" viewBox="0 0 18 18"><path d="M16.94 1.1A3.7 3.7 0 0 0 14.3 0c-1 0-1.94.39-2.64 1.1L7.43 5.3c-.91.92-2.09 3.2 0 5.27a.75.75 0 0 0 .82.16c.09-.03.17-.09.24-.15a.74.74 0 0 0 0-1.06c-1.16-1.15-.77-2.39-.02-3.16l4.24-4.22a2.2 2.2 0 0 1 1.58-.65c.6 0 1.16.23 1.58.65.86.87.86 2.29 0 3.16L12.7 8.47a.74.74 0 0 0 1.04 1.05l3.17-3.16a3.73 3.73 0 0 0 0-5.27h.03zM9.54 7.4a.74.74 0 0 0 0 1.06c1.16 1.15.76 2.39 0 3.16l-4.22 4.22c-.42.42-.99.65-1.59.65a2.23 2.23 0 0 1-1.58-3.82l3.17-3.16A.73.73 0 0 0 5.54 9a.78.78 0 0 0-.22-.52.77.77 0 0 0-1.05 0L1.1 11.64A3.72 3.72 0 0 0 3.74 18c1 0 1.94-.39 2.65-1.1l4.23-4.2c.21-.22.94-1.02 1.13-2.2.18-1.12-.2-2.15-1.12-3.07-.27-.27-.78-.27-1.06 0l-.02-.02z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></a>
+        </div>
+    </div>
+    <div class='alert' style='font-size:.6em;color:var(--accent);text-align:center;'></div>
+</div>
+</aside>
+
+        <div class="separator"></div>
+        
+
+
+
+<section class="author-box">
+  <div class="narrow-column">
+    <a href='https://amaynez.github.io'><img src="./assets/img/Myself_Neon_grey.jpg" alt="Armando Maynez" class="author-img"></a>
+    <ul class="contact-icons">
+      
+      <li class="twitter"><a class="twitter" href="https://twitter.com/@MvmThe" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      
+      
+      <li class="linkedin"><a class="linkedin" href="https://in.linkedin.com/in/amaynez" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+      
+      
+      <li class="github"><a class="github" href="http://github.com/amaynez" target="_blank"><i class="fa fa-github"></i></a></li>
+      
+      
+      <li class="email"><a class="email" href="mailto:armando.maynez@gmail.com"><i class="fa fa-envelope-o"></i></a></li>
+      
+      
+      <li class="stackoverflow"><a class="stackoverflow" href="https://stackoverflow.com/users/stackoverflow"><i class="fa fa-stack-overflow"></i></a></li>
+      
+    </ul>
+  </div>
+  <div class="author-desc">
+    <h3>Armando Maynez</h3>
+    <p>Engineer, industry executive, research enthusiast. Avid learner with diverse interests in coding, machine learning, artificial intelligence and reinforcement learning. 17+ years of experience working in multinational corporations.</p>
+  </div>
+</section>
+
+        
+
+
+
+<div class="recent-box">
+  <h2 class="page-subtitle">Recent posts</h2>
+  <div class="recent-list">
     
       
-      <span class="page_meta-date">
-        <time datetime="2023-05-07T00:00:00+09:00">May 7, 2023</time>
-      </span>
-    
-    
-      <span class="meta-sep"></span>
-    
+        <div class="recent-item">
+          
+          
+
+          <a href="./Vue-React.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+            <div class="recent-item-title">
+              <span>Vue VS React</span>
+              
+
+  <span class = "recent-item-meta">
+  
+  
   
   
     
     
-    <span class="page_meta-readtime">
+    <p class="page_meta-readtime">
       
         2 minute read
       
-    </span>
+    </p>
   
   
   </span>
 
-			<div class="post-excerpt">
-				<hr /><h2 id="1-nodejs란">1. Node.js란?</h2><ul> <li>Node.js는 <a href="#단어정리">V8 JavaScript 엔진</a>으로 빌드되어 외부에 있는 JavaScript 코드를 실행하는 오픈소스 <a href="#단어정리">크로스 플렛폼</a> 백엔드 <a href="#단어정리">런타임 환경</a>이다.</li> <li>Node.js를 사용하여 개발자는 자바스크립트를 사용해서 명령줄 도구를 작성하고 서버측 스크립팅을 실행하여 페이지를 사용자의 웹 브라우저로 보내기 전에 동적 웹 페이지 컨텐츠를 생성할 수 있다.</li> <li>즉, Node.js는 웹 어플리케이션을 통합하는 JS를 어디에서나 적용하고 쓸 수 있는 패러다임을 제공하는 서버측 스크립트, 클라이언트측 스크립트가 아닌 단일 프로그래밍 언어이다.</li> <li>Node.js는 이벤트 기반, 논 블로킹 I/O 모델이라는 특성으로 높은 처리 성능을 가지고 있다는 것이 특징이다.</li></ul><p>[이벤트 기반]<br /><img src="https://velog.velcdn.com/images%2Feunnbi%2Fpost%2Fd27f23af-53fd-44fc-81f3-74d10a2c6c7d%2Fimage.png" alt="image" /></p><ul> <li>이벤트 기반은 이벤트 루프를 통해 이벤트 발생 시 미리 지정한 작업을 수행하는...<a class="read-more" href="./Environment.html"> read more</a>
-			</div>
-		</div>
-	
-		<div class="post">
-			
-
-			<a class="post-list-title" href="./REST-API-RESTFUL-API.html">REST-API? RESTFUL-API?</a>
-			
-
-  <span class = "post-card-meta">
-  
-  
-    <span class="meta-pre"></span>
-  
-  
+            </div>
+          </a>
+        </div>
+      
     
       
-      <span class="page_meta-date">
-        <time datetime="2023-05-06T00:00:00+09:00">May 6, 2023</time>
-      </span>
-    
-    
-      <span class="meta-sep"></span>
-    
+        <div class="recent-item">
+          
+          
+
+          <a href="./Environment.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+            <div class="recent-item-title">
+              <span>Node.js 환경 VS 브라우저 환경</span>
+              
+
+  <span class = "recent-item-meta">
+  
+  
   
   
     
     
-    <span class="page_meta-readtime">
+    <p class="page_meta-readtime">
       
         2 minute read
       
-    </span>
+    </p>
   
   
   </span>
 
-			<div class="post-excerpt">
-				<hr /><h2 id="1-rest란-무엇인가">1. REST란 무엇인가?</h2><ul> <li>REST(REpresentational State Transfer)는 정보를 주고 받는 방식에 있어 개발자들이 널리 쓰이는 일종의 형식으로 기본적으로 웹의 기존 기술과 HTTP 기술을 그대로 사용하기에 웹의 장점을 최대한 사용할 수 있는 아키텍쳐 스타일이다.</li></ul><p>[REST의 구성요소]</p><ul> <li>URI : 서버의 존재하는 고유한 ID를 가진 자원으로 Client는 url을 이용하여 자원에 대한 조작을 Server에 요청한다.</li> <li>Method : <a href="#단어정리">HTTP 프로토콜의 Method</a>를 사용한다.</li> <li>Representation of Resouce : Client가 Server와 주고 받는 데이터 형식으로 JSON, XML, TEXT, <a href="#단어정리">RSS</a> 등이 있다.</li></ul><p>[REST의 특징]</p><ul> <li>Server-Client 구조 : 자원을 요청하는 쪽이 Client, 자원을 가진 쪽이 Server로 서로의 역할을 확실히 하므로 의존성을 줄인다.</li> <li>Stateless(무상태) : Client의 context를 Server에 저장하지 않아...<a class="read-more" href="./REST-API-RESTFUL-API.html"> read more</a>
-			</div>
-		</div>
-	
-	</div>
-</div>
-<style>
-.spinner {
-  margin: 100px auto;
-  width: 50px;
-  height: 40px;
-  text-align: center;
-  font-size: 10px;
-}
+            </div>
+          </a>
+        </div>
+      
+    
+      
+        <div class="recent-item">
+          
+          
 
-.spinner > div {
-  background-color: var(--accent);
-  height: 100%;
-  width: 6px;
-  display: inline-block;
+          <a href="./REST-API-RESTFUL-API.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+            <div class="recent-item-title">
+              <span>REST-API? RESTFUL-API?</span>
+              
 
-  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
-  animation: sk-stretchdelay 1.2s infinite ease-in-out;
-}
+  <span class = "recent-item-meta">
+  
+  
+  
+  
+    
+    
+    <p class="page_meta-readtime">
+      
+        2 minute read
+      
+    </p>
+  
+  
+  </span>
 
-.spinner .rect2 {
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
-}
+            </div>
+          </a>
+        </div>
+      
+    
+      
+        <div class="recent-item">
+          
+          
 
-.spinner .rect3 {
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
-}
+          <a href="./Session-Cookie.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+            <div class="recent-item-title">
+              <span>Session? Cookie?</span>
+              
 
-.spinner .rect4 {
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
-}
+  <span class = "recent-item-meta">
+  
+  
+  
+  
+    
+    
+    <p class="page_meta-readtime">
+      
+        3 minute read
+      
+    </p>
+  
+  
+  </span>
 
-.spinner .rect5 {
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
-}
+            </div>
+          </a>
+        </div>
+      
+    
+  </div>
+</div> <!-- End Recent-Box -->
 
-@-webkit-keyframes sk-stretchdelay {
-  0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
-  20% { -webkit-transform: scaleY(1.0) }
-}
+        <div class="newsletter" id="mc_embed_signup">
+  <h2 class="page-subtitle">Newsletter</h2>
+  <div class="form-container">
+    <p>Subscribe here to get our latest updates</p>
+    <form action="https://github.us1.list-manage.com/subscribe/post?u=8ece198b3eb260e6838461a60&amp;id=397d90b5f4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+      <label class="screen-reader-text" for="mce-EMAIL">Email Address</label>
+      <div class="newsletter-box" id="mc_embed_signup_scroll">
+        <input type="email" name="EMAIL" placeholder="Email address" class="email-input" id="mce-EMAIL" required>
+        <input type="submit" value="Subscribe" name="subscribe" class="subscribe-btn" id="mc-embedded-subscribe">
+      </div>
+    </form>
+  </div>
+</div> <!-- End Newsletter -->
 
-@keyframes sk-stretchdelay {
-  0%, 40%, 100% {
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20% {
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
-}
-</style>
-<div class="spinner">
-  <div class="rect1"></div>
-  <div class="rect2"></div>
-  <div class="rect3"></div>
-  <div class="rect4"></div>
-  <div class="rect5"></div>
-</div>
+        <section class="comment-area">
+    <div class="comment-wrapper">
+        
+        <div class="row" id="comment-curtain">
+            <div class="col-lg-8 col-sm-10 mr-auto ml-auto">
+                <h2 class="page-subtitle">Comments</h2>
+                <div class="comments-trigger" onClick="toggle_comments()">
+                    <i class="fa fa-comments"></i>&nbsp;&nbsp;Write a comment ...
+                </div>
+            </div>
+        </div>
+        
+
+        
+            
+        
+    </div>
+</section> <!-- End Comment Area -->
+      </div>
+    </div> <!-- End Wrapper -->
+  </article>
   <div class="search-box">
   <div class="wrapper">
     <div class="search-grid">
@@ -433,12 +680,6 @@
   </div>
 </div>
 
-  <div class="pagination clearfix">
-  
-  
-</div>
-
-  </div> <!-- End Wrapper -->
   
 
 
@@ -597,6 +838,71 @@
 <script src="./assets/js/jquery-3.6.0.min.js"></script>
 
 
+  <script>
+    function toggle_comments(){
+      var commentCurtain = document.getElementById('comment-curtain')
+      if (commentCurtain) {
+        commentCurtain.classList.toggle('hide')
+      }
+      var disqusThread = document.getElementById('comment-layout')
+      if (disqusThread) {
+        disqusThread.classList.toggle('show')
+      }
+    }
+
+    function copyToClipboard() {
+      navigator.clipboard.writeText('http://localhost:4000/Environment.html').then(function() {
+      alerts = document.getElementsByClassName('alert')
+      for (i=0; i < alerts.length; i++){
+        alerts[i].innerHTML='\u00ABlink copied\u00BB';
+        setTimeout((function(i){ return function(){alerts[i].innerHTML='';}})(i), 1600 );
+      };
+      }, function() {
+        prompt("Unable to copy, please use this link:", "http://localhost:4000/Environment.html");
+      });
+    }
+
+    $(function () {
+      if (document.getElementById('comment-curtain') == null){
+        var disqusThread = document.getElementById('comment-layout')
+        if (disqusThread) {
+          disqusThread.classList.toggle('show')
+        }
+      }
+
+      var tweetTags = document.getElementsByTagName("tweet");
+
+      if (tweetTags != null){
+        for (i=0; i<tweetTags.length; i++){
+          tweetA = document.createElement("a")
+          tweetA.href = 'https://twitter.com/share?text='
+                       + encodeURIComponent(tweetTags[i].textContent)
+                       + '&via=MvmThe&url='
+                       + window.location.href;
+          tweetA.target = "_blank";
+          tweetA.className = 'twitter';
+          tweetSpanText = document.createElement('span');
+          tweetSpanText.className = 'tweetText';
+          tweetSpanText.appendChild(document.createTextNode(tweetTags[i].textContent));
+          tweetSpanIcon = document.createElement('span');
+          tweetSpanIcon.className = 'tweetIcon';
+          tweetSpanIcon.appendChild(document.createTextNode("click to tweet"));
+          tweetI = document.createElement("i");
+          tweetI.className = 'fa fa-twitter';
+          tweetSpanIcon.appendChild(tweetI);
+          tweetA.appendChild(tweetSpanText);
+          tweetA.appendChild(tweetSpanIcon);
+          tweetTags[i].textContent = "";
+          tweetTags[i].appendChild(tweetA);
+        }
+      }
+
+    });
+
+  </script>
+  <!-- Mailchimp linking -->
+  <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8ece198b3eb260e6838461a60/d20d9fb9aad962399025da52e.js");</script>
+
 
 
 
@@ -615,8 +921,6 @@
     });
 </script>
 
-
-  <script src="./assets/js/infinite-jekyll.js"></script>
 
 
 

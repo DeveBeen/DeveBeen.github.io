@@ -3,6 +3,16 @@
 [   
       
   {
+  "tag" : "api",
+  "posts" : [
+      
+      "./REST-API-RESTFUL-API.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "artificial intelligence",
   "posts" : [
       
@@ -20,6 +30,14 @@
   "tag" : "basic",
   "posts" : [
       
+      "./Vue-React.html",
+      
+      "./Environment.html",
+      
+      "./REST-API-RESTFUL-API.html",
+      
+      "./Session-Cookie.html",
+      
       "./Java-Basic.html",
       
       "./Git-Github.html",
@@ -29,6 +47,16 @@
       "./CSR-SSR-MAP-SPA.html",
       
       "./Interface.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "browser",
+  "posts" : [
+      
+      "./Environment.html"
       
     ]
   } ,
@@ -96,6 +124,14 @@
   "tag" : "front-end",
   "posts" : [
       
+      "./Vue-React.html",
+      
+      "./Environment.html",
+      
+      "./REST-API-RESTFUL-API.html",
+      
+      "./Session-Cookie.html",
+      
       "./Java-Basic.html",
       
       "./Git-Github.html",
@@ -131,7 +167,7 @@
     
       
   {
-  "tag" : "java",
+  "tag" : "javascript",
   "posts" : [
       
       "./Java-Basic.html"
@@ -171,6 +207,16 @@
     
       
   {
+  "tag" : "network",
+  "posts" : [
+      
+      "./Session-Cookie.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "neural networks",
   "posts" : [
       
@@ -181,6 +227,16 @@
       "./ML-Library-from-scratch.html",
       
       "./single-neuron-perceptron.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "node.js",
+  "posts" : [
+      
+      "./Environment.html"
       
     ]
   } ,
@@ -211,6 +267,16 @@
     
       
   {
+  "tag" : "react",
+  "posts" : [
+      
+      "./Vue-React.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "reinforcement learning",
   "posts" : [
       
@@ -225,6 +291,16 @@
   "posts" : [
       
       "./starting-the-adventure.html"
+      
+    ]
+  } ,
+    
+      
+  {
+  "tag" : "vue",
+  "posts" : [
+      
+      "./Vue-React.html"
       
     ]
   } 

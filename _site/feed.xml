@@ -1,4 +1,471 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-29T16:21:58+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Minimum Viable Model</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">Git,Github?</title><link href="http://localhost:4000/Git-Github.html" rel="alternate" type="text/html" title="Git,Github?" /><published>2023-04-29T00:00:00+09:00</published><updated>2023-04-29T00:00:00+09:00</updated><id>http://localhost:4000/Git-Github</id><content type="html" xml:base="http://localhost:4000/Git-Github.html"><![CDATA[<hr />
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-05-07T19:32:30+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">The Minimum Viable Model</title><subtitle>Artificial Intelligence trends and concepts made easy.</subtitle><author><name>Armando Maynez</name></author><entry><title type="html">Vue VS React</title><link href="http://localhost:4000/Vue-React.html" rel="alternate" type="text/html" title="Vue VS React" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-07T00:00:00+09:00</updated><id>http://localhost:4000/Vue-React</id><content type="html" xml:base="http://localhost:4000/Vue-React.html"><![CDATA[<hr />
+<h2 id="1-vuejs">1. Vue.js?</h2>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu5WAs%2Fbtr9qC5h0xP%2FfbpbQzd5tlxv3ilL6ukcAK%2Fimg.png" alt="image" /></p>
+<ul>
+  <li>웹 화면을 만들기 위한 프론트엔드 라이브러리이자 점진적 프레임워크이다.</li>
+  <li>배우기 쉽게 만들어져 프로트엔드 개발에 있어 react와 함께 대중적인 오픈소스 js 프레임워크이다.</li>
+  <li>SPA를 구축하는데 사용한다.</li>
+  <li>MVVM패턴의 ViewModel에 해당하여, UI코드와 데이터제어 제어 로직을 분리했다.
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcVeP4L%2FbtrvZIubnnT%2FCZKbN7k7uHkvIssYIAgjWk%2Fimg.png" alt="image" /></li>
+</ul>
+
+<p>[구성요소]</p>
+<ul>
+  <li>View(html DOM): 사용자에게 보이는 화면이다.</li>
+  <li>Model(JS): 데이터를 담는 용기로 보통은 서버에서 가져온 javascript 객체를 저장한다.</li>
+  <li>ViewModel: View와 Model의 중간 영역으로 DomListener와 DataBinding을 제공하는 영역이다.</li>
+  <li>DOM: HTML 문서에 들어가는 요소(tag, class, attribute 등)의 정보를 담고 있는 트리 형태의 데이터이다.</li>
+  <li>DOM Listener: DOM의 변경에 대한 즉각적으로 반응하여 특정 로직을 수행하는 장치이다.</li>
+  <li>Data Binding: View에 표시되는 내용과 모델의 데이터를 동기화한다.</li>
+  <li>
+    <p>Vue에서는 기본적으로 단방향 데이터바인딩으로 컴포넌트간 통신은 상위 컴포넌트에서 하위컴포넌트로 전달한다.</p>
+  </li>
+  <li>Vue.js로 Hello World 출력 프로그램 짜기 <br /></li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello World<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="k">new</span> <span class="nc">Vue</span><span class="p">({</span>
+        <span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#app</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Vue.js - Hello World </span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<hr />
+<h2 id="2-react">2. React?</h2>
+<p><img src="https://lessipe.com/file/course/15561812324742.png" alt="image" /></p>
+<ul>
+  <li>React는 javascript 라이브러리 중 하나로 사용자 인터페이스를 만들기 위해 사용한다. 페이스북(메타)와 개발자 및 기업들인 공동체에 의해 유지보수된다.</li>
+  <li>Vue와 같이 SPA 개발 시 자주 사용된다.</li>
+</ul>
+
+<p>[React의 특징]</p>
+<ol>
+  <li>Data Flow : 데이터의 흐름이 단방향성이다.</li>
+  <li><a href="#단어정리">Component</a> 기반 구조 : React는 UI를 여러 컴포넌트로 쪼개진 독립된 컴포넌트를 조합하여 구현한다.</li>
+  <li>Virtual Dom : Vue와 같이 데이터를 객체로 간주하는 트리구조의 형태를 가진다.</li>
+  <li>Props : 부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달하는 데이터로 자식 컴포넌트에서는 props를 변경 불가능하게 하는 특징을 가지고 있다.</li>
+  <li>State : 컴포넌트 내부에 선언하여 값을 바꾸는 용도이며, 동적인 데이터를 다룰 때 사용된다.</li>
+  <li>JSX : JS 문법을 확장시킨 것으로, 필수사용은 아니지만 UI 코드 작업 시 시각적으로 도움이 된다.</li>
+</ol>
+
+<hr />
+<h2 id="3-프레임워크-라이브러리">3. 프레임워크? 라이브러리?</h2>
+<p>[프레임워크?]</p>
+<ul>
+  <li>프레임워크(Framework)는 제어의 역전 개념이 적용된 소프트웨어의 기반 구조가 되는 대표적인 기술이다.</li>
+</ul>
+
+<p>[프레임워크의 특징]</p>
+<ul>
+  <li>특정 개념들의 추상화를 제공하는 재사용이 가능한 여러 클래스나 컴포넌트로 구성되어 있습니다.</li>
+  <li>추상적인 개념들이 문제를 해결하기 위해 같이 작업하는 방법을 정의합니다.</li>
+  <li>높은 수준에서 패턴들을 조작화 할 수 있습니다.</li>
+</ul>
+
+<p>[라이브러리?]</p>
+<ul>
+  <li>라이브러리(Library)는 활용가능한 도구들의 집합으로 개발자가 만들어둔 클래스를 호출하여 사용하는 방식으로 활용할 수 있다.</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2344774D577B359522" alt="image" /></p>
+
+<p>[프레임워크 VS 라이브러리]</p>
+<ul>
+  <li>둘의 가장 큰 차이점은 제어 흐름에 대한 주도성이 누구에게 있냐에 있다.</li>
+  <li>프레임워크는 전체적인 흐름을 프레임워크가 가지고 있으며 사용자는 그 안에서 코드를 짜 넣는 반면 라이브러리는 사용자가 전체적인 흐름을 가지고 있어 사용자가 주도성을 가지고 있다.</li>
+  <li>간단하게 말해서 프레임워크는 누가 이미 만들어 놓은 틀에서 조금씩의 조작으로 만들어가는 기술이고, 라이브러리는 누군가가 만들어 놓은 또는 내가 만든 기능들을 호출하여 사용하면서 만들어가는 기술이다.</li>
+</ul>
+
+<hr />
+<h2 id="4-vue-vs-react">4. Vue VS React?</h2>
+<ul>
+  <li>위에 프레임워크와 라이브러리의 차이를 알았으니 Vue와 React의 사용처에 대한 조금은 왔을거라고 생각한다. 간단히 말해서 정해진 규칙대로 만들어진 프레임워크로 코드 통일성을 가지고 싶다면 Vue, 자유로운 코드 형식으로 자유도가 높은 코드를 사용하고 싶으면 React를 사용하면 된다.</li>
+  <li>위에 특성으로 Vue는 자유도가 떨어지고 Vue에서 제공해주는 문법으로만 코딩을 해야한다는 답답함이 있고, React는 개발자마다 코드가 다 달라 어떤 코딩을 해야하는지 감을 잡기 쉽지 않고 스타일을 통일할 때도 지속적인 커뮤니케이션 비용이 발생한다.</li>
+  <li>아직 감이 안온다면 아래 예시 내옹을 보자.</li>
+</ul>
+
+<p>[Vue를 사용해야 하는 상황]</p>
+<ul>
+  <li>프론트엔드 초보자 : 제어 흐름이 정해져있고 통일성이 있기에 초보자 입장에서 집입장벽이 낮고 쉽게 코드 통일하기 좋다.</li>
+  <li>개발자들의 코드를 많이 참고하는 사람 : 위에서 말한 것과 동일하게 Vue에서 정해진 규칙으로 코딩하기에 개발자들의 코드를 읽고 이해하기가 쉽다.</li>
+</ul>
+
+<p>[React를 사용해야 하는 상황]</p>
+<ul>
+  <li>프론트엔드 실력자 : 제어 흐름이 개발자에게 달려 있어 개발자의 생각으로 커스터마이징이 가능하며 높은 자유도를 가져 방대한 생태계가 존재한다.</li>
+  <li>규모가 큰 프로젝트 : 컴포넌트를 작은 단위로 쪼개 UI를 재사용하는 방면에서 코드의 직관성이 보장되기에 대규모 프로젝트를 진행할 때 적절하다.</li>
+</ul>
+
+<p>[둘의 시장 점유율]</p>
+
+<p><img src="https://www.dong-ki.com/wp-content/uploads/2022/06/image-7.png" alt="image" /></p>
+<ul>
+  <li>NPM trend에서 각 프레임워크의 다운로드 수치이다.</li>
+  <li>보는 것과 같이 자유도가 높은 면에서 이점이 많기에 당연히 react가 점유율이 높다는 것을 볼 수 있다.</li>
+</ul>
+
+<hr />
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>Component : 독립적인 단위의 소프트웨어 모듈이다.</li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="vue" /><category term="react" /><category term="basic" /><summary type="html"><![CDATA[Vue VS React]]></summary></entry><entry><title type="html">Node.js 환경 VS 브라우저 환경</title><link href="http://localhost:4000/Environment.html" rel="alternate" type="text/html" title="Node.js 환경 VS 브라우저 환경" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-07T00:00:00+09:00</updated><id>http://localhost:4000/Environment</id><content type="html" xml:base="http://localhost:4000/Environment.html"><![CDATA[<hr />
+<h2 id="1-nodejs란">1. Node.js란?</h2>
+<ul>
+  <li>Node.js는 <a href="#단어정리">V8 JavaScript 엔진</a>으로 빌드되어 외부에 있는  JavaScript 코드를 실행하는 오픈소스 <a href="#단어정리">크로스 플렛폼</a> 백엔드 <a href="#단어정리">런타임 환경</a>이다.</li>
+  <li>Node.js를 사용하여 개발자는 자바스크립트를 사용해서 명령줄 도구를 작성하고 서버측 스크립팅을 실행하여 페이지를 사용자의 웹 브라우저로 보내기 전에 동적 웹 페이지 컨텐츠를 생성할 수 있다.</li>
+  <li>즉, Node.js는 웹 어플리케이션을 통합하는 JS를 어디에서나 적용하고 쓸 수 있는 패러다임을 제공하는 서버측 스크립트, 클라이언트측 스크립트가 아닌 단일 프로그래밍 언어이다.</li>
+  <li>Node.js는 이벤트 기반, 논 블로킹 I/O 모델이라는 특성으로 높은 처리 성능을 가지고 있다는 것이 특징이다.</li>
+</ul>
+
+<p>[이벤트 기반]<br />
+<img src="https://velog.velcdn.com/images%2Feunnbi%2Fpost%2Fd27f23af-53fd-44fc-81f3-74d10a2c6c7d%2Fimage.png" alt="image" /></p>
+<ul>
+  <li>이벤트 기반은 이벤트 루프를 통해 이벤트 발생 시 미리 지정한 작업을 수행하는 방식을 이야기 한다.</li>
+  <li>이벤트 루프는 여러 이벤트가 동시 발생할 때 어떤 것을 우선 처리할 지 우선순위를 판단하는 사이클이다.</li>
+  <li>Node.js는 이벤트가 종료될 때까지 이벤트 처리를 위한 작업을 반복한다.</li>
+</ul>
+
+<p>[논 블로킹 I/O 모델]<br /></p>
+<ul>
+  <li>작업에는 두 가지 종류가 있는데 동시에 실행될 수 있는 작업과 동시에 실행될 수 없는 작업이있다. 이 중 논 블로킹은 이전 작업이 완료될 때까지 대기하지 않고 다음 작업을 수행하는 것을 말한다.</li>
+  <li>Node.js는 싱글스레드 논 블로킹 방식으로 스레드는 하나지만 비동기식으로 이전작업의 완료를 기다리지 않고 다음 작업을 실행한다.</li>
+</ul>
+
+<hr />
+<h2 id="2-브라우저">2. 브라우저?</h2>
+<ul>
+  <li>브라우저 환경을 알기 위해서 먼저 브라우저가 정확히 뭔지 알아야한다.</li>
+  <li>브라우저는 사전적 의미로는 인터넷상에서 웹에 연결 시켜주는 윈도우 기반의 소프트웨어이다. 쉽게 말해서 사용자인 우리가 웹에 접근하기 위한 도구를 브라우저라고 정의한다.</li>
+  <li>아래 사진과 같이 우리가 아는 브라우저는 여러 종류가 있다.<br />
+<img src="https://t1.daumcdn.net/cfile/tistory/2670B14957BA8B2E0C" alt="image" /><br /></li>
+</ul>
+
+<hr />
+<h2 id="3-nodejs-브라우저-환경">3. Node.js, 브라우저 환경?</h2>
+<ul>
+  <li>그렇다면 여기에 환경을 붙이면 정확히 무엇을 말하는 것이냐? 우리가 보통 개발 환경하면은 어떤 뜻으로 해석하는가? 그렇다 개발을 위해 셋팅하는 환경을 말한다.</li>
+  <li>위에 두가지도 직역하자면 Node.js 환경은 Node.js를 사용하기 위해 셋팅하는 환경, 브라우저 환경은 브라우저를 사용하기 위해 셋팅하는 환경을 말한다.</li>
+  <li>그러면 셋팅을 누가 하느냐? 개발환경은 보통 개발자가 언어를 채택하여 셋팅하는 방식이지만 위에 두 환경은 그 셋팅 주체가 JavaScript로 통일(약속)되어 있다.
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*BPSx-c--z6r7tY29L19ukQ.png" alt="image" /></li>
+</ul>
+
+<hr />
+<h2 id="4-nodejs-환경과-브라우저-환경의-차이점">4. Node.js 환경과 브라우저 환경의 차이점</h2>
+<ul>
+  <li>이제 확실하게 Node.js 환경이 뭔지, 브라우저 환경이 무엇인지 알았을 것이다. 그렇다면 이 둘의 차이점이 무엇인지 알아보자.</li>
+</ul>
+
+<p>[Node.js와 브라우저의 차이점]</p>
+<ol>
+  <li>존재목적 : 브라우저는 HTML,CSS,JS를 실행하여 사용자의 웹 화면에 랜더링하는 것이 주 목적이지만 Node.js는 서버 개발 환경을 제공하는 것이 주목적이다. 이에 둘 다 JS의 코어인 <a href="#단어정리">ECMAScript</a>를 실행하나 이외 추가적인 API는 서로 호환되지 않는다.</li>
+  <li>API : 브라우저는 시각적 표현이 필요한 것과 다르게 node.js는 필요가 없어 UI관련 API에도 차이가 있고, Node.js는 브라우저에서 사용가능한 window,document 객체가 없어 웹 플렛폼 API가 Node.js에는 호환되지 않는다.</li>
+  <li>JS Engine : Node.js는 구글 Chrome 브라우저에서 사용하는 V8 엔진을 자바스크립트 실행 엔진으로 사용하지만 브라우저는 종류와 버전에 따라 엔진이 다양하다.</li>
+  <li>제어 : Node.js에서는 우리가 직접환경을 제어하여 버전 이동이 가능하지만 브라우저는 환경이 정해져 있기에 불가능하다.
+<br />
+<br />
+    <ul>
+      <li>이러한 차이점들로 Node.js는 컴퓨터의 깊은 부분을 제어하는 백엔드 기술에 최적화 되어 있음을 알 수 있다.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>V8 JavaScript 엔진 : 웹 브라우저를 만드는데 기반을 제공하는 오픈소스 자바스크립트 엔진으로 자바스크립트를 바이트 코드로 변환하여 읽어 웹 브라우저 내부의 속도 개선을 위해 만들어졌다.</li>
+  <li>크로스 플렛폼 : 컴퓨터 프로그램, 운영체제, 프로그래밍 언어 등 여러종류의 컴퓨터 플랫폼에서 동작할 수 있다는 뜻이다.</li>
+  <li>런타임 환경 : 런타임을 위해 시스템 적인 자원을 운영체제에게 요청하기 위해 엑세스할 수 있도록 해주는 환경을 말한다.</li>
+  <li>ECMAScript : Ecma International이 ECMA-262 기술 규격에 따라 정의하고 있는 표준화된 스크립트 프로그래밍 언어를 말하며 자바 스크립트를 표준화하기 위해 사용된다.</li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="node.js" /><category term="browser" /><category term="basic" /><summary type="html"><![CDATA[Node.js 환경 VS 브라우저 환경]]></summary></entry><entry><title type="html">REST-API? RESTFUL-API?</title><link href="http://localhost:4000/REST-API-RESTFUL-API.html" rel="alternate" type="text/html" title="REST-API? RESTFUL-API?" /><published>2023-05-06T00:00:00+09:00</published><updated>2023-05-06T00:00:00+09:00</updated><id>http://localhost:4000/REST-API-RESTFUL-API</id><content type="html" xml:base="http://localhost:4000/REST-API-RESTFUL-API.html"><![CDATA[<hr />
+<h2 id="1-rest란-무엇인가">1. REST란 무엇인가?</h2>
+<ul>
+  <li>REST(REpresentational State Transfer)는 정보를 주고 받는 방식에 있어 개발자들이 널리 쓰이는 일종의 형식으로 기본적으로 웹의 기존 기술과 HTTP 기술을 그대로 사용하기에 웹의 장점을 최대한 사용할 수 있는 아키텍쳐 스타일이다.</li>
+</ul>
+
+<p>[REST의 구성요소]</p>
+<ul>
+  <li>URI : 서버의 존재하는 고유한 ID를 가진 자원으로 Client는 url을 이용하여 자원에 대한 조작을 Server에 요청한다.</li>
+  <li>Method : <a href="#단어정리">HTTP 프로토콜의 Method</a>를 사용한다.</li>
+  <li>Representation of Resouce : Client가 Server와 주고 받는 데이터 형식으로 JSON, XML, TEXT, <a href="#단어정리">RSS</a> 등이 있다.</li>
+</ul>
+
+<p>[REST의 특징]</p>
+<ul>
+  <li>Server-Client 구조 : 자원을 요청하는 쪽이 Client, 자원을 가진 쪽이 Server로 서로의 역할을 확실히 하므로 의존성을 줄인다.</li>
+  <li>Stateless(무상태) : Client의 context를 Server에 저장하지 않아 세션과 쿠키같은 context 정보를 신경쓰지 않아도 되기에 개발이 쉬워지고, Server는 각 요청이 모두 별개로 처리 되기에 일관성이 있다. 이때문에 서비스의 자유도가 높다.</li>
+  <li>Cacheable(캐시 처리 가능) : 웹 표준 HTTP 프로토콜을 그대로 사용하기에 HTTP 프로토콜의 캐싱 기능을 사용할 수 있다.</li>
+  <li>Layered System(계층구조) : Client는 REST API 서버만 호출하며 REST Server는 다층 계층으로 구성될 수 있다.</li>
+  <li>Code-On-Demend : 서버로부터 스크립트를 받아서 클라이언트에서 실행한다. (무조건 충족할 필요는 없다.)</li>
+  <li>인터페이스 일관성 : URI로 지정한 자원에 대한 조작을 통일되고 한정적인 인터페이스로 수행하며 HTTP 표준 프로토콜에 따르는 모든 플랫폼에서 사용이 가능하다.</li>
+</ul>
+
+<p>[REST가 필요한 이유]</p>
+<ul>
+  <li>어플리케이션의 분리 통합을 위해서 필요하다.</li>
+  <li>다양한 클라이언트의 등장으로 다양한 브라우저와 모바일에서도 통신이 가능해야 한다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-rest-api">2. REST API?</h2>
+<ul>
+  <li>API는 인터넷상에서 데이터를 전송하고 이용할 수 있게 하는 소프트웨어 인터페이스이다.</li>
+  <li>REST 개념과 합쳐서 REST API는 REST 기반 API이다. REST API를 사용하는 이유는 REST 기반으로 시스템을 분산해 확장성과 재사용성을 높여 유지보수와 운용을 편리하게 하기 위함이다.</li>
+  <li>따라서 REST API는 HTTP를 잘 사용하기위해, URI와 HTTP메소드를 사용해서, URI로 어떤 자원에 접근할 것인지, 메소드로 어떤 행위를 할것인지 표현하여 설계된 API를 말한다.</li>
+</ul>
+
+<p>[REST API의 특징]</p>
+<ul>
+  <li>REST는 HTTP 표준을 기반으로 구현하므로, HTTP를 지원하는 프로그램 언어로 클라이언트, 서버를 구현할 수 있다.</li>
+  <li>각 요청이 어떤 동작이나 정보를 위한 것인지를 요청의 모습으로 추론이 가능하다.</li>
+</ul>
+
+<p>[REST API 설계 방법]</p>
+<ol>
+  <li>URI은 정보의 자원을 표현 해야 한다.</li>
+  <li>자원에 대한 행위는 HTTP method로 표현하며 이는 URI에 포함되지 않는다.</li>
+</ol>
+
+<hr />
+
+<h2 id="3-restful-api">3. RESTFUL API?</h2>
+<ul>
+  <li>REST API는 아래와 같은 설계규칙이 있다.</li>
+</ul>
+
+<p>[설계규칙]</p>
+<ol>
+  <li>URI는 명사를 사용한다. (Resource 이름은 동사가 아닌 명사)</li>
+  <li>슬래시(/)로 계층관계를 표현하며 해당 기호는 마지막에 오지 않는다.</li>
+  <li>Underbar(_)를 사용하지 않고 hyphen(-)을 사용한다.</li>
+  <li>URI는 소문자로만 구성한다.</li>
+  <li>HTTP 응답상태 코드를 명시하여 잘못된 요청에 대한 피드백을 남겨야한다.</li>
+  <li>URI에는 파일 확장자가 포함되지 않는다.</li>
+</ol>
+
+<ul>
+  <li>RESTFUL API는 이러한 설계규칙을 잘 지켜서 설계된 REST API를 말한다.</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/gomuzom/post/4d78ca3b-d4ee-4723-b55b-6a12d5566e30/image.png" alt="image" /></p>
+
+<hr />
+
+<h2 id="단어정리">단어정리</h2>
+<p><br />
+[HTTP 프로토콜의 Method]<br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">이름</th>
+      <th style="text-align: center">기능</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">GET</td>
+      <td style="text-align: center">Read : URL이 가진 정보를 검색하기 위해 서버에 요청한다.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">POST</td>
+      <td style="text-align: center">Create : 클라이언트에서 서버로 전달하려는 정보를 보낸다.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PUT</td>
+      <td style="text-align: center">Update : 데이터 전부 내용을 갱신할 때 주로 사용</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PATCH</td>
+      <td style="text-align: center">Update : 데이터 일부 내용을 갱신할 때 주로 사용</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DELETE</td>
+      <td style="text-align: center">Delete : 정보를 삭제하는 메소드이나 보안 문제로 대부분 비활성화</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
+<ul>
+  <li>RSS : Real Simple Syndication의 약자로 뉴스나 블로그에서 주로 사용하는 콘텐츠 표현 파일형식이다.</li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="api" /><category term="basic" /><summary type="html"><![CDATA[REST-API, RESTFUL-API가 무엇인지 알아보자.]]></summary></entry><entry><title type="html">Session? Cookie?</title><link href="http://localhost:4000/Session-Cookie.html" rel="alternate" type="text/html" title="Session? Cookie?" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-04T00:00:00+09:00</updated><id>http://localhost:4000/Session-Cookie</id><content type="html" xml:base="http://localhost:4000/Session-Cookie.html"><![CDATA[<hr />
+
+<h2 id="1-쿠키cookie란">1. 쿠키(Cookie)란?</h2>
+<ul>
+  <li>쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일로 클라이언트의 상태 정보를 로컬에 저장했다가 참조한다.</li>
+  <li>사용자 인증이 유효한 시간을 명시할 수 있고, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.</li>
+  <li>하나의 쿠기값은 4KB로 클라이언트에 300개까지 쿠키를 저장가능하며 도메인당 20개의 값만 가질 수 있다.</li>
+  <li><a href="#단어정리">Response Header</a>에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있습니다.</li>
+  <li>쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 <a href="#단어정리">Request Header</a>를 넣어서 자동으로 서버에 전송합니다.</li>
+</ul>
+
+<p>[쿠키를 사용하는 이유]</p>
+<ul>
+  <li>세션관리(Session Management) : 서버에 저장해야 할 정보를 관리한다.</li>
+  <li>개인화(Personalization) : 사용자 선호, 테마 등을 세팅한다.</li>
+  <li>트래킹(Tracking) : 사용자의 행동을 기록하고 분석한다.</li>
+</ul>
+
+<p>[쿠키의 구성요소]</p>
+<ul>
+  <li>이름 : 쿠키를 구별하는데 사용되는 이름</li>
+  <li>값 : 쿠키의 이름과 관련된 값</li>
+  <li>유효시간 : 쿠키의 유지시간</li>
+  <li>도메인 : 쿠키를 전송할 도메인</li>
+  <li>경로 : 쿠키를 전송할 경로</li>
+  <li>보안 : 보안 연결 설정</li>
+  <li>HttpOnly : HTTP 외 다른 통신 사용 가능</li>
+</ul>
+
+<p>[쿠키의 동작순서]<br />
+1) 클라이언트가 페이지를 요청<br />
+2) 서버에서 쿠키를 생성하여 HTTP 헤더에 쿠키를 포함하여 응답<br />
+3) 브라우저가 종료되어도 쿠키 만료시간이 있다면 클러이언트에서 보관<br />
+4) 같은 요청 시 HTTP 헤더에 쿠키를 포함시켜 보냄<br />
+5) 서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답<br /></p>
+
+<p><img src="https://velog.velcdn.com/images%2Fxchdtk%2Fpost%2F0051a36c-41be-4b63-a618-c8b8e490f254%2Fimage.png" alt="image" /></p>
+
+<p>[쿠키의 단점]</p>
+<ul>
+  <li>쿠키에 대한 정보를 매번 헤더에 추가하여 보내기에 트래픽을 많이 발생시킨다.</li>
+  <li>쿠기의 대한 정보가 유출되면 보안 문제도 발생하기에 보안이 취약하다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-세션session이란">2. 세션(Session)이란?</h2>
+<ul>
+  <li>세션은 쿠키를 기반하고 있지만 사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 서버 측에서 관리하는 데이터 파일이다.</li>
+  <li>서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지하고 접속시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능하다.</li>
+  <li>클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션 ID입니다.</li>
+</ul>
+
+<p>[세션의 동작순서]<br />
+1) 클라이언트가 서버에 Resource를 요청합니다.<br />
+2) 서버에서는 HTTP Request를 통해 쿠키에서 세션 ID를 확인을 한 후에 없으면 쿠키를 셋팅하여 새로 발행한 세션 ID 보냅니다.<br />
+3) 클라이언트는 HTTP Request 헤더에 세션 ID를 포함하여 원하는 Resource를 요청을 합니다.<br />
+4) 서버는 세션 ID를 통해 해당 세션을 찾아 클라이언트 상태 정보를 유지하며 적절한 응답을 합니다.<br /></p>
+
+<p>[세션의 장점]</p>
+<ul>
+  <li>신뢰할 수 있는 유저인지 서버에서 추가로 확인 가능 (최초 접속 때를 제외하고 세션ID만 사용)</li>
+  <li>저장 개수나 용량 제한 없어 서버 용량이 충분하다면 큰 용량을 허용한다.</li>
+  <li>데이터를 <a href="#단어정리">Hash Table</a>에 저장. 한 번에 많은 정보를 하나의 세션 객체에 저장 가능</li>
+  <li>세션 ID만 보내므로, 세션의 크기가 커도 네트워크 부하가 거의 없다.</li>
+  <li>서버에 저장되므로 클라이언트의 웹브라우저에 의존하지 않아도 된다.</li>
+</ul>
+
+<p>[세션의 단점]</p>
+<ul>
+  <li>사용자에 대한 정보를 서버에 두기 때문에 사용자가 많아질수록 서버 메모리를 많이 차지한다.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-쿠키-or-세션">3. 쿠키 or 세션?</h2>
+<ul>
+  <li>세션은 결국 쿠키를 사용한 것이기에 쿠키와 세션은 비슷한 역할을 하며, 동작원리도 비슷하다.</li>
+  <li>둘이 비슷한 역할을 하나 쿠키는 서버 자원을 전혀 사용하지 않고, 세션은 서버의 자원을 사용해 사용자의 정보가 저장되는 위치가 다르다는 차이점이 있다.</li>
+  <li>보안 면에서 세션이 더 우수하며, 요청 속도는 쿠키가 세션보다 더 빠릅니다. 그 이유는 세션은 서버의 처리가 필요하기 때문입니다.
+보안면에서 쿠키는 클라이언트 로컬에 저장되기에 request에서 <a href="#단어정리">스니핑</a>을 당할 우려가 있어 보안에 취약하지만 세션은 세션 ID만 저장하고 서버에서 그것을 구분해서 처리하기에 보안성이 좋다.<br />
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASUAAACsCAMAAAAKcUrhAAABhlBMVEX6bm5Vuvrb0urDYx3////86fPIZRzGZB36a2v6aWlOuPr8bnDe1e7/amXKZhz6Z2f+a2hKvf/6Y2PAYhb+2tp7fpD/9fX+39//aGL/7/i9YR2VUiOFjKI7gq6h1vzW7P3ua11+yfv3/P/7iYn0h7WyXR/6eHj7mZn9vr7m9P77hYWLzvtCv//haU2DSyXybGJWPCnhz9dxRSesWyBlQSh8SSaKgo9qwvvP6v254P3+6en8o6P7kZH9zs76XFzrdHmLptdftfA6m9TKiJ+TjqDt3+/VxMy8rrXKwtndaEfgw9/um8ObVCPrpcoFKC87Myywqb6onadINysAHirMZSxdPinWgZJfoNGinMP8ra20lLbleYLBjquXoMx+rOEqcp1OeJlCqOVLgqhwiaRidoyuyO/Ftr0dRVNNa3Vod3ybXjd7sckIlrHJW11MXGKJSkxraGYALT1PTk1NXG28XzAsLy1eSz0ADSE4QEJ/jpRPo73ltNWrwdoeKix3WUcAJi8+UVnFz+9RWOFlAAAOaUlEQVR4nO2di1fbRhbGLSwkWXZsbCWklYp5RWDw4pewDQHSwhowRAHbMe2y3d0mhZCkzbJ9bNK0Ddv0P987MzIYDDYaY804J985yPLYgaNf7ty582kk+Xz8a+jLqMBWrAlcR0N//0ips2598ZFSZ32yyhhSP1BSPmcdSv1AaeivHyl11q2/faTUWbf+xRpSP1DysWbUD5SUr//CGlIfUBr6B/O01AeUbv3zI6XOYl9T9gEl5XPWiIQ+oMTeEOgLSswNgX6gxN4Q6AdKn7AmhMQaQicpU+xrSv4pcWAICPxT4sAQEPqAEntDQOCekuJbZU0IiTWGDuLBEBC4p8SDISBwT4kHQ0DgnhIPhoDAOyVlijUfItYc2osLQ0DgnhIPhoDAOyUuDAGBd0pDq6z5ELHm0FbK51zUlJxT4sMQEDinxIchIHBO6RMuDAGBb0rK1CprPI5Yk2gn5WvqDhc904dOicYQiKqqujbyzZMnh58hHRw8+WZkZE3tEhZrEu3k2hCIPl379qC6mR389JyyR5t3now87QIUaxLt5NIQiK4dEkCDLYK27ObhmvoBUlJ87v73vzm6DFATqY3Dpx8eJZeGwEi2HSMCqkqJiTWKNnJpCBx0hAQa+eAouTQEDrIdGX16tMaKUjDY/e+4VMqqmwNRnxU6dLlPB4+qdJC6oxQEKel0sCegXF4yoD4bKBWOBq8CBYl9s1AJeU8J2MzV/fmUptXTPcDk0hAASqFQuVRdX18/TwdXTBvVUqkcCg14TSkYTG/5Nan243PTb2tjN4/JpSEQ/Sw0AJxggxUCWuvZzaPNzWqhUCpVyuQTjykBI03zy9aLl99J/pzkJ42OboSSS0MgeqcB6EzlSqWMyJ3B85RSMIgYgWRLl/x6TtLmMJz0GCid9t0IKncHchmlgdC5tm1vKQV9dcwIYYIfE2JpK71V92uaFpZg46/X58a6JOXWELiU0jlcD+95SUnxpeUGJCQpZct63tQBmJ6r5SC4QMCqPpfugpNbQ6ANpe2B0PevgNJDDykF/31syDiMJIlQqvklI2XlLFmaf/7y12NbdujtZupj1JzcGgJXU3p0bzv02ysSUt5R+s+xjikYuZSMQyklhWuWZEGrbtR+eb4bdij98N7UqDm5XSEQPbyS0kOUyDGkslczlGBa1wmcH19mIJhkE7b6joQzlF+SzFQjlmTzJwCn1X10mFyeZIr+XGmXmDCkgYJHlILp03yUqeGYmpehw2XC8mmaOt2TcY80TZpiyvUKgehxtlAOha4kBR9VqhvezOOCimU2IITDDSrhXVu3mvCcl23MucfkeoVA9LAA8zRUYLegwi2VUjWbLdBBch1L/93VL0CQbb/5Wvbb+Zzhl86HkR9/V5a1LdeYXK8QgOxdqg4OQqkNhXa53IAzAPuVaqlQ3RjMejWPg2KyNVZMKwOpCLjYe3mZxJNupyDkpDcvdhEtWdfcR9OqywMBSqFyeR2btxvVZh0hm3ejCoy8mccFx7TmSAEOJknT5L0ctmu4WgqfvHj/OgztBgom6c0vuuaSkft7CJxWAiFnvguT3PUsaGOziuKL9ENPKDls7O+cnRyqnKT6mIWGPYBi6TXodpJk/PQGj3Q4ssI/vLDc9jn3KwQuqZdCaB6HdDYL9oCS09+k1C8vUqgG0KFKAgj5/8rWaxtCJ5WSZdnIZPK2GQ6fDXqy9daU/a4gUawQuKyqbM3kvacU9JGj1o9/fYN3MCTJqMkI2J4eNkzSG61ULpNJnQ16wE7W3FVN7lcItJ/HIW3fe+RB9g7OOVnJNnDymbcRJGsHj2xSaifVGOJkNHex8vPzuNdBB5R0w3LDCHqc6wPpQOm370Pb9373Ipb8ToGNBzLJyOHKeydlGCgrSXrmJHVWCqBZnqSjbpnP7WXm7bqrUKJYIdCG0r2HoXevvscfF3tNCQa4zI7VyDayRVLTyc7J48cnJuZmZk7yunQGCoUdFFOmLksuzUyKFQJXU0IxNPCO7Pd8hhLcsh+/tM5yMhrV9B0jc/zr8fP/4S5oWub8HzDIhU+rcDll41e3QxzFJQPRn8sd53Gh3s/jgnXrxe65SYhknhhhyZx/W0NpO/z2+Hkt7DdqO7t5S5fCKB/5rTB2mtzO5ChWnUZ/OCqVr57GIUaV0kbvKWmybZKJv056mH1ipaAACOs4dqTc+2PohfDWzu+evK7N5yFjpVL1LfdmnNsVApjS4eZgtVQZaJ3GkaZyqbqR7XksBdMa6WWSbOwhXFJ+by9s750lbKmRk2QpHNYtO//Ha9u25iiMXZpLBqKflQvZYZiboBMmzikB58RAGWa61U2owSuhnlMa01AX0o35miGZKUOrb2kZU7JqKGHLcosfIIffvn+cD1Odg6K5ZACdaaqQ05aAqtAkNJHLbhbQySYPKNm5+czefMqE/iVbOuRjeW9PkiV7rzZv2Jap48FfRsWShLpgePfle0t2VwE4orlkAFGC+W6FTONOV3gNrmePNguN83E9p+TzoVgiAPz4bG4wDV0PmQGQiQzDMKGCyqds28jncnh+p0MhpVGd9XW3QuCM0vlTSyhdl8gJy0Zz7ymduSaafw7PN4JK3ZAacxDJgo1ppVKGbeLzKX7TtmU6SF9THAih1Jq2m7g92vYglnx1Das+18jHweBYXdMapRGqpdCUrTF7s/xbdJY31SUDl1Fq0rs/B36HeZwHlILpua25sXNLcdBqAQQPoBips6obn7mcozwtQHfJQBtKj36HGcpvoYFHXuQlZx1Aa1t6bKsua5qlNYRqpC7WNVFdMnA1pW2Yx/356p03eelqOUso8CKBsbRyKUw3ukWz5rjNbPfRNjrLhMV+xeBNLTihvGRgpNJufoIVKj1lTummRHkPgehIodLmfBzSF5Sn43ikRH0PgehXh5dP5IieCR/Sqvgh+uu9oqtffXunVG2cjQvdDCMeKSlTXV1ZE40KX62NPHlycHBw5867P7GeJYtqF4x4pHQj9xBAl3ypWIJAtl2JNZNW8XIPgWaxZtIqXu4h0CzWTFrFyz0EmsWaSYu6uAy1d2INpUXc3EOgWayhtIibewg0izWUFvFxU8ELYg2lRVSGQK/FGspFcXJTwQtiTeWiOLmp4AWxpnJRnNxU8IJYU7koHmtK7ihx8ZSBVrHGckFDX/KYvLmjxKEhIHBHiUdDQOCOEid3hL0o1ljOi0tDQOCNEpeGgMAbJS4NAYE7SjwaAgJvlDh47OClYo3lnPg0BATOKPFpCAicUeLTEBB4o7TKGscVYg2mWZwaAgJflHh5ykCrWJNpFqeGgMAXpVtfdLs2pFfq1RErEcX1v+nRYwe7XpdDR0kJBK5AEIgEnJ3lxJRbTLRPGeiwPEmNx6l+bbPcMwpElpeWpmKXfRS7K4rOrigOR1z+YjpDQC0m4+NtOKlxUVz0fJVXZHJYBCUupXRbHCZ7iijedUuJyhBAEERxInklBzUpinGvKQWWRaIplHtiMdLDArEYykOEUiASURTfMvoEfePaHY/GEEAMkEYRh8bSwPOvarF44cNOfbR7SjGIpP1YZGU24IvMrtxeWUZdLza9cjsxGyGUItOJxGQkkdh3vjF5zZhSaAwBdVQUi2pxAdEQFkcXUEypyYXRRSCjxkfRa3FxcVxtalxMwhcXe0opMC2KKwAGIieyhP8XEzFfZAXvTQcQpcAsdDYlBptYZNppvx4lGkMAUYqT0ChOoD+2qKqL+K8W0UfQF0mPcxqTKrTOTDSCr1eUIglRXMJHrUxBgk7cBwgxwHU/gTohjqVh8X6AUIIUfn8JgbvWr6YyBHBamsBBMiNOxIFFsSiKC+Oji+o4IEvOJAkl2MwgUBjrxAJwcvVnKCjhjEN4PQBUtx/AyDb1YB964gNAclcchhoAUUJNy1MQWrPXSk10hsBpkAAUGPEnYANAYNBDDQtFeMWURhGg+Oke/KNxN8FEQYnEUmwFHX4EIufBMIz6gUnoikBJxEFEKK04iX75WpQoTzJB3kF/Q4g7fyyOuSFOqMfNFAmlCXEGc1tErWqvKTl5SYkEEKXJQEQklAJo7EsQSuJ+hFACordXVlZuXyuWKA0BvPIdjjwJMEYXQJB6kqM4L6nxmdO8NAE73lHyBdAYp/hWEigbJR4gaChmltFmGlHah50pkpeWUCd8ELheLUBnCKjjE0lBXYCDRumIXC2QdHpZEtMooq6Iv4HeJb2h5IxswAXVBJC8xVk0qqG9+3iMi6BUFSNjHPrGXRRa16FEZwig8Qp+ZjCqmdGJBbUI2RmCqJgUZ9ArIVZEvU9E3c4TSlAOkdpbUaYQo+HliNN0HyIIzVBiCRRC8D5GviGuXIsSnSGgJmdEkn4wJsRhfIZUBMkJktZJJYDfzRQFjyj5Ar7lfTyPUyLL+9O+AG6a3l+GEkqZnZyEt5OTswH4gfeRyf2l2UunfK2UVikgobw0Ho+TI1aL8TiiBS1J9CqQV2F8vIhqziT5WnF83Nn0lBJAaXgCSiBw2oRbFEVxtmSvjX1wQfSPHWy6ZMnZUc+/trSetfWSUi/E6woBItZ0GuJ1hQARazoN8bpCgIg1HUf8PHbwUrHG44jX5V2OWONxxO0KASLWeBxxu0KAiDUeR5yuOm2INR6iLu8h0HOx5kPE7woBItZ8iPhdIUDEmg8RvysEiFjzIaK5qaCXYs0Hi94Q8EisAWHxbQgInFDi2xAQOKFEdVNBL8UaEBLnhoDACSXOa0o+KHFuCAh8UOLcEBD4oMS5ISBwQUlx+9hB78UakY9/Q0DggxLnhoDABSXeDQGBC0quHzvovVgTonnsoPdizagPDAGBB0rcGwICD5S4NwQEDihRXTLgtVhD6gNDQOCAEv+GgMABJf4NAYEHSqusEVxDrCH1gSEgsKfUB4aAwAEl/g0BgT2lPjAEBPaU+sAQAP0fTFsuDVUr3CUAAAAASUVORK5CYII=" alt="image" /></li>
+</ul>
+
+<hr />
+
+<h2 id="4-로컬스토리지localstorage">4. 로컬스토리지(LocalStorage)</h2>
+<ul>
+  <li>LocalStorage는 Local:헌지의,Storage:저장소로 말 그대로 현지의 저장소. 즉, 사용자의 로컬에 존재하는 저장소를 말한다.</li>
+  <li>로컬 스토리지는 만료시간이 존재하지 않아 페이지나 브러우저를 닫아도 반 영구적으로 유지되는 저장소이다.</li>
+  <li>로컬 스토리지는 key와 value 형태로 이루어진다.<br /></li>
+</ul>
+
+<p>[로컬 스토리지 메소드,속성]<br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">이름</th>
+      <th style="text-align: center">구분</th>
+      <th style="text-align: center">쿠키</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">setitem(key,value)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값으로 데이터를 저장</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">getitem(key)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값의 이름을 가진 데이터를 가져옴</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">removeitem</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값의 이름을 가진 데이터를 삭제</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">key(index)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 인덱스를 가진 키 값을 가져옴</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">clear()</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">모든 데이터를 삭제</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">length</td>
+      <td style="text-align: center">속성</td>
+      <td style="text-align: center">저장된 데이터 수를 가져옴</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>Response Header : 위치 또는 서버 자체에 대한 정보(이름, 버전 등)와 같이 응답에 대한 부가적인 정보를 갖는 헤더이다.</li>
+  <li>Request Header : HTTP 요청에서 사용되지만 메시지의 컨텐츠와는 관련이 없는 헤더이다.</li>
+  <li>Hash Table : 해시 테이블은 (Key, Value)로 데이터를 저장하는 자료구조 중 하나로 빠르게 데이터를 검색할 수 있는 자료구조이다.</li>
+  <li>스니핑 : 네트워크 트래픽을 도청하는 과정을 말한다.<br />
+<img src="data:image/png;base64,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" alt="image" /></li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="network" /><category term="basic" /><summary type="html"><![CDATA[세션과 쿠키 그리고 로컬스토리지가 무엇인지 알아보자.]]></summary></entry><entry><title type="html">Javascript</title><link href="http://localhost:4000/Java-Basic.html" rel="alternate" type="text/html" title="Javascript" /><published>2023-04-29T00:00:00+09:00</published><updated>2023-04-29T00:00:00+09:00</updated><id>http://localhost:4000/Java-Basic</id><content type="html" xml:base="http://localhost:4000/Java-Basic.html"><![CDATA[<hr />
+
+<h2 id="1-javascript란">1. JavaScript란?</h2>
+<ul>
+  <li>js는 웹 페이지의 생동감을 불어 넣기 위해 만들어진 프로그래밍 언어이다.</li>
+  <li>HTML과 CSS언어와는 다르게 C언어, java와 같은 일반 프로그래밍 언어와 비슷하게 생겼으며 HTML,CSS,JS를 이용하는 프론트엔드 초보자에게는 어려운 부분이다.</li>
+  <li>js는 객체기반의 스크립트 언어로 기본적으로 웹 브라우저에서 해석되는 인터ㅡ리터 언어이다. Node.js와 같은 프레임 워크를 사용해 서버 프로그래밍도 가능하다.</li>
+</ul>
+
+<p>[JS의 특징]</p>
+<ul>
+  <li>동적이며 타입을 명시할 필요가 없는 인터프리터 언어이다.</li>
+  <li>객체지향 프로그래밍과 함수형 프로그래밍을 모두 표현 가능하다.</li>
+  <li>HTML의 내용, 속성, 스타일을 변경할 수 있다.</li>
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="javascript" /><category term="basic" /><summary type="html"><![CDATA[JavaScript가 무엇인지 알아보고 기초 문법에 대해 알아보자.]]></summary></entry><entry><title type="html">Git,Github?</title><link href="http://localhost:4000/Git-Github.html" rel="alternate" type="text/html" title="Git,Github?" /><published>2023-04-29T00:00:00+09:00</published><updated>2023-04-29T00:00:00+09:00</updated><id>http://localhost:4000/Git-Github</id><content type="html" xml:base="http://localhost:4000/Git-Github.html"><![CDATA[<hr />
 
 <h2 id="1-githubgit이란">1. Github,Git이란?</h2>
 <ul>
@@ -107,186 +574,7 @@
   <li>브랜치(branch) : 직역하면 나뭇가지란 뜻으로 직역 뜻과 같이 나뭇가지 처럼 뻗어나가는 가지 중 한가지를 말하며 Git 개발 작업에서는 이를 하나의 작업라인을 말할 때 사용한다.</li>
   <li>QA Test : Quality Assurance Test로 품질 보증 시험으로 소프트웨어가 개발 되었을 때, 이것이 적절한 디자인 패턴을 적재적소에 사용해 확작성이 있고 유지보수가 좋은 코드인지, 기존 소프트웨어 보다 좋은 또는 편리한 기능을 제시하는지, 기존 소프트웨어보다 성능면에서 좋은지 검증하는 단계라 볼 수 있다.</li>
   <li>머지(merge) : 병합이라는 뜻을 가진 것처럼 나뭇가지로 뻗어나간 수 많은 나뭇가지 중 어떠한 나뭇가지인 작업라인을 또다른 작업라인으로 병합 시켜준다는 말이다.</li>
-</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="git" /><category term="basic" /><summary type="html"><![CDATA[Git,Github가 무엇인지 알아보고, Git Flow 개념을 이해해보자.]]></summary></entry><entry><title type="html">JavaBasic</title><link href="http://localhost:4000/Java-Basic.html" rel="alternate" type="text/html" title="JavaBasic" /><published>2023-04-29T00:00:00+09:00</published><updated>2023-04-29T00:00:00+09:00</updated><id>http://localhost:4000/Java-Basic</id><content type="html" xml:base="http://localhost:4000/Java-Basic.html"><![CDATA[<hr />
-
-<h2 id="1-java란">1. Java란?</h2>
-<ul>
-  <li>1991년 제임스 고슬링을 비롯한 선 마이크로 시스템스 연구원들이 처음 개발한 프로그래밍 언어로 가전, 휴대용 장치에 사용되는 소프트웨어 언어로 개발되었다.</li>
-  <li>객체지향언어이기에 유지보수가 쉽고 확장성이좋다.</li>
-  <li>프로그램이 안정적이 풍부한 기능을 제공하는 오픈 소스이다.</li>
-</ul>
-
-<hr />
-
-<h2 id="2-java-변수-선언">2. Java, 변수 선언</h2>
-<ul>
-  <li>변수를 사용하는 이유는 컴퓨터 메모리 특정 공간에 값을 집어 넣고 상자처럼 사용하기 위해서이다.</li>
-</ul>
-
-<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FeBCVuv%2Fbtq1XUZo7IP%2FWKEm9vaFG5nQxc3cOGk2F1%2Fimg.png" alt="image" /></p>
-
-<ul>
-  <li>java의 변수선언 방법은 아래와 같이 “자료형 변수명”으로 선언한다. 아래 코드는 “String(자료형) message(변수명)”으로 선언한 것이다.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">message</span><span class="o">;</span>
-</code></pre></div>    </div>
-  </li>
-  <li>변수를 선언하면 변수를 초기화 해야지 사용할 수 있다. 변수 초기화는 아래와 같이 할 수 있다.</li>
-  <li>또한 다중으로 선언이 가능하다.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">String</span> <span class="n">message1</span><span class="o">;</span>
-<span class="n">message1</span> <span class="o">=</span> <span class="s">"Kimwonbin"</span>
-<span class="c1">// 선언 후 초기화</span>
-<span class="nc">String</span> <span class="n">message2</span> <span class="o">=</span> <span class="s">"Kimwonbin"</span><span class="o">;</span>
-<span class="c1">// 선언과 동시에 초기화</span>
-<span class="nc">String</span> <span class="n">message3</span><span class="o">,</span> <span class="n">message4</span><span class="o">;</span>
-<span class="c1">// 다중 선언</span>
-</code></pre></div>    </div>
-  </li>
-</ul>
-
-<hr />
-
-<h2 id="3-java-scope">3. Java, Scope?</h2>
-<ul>
-  <li>java는 Scope라는 개념이 있다. 이는 유효범위라는 뜻으로 사용하는 이유는 간단하게 말해 명령 충돌을 막기 위해 존재한다. 아래의 예시를 보자.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">left</span><span class="o">;</span>
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">left</span><span class="o">()</span> <span class="o">{}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>위 코드 처럼 left라는 명령이 출돌하는 사태를 막기위해 자바는 유효범위를 사용합니다.</li>
-  <li>아직까지는 잘 감이 안올 것이니 코드를 보면서 이해해보자.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoScope</span> <span class="o">{</span>
- <span class="kd">static</span> <span class="kt">void</span> <span class="nf">reset</span> <span class="o">()</span> <span class="o">{</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
- <span class="o">}</span>
-
- <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-       <span class="n">reset</span><span class="o">();</span>
-       <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-    <span class="o">}</span>
- <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>위 코드는 reset이라는 함수가 i=0으로 계속 초기화하기에 main함수에서 for문에 조건식을 만족하지 못해 무한루프에 빠지게 된다. 라고 생각 할 수 있다. 하지만 java는 scope 기능이 있기에 위 코드는 0,1,2,3,4가 출력된 후 종료된다.</li>
-  <li>그러면 다음 코드를 보자.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DemoScope</span> <span class="o">{</span>
-  <span class="kd">static</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-  <span class="kd">static</span> <span class="kt">void</span> <span class="nf">reset</span> <span class="o">()</span> <span class="o">{</span>
-      <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-  <span class="o">}</span>
-
-  <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-     <span class="k">for</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-          <span class="n">reset</span><span class="o">();</span>
-          <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
-      <span class="o">}</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>위 코드는 어떻게 실행될 것 같은가? 맞다 흐름상 위 코드는 무한루프에 빠지게 된다. 그 이유는 scope의 우선순위에 있다. scope의 우선순위는 지역변수 다음 멤버변수이기 때문에 위 코드는 무한루프에 빠지게 되는 것이다.</li>
-  <li>
-    <p>그렇다면 둘 다 있을 때, 이 scope를 유연하게 사용해보자.
-~~~java
-class Demo {
-  int v = 10;</p>
-
-    <p>void m() {
-      int v = 20;
-      System.out.println(v);
-  }
-}</p>
-  </li>
-</ul>
-
-<p>public class DemoScope2 {</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static void main(String[] args) {
-    Demo c1 = new Demo();
-    c1.m();
-}
-</code></pre></div></div>
-
-<p>}</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 위 코드를 보면 출력값이 어떻게 나올 것 같은가? 복잡하게 보이지만 간단하게 생각하여 우선순위를 타고 가면 c1.m()이 실행될 때, v = 20이 되고 출력되기에 20이 출력된다.
-- 그러면 우리는 멤버변수의 값을 출력하고 싶다하면 어떻게 해야하는가? 그렇다 멤버변수를 가르키면 된다. 멤버변수를 가르키는 키워드는 "this."이다.
-~~~java
-void m() {
-        int v = 20;
-        System.out.println(this.v);
-    }
-</code></pre></div></div>
-<ul>
-  <li>위처럼 코드를 수정하고 출력하면 10이 출력된다.</li>
-</ul>
-
-<hr />
-
-<h2 id="4-java-제어문">4. Java, 제어문</h2>
-<ul>
-  <li>자, 이제 java언어에 대하여 워밍업이 조금 되었을 것이다. 이제 본격적으로 다른 프로그래밍 언어에도 있는 제어문에 대하여 익혀보자.</li>
-  <li>제어문은 말 그래도 코드의 실행흐름을 바꾸는 역할을 하는 코드들로 아래와 같은 종류가 있다.
-<img src="https://velog.velcdn.com/images%2Fdamhee6624%2Fpost%2Fba4e285e-7ce7-4a9e-b025-0d89bd0cb714%2F%EC%A1%B0%EA%B1%B4%EB%AC%B8.png" alt="image" /></li>
-</ul>
-
-<p>[조건문 사용법]</p>
-<ul>
-  <li>C언어와 거의 똑같은 형태를 가지고 있다.</li>
-  <li>먼저 if문의 사용법 부터 알아보자.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">score</span> <span class="o">=</span> <span class="mi">75</span><span class="o">;</span>
-  <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">90</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"A"</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"B"</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">score</span> <span class="o">&gt;=</span> <span class="mi">70</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"C"</span><span class="o">);</span>
-  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"공부 좀 하세요."</span><span class="o">);</span> 
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>다음은 switch문의 사용법이다.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span>
-  <span class="k">switch</span><span class="o">(</span><span class="n">a</span><span class="o">*</span><span class="mi">2</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">case</span> <span class="mi">10</span><span class="o">:</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-  <span class="k">case</span> <span class="mi">20</span><span class="o">:</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"20"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-  <span class="k">case</span> <span class="mi">30</span><span class="o">:</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"30"</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-  <span class="k">default</span><span class="o">:</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">a</span><span class="o">);</span>
-      <span class="k">break</span><span class="o">;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>보면 C언어 아니야? 할 정도로 똑같다. 이는 반복문 또한 똑같다.
-    <div class="language-java highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// for 문</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
-  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-<span class="c1">// while 문</span>
-<span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">argv</span><span class="o">)</span> <span class="o">{</span>
-  <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
-  <span class="k">while</span> <span class="o">(</span><span class="n">a</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="o">)</span> <span class="o">{</span>
-      <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">,</span><span class="n">println</span><span class="o">(</span><span class="s">"10"</span><span class="o">);</span>
-      <span class="n">a</span><span class="o">++;</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div>    </div>
-  </li>
-  <li>이처럼 반복문 또한 C언어와 매우 유사한 것을 볼 수 있다.</li>
-</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="java" /><category term="basic" /><summary type="html"><![CDATA[Java가 무엇인지 알아보고 기초 문법에 대해 알아보자.]]></summary></entry><entry><title type="html">JSON,XML,YAML</title><link href="http://localhost:4000/JSON-XML-YAML.html" rel="alternate" type="text/html" title="JSON,XML,YAML" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/JSON-XML-YAML</id><content type="html" xml:base="http://localhost:4000/JSON-XML-YAML.html"><![CDATA[<hr />
+</ul>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="front-end" /><category term="git" /><category term="basic" /><summary type="html"><![CDATA[Git,Github가 무엇인지 알아보고, Git Flow 개념을 이해해보자.]]></summary></entry><entry><title type="html">JSON,XML,YAML</title><link href="http://localhost:4000/JSON-XML-YAML.html" rel="alternate" type="text/html" title="JSON,XML,YAML" /><published>2023-04-28T00:00:00+09:00</published><updated>2023-04-28T00:00:00+09:00</updated><id>http://localhost:4000/JSON-XML-YAML</id><content type="html" xml:base="http://localhost:4000/JSON-XML-YAML.html"><![CDATA[<hr />
 
 <h2 id="1-json-javascript-object-notation">1. JSON (JavaScript Object Notation)</h2>
 <ul>
@@ -588,810 +876,4 @@ Servers:
 <tweet>Perhaps a new model for remunerating creative work can be established, one that does not require commercial success to be necessary for artists to make a living.</tweet>
 
 <p><img src="./assets/img/posts/20210420/post8-rembrandt2.jpg" alt="The next Rembrandt" />
-<small><a href="https://www.jwt.com/en/work/thenextrembrandt">The Next Rembrandt</a> is a computer-generated 3-D–printed painting developed by a facial-recognition algorithm that scanned data from 346 known paintings by the Dutch painter in a process lasting 18 months. The portrait is based on 168,263 fragments from Rembrandt’s works.</small></p>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="copyright" /><category term="creativity" /><category term="neural networks" /><category term="machine learning" /><category term="artificial intelligence" /><summary type="html"><![CDATA[As neural networks are used more and more in the creative process, text, images and even music are now created by AI, but who owns the copyright for those works?]]></summary></entry><entry><title type="html">So, what is a neural network?</title><link href="http://localhost:4000/back-to-basics.html" rel="alternate" type="text/html" title="So, what is a neural network?" /><published>2021-04-02T00:00:00+09:00</published><updated>2021-04-02T00:00:00+09:00</updated><id>http://localhost:4000/back-to-basics</id><content type="html" xml:base="http://localhost:4000/back-to-basics.html"><![CDATA[<p>The omnipresence of technology nowadays has made it commonplace to read news about AI, just a quick glance at today’s headlines, and I get:</p>
-<ul>
-  <li><a href="https://www.morningbrew.com/emerging-tech/stories/2021/03/29/one-biggest-advancements-ai-also-sparked-fierce-debate-heres?utm_source=morning_brew">This Powerful AI Technique Led to Clashes at Google and Fierce Debate in Tech.</a></li>
-  <li><a href="https://fortune.com/2021/04/02/ai-forecasting-supply-chain-factories-caterpillar-agco/">How A.I.-powered companies dodged the worst damage from COVID</a></li>
-  <li><a href="https://www.mobihealthnews.com/news/emea/ai-technology-detects-ticking-time-bomb-arteries">AI technology detects ‘ticking time bomb’ arteries</a></li>
-  <li><a href="https://www.genengnews.com/insights/ai-in-drug-discovery-starts-to-live-up-to-the-hype/">AI in Drug Discovery Starts to Live Up to the Hype</a></li>
-  <li><a href="https://www.c4isrnet.com/artificial-intelligence/2021/04/02/pentagon-seeks-commercial-solutions-to-get-its-data-ready-for-ai/">Pentagon seeks commercial solutions to get its data ready for AI</a></li>
-</ul>
-
-<p>Topics from business, manufacturing, supply chain, medicine and biotech and even defense are covered in those news headlines, definitively the advancements on the fields of artificial intelligence, in particular machine learning and deep neural networks have permeated into our daily lives and are here to stay. But, do the general population know what are we talking about when we say “an AI”?  I assume most people correctly imagine a computer algorithm or perhaps the more adventurous minds think of a physical machine, an advanced computer entity or even a robot, getting smarter by itself with every use-case we throw at it. And most people will be right, when “an AI” is mentioned it is indeed an algorithm run by a computer, and there is where the boundary of their knowledge lies.</p>
-
-<p>They say that the best way to learn something is to try to explain it, so in a personal exercise I will try to do an ELI5 (<strong>E</strong>xplain it <strong>L</strong>ike <strong>I</strong> am <strong>5</strong>) version of what is a neural network.</p>
-
-<p>Let’s start with a little history, humans have been tinkering with the idea of an intelligent machine for a while now, some even say that the idea of artificial intelligence was conceived by the ancient greeks (<a href="https://www.thinkautomation.com/bots-and-ai/a-history-of-automation-the-rise-of-robots-and-ai/">source</a>), and several attempts at devising “intelligent” machines have been made through history, a notable one was ‘The Analytical Engine’ created by Charles Babbage in 1837:</p>
-
-<p><img src="./assets/img/posts/20210402/post7-analytical-engine.jpg" alt="The Analytical Engine" />
-<small>The Analytical Engine of Charles Babbage - 1837</small></p>
-
-<p>Then, in the middle of last century by trying to create a model of how our brain works, Neural Networks were born. Around that time, Frank Rosenblatt at Cornell trying to understand the simple decision system present in the eye of a common housefly,  proposed the idea of a <a href="./single-neuron-perceptron.html">perceptron</a>, a very simple system that processes certain inputs with basic math operations and produces an output.</p>
-
-<p><img src="./assets/img/posts/20210125/Perceptron.png" alt="A perceptron" /></p>
-
-<p>To illustrate, let’s say that the brain of the housefly is a perceptron, its inputs are whatever values are produced by the multiple cells in its eyes, when the eye cell detects “something” it’s output will be a 1, and if there is nothing a 0. Then the combination of all those inputs can be processed by the perceptron (the fly brain), and the output is a simple 0 or 1 value. If it is a 1 then the brain is telling the fly to flee and if it is a 0 it means it is safe to stay where it is.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-housefly-eye.jpg" alt="A housefly eye" /></p>
-
-<p>We can imagine then that if many of the eye cells of the fly produce 1s, it means that an object is quite near, and therefore the perceptron will calculate a 1, it is time to flee.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-fly-vision.jpg" alt="The fly vision" /></p>
-
-<p>The perceptron is just a math operation, one that multiplies certain input values with preset “parameters” (called weights) and adds up the resulting multiplications to generate a value.</p>
-
-<p>Then the magic spark was ignited, the parameters (weights) of the perceptron could be “learnt” by a process of minimizing the difference between known results of particular observations, and what the perceptron is actually calculating. It is this process of learning what we call <strong>training the neural network</strong>.</p>
-
-<tweet>This idea is so powerful that even today it is one of the fundamental building blocks of what we call AI.</tweet>
-
-<p>From this I will try to explain how this simple concept can have such diverse applications as natural language processing (think Alexa), image recognition like medical diagnosis from a CTR scan, autonomous vehicles, etc.</p>
-
-<p>A basic neural network is a combination of perceptrons in different arrangements, the perceptron therefore was downgraded from “fly brain” to “network neuron”.
-<img src="./assets/img/posts/20210402/post7-multilayer-perceptron.png" alt="A multilayer perceptron" /></p>
-
-<p>A neural network has different components, in its basic form it has:</p>
-<ul>
-  <li>Input</li>
-  <li>Hidden layers</li>
-  <li>Output</li>
-</ul>
-
-<p><img src="./assets/img/posts/20210228/nnet_flow.gif" alt="Neural network components" /></p>
-
-<h3 id="input">Input</h3>
-
-<p>The inputs of a neural network are in their essence just numbers, therefore anything that can be converted to a number can become an input. Letters in a text, pixels in an image, frequencies in a sound wave, values from a sensor, etc. are all different things that when converted to a numerical value serve as inputs for the neural network. This is one of the reasons why applications of neural networks are so diverse.</p>
-
-<p>Inputs can be as many as one need for the task at hand, from maybe 9 inputs to teach a neural network how to play tic-tac-toe to thousands of pixels from a camera for an autonomous vehicle. Since the input of a perceptron needs to be a single value, if for example a color pixel is chosen as input, it most likely will be broken into three different values; its  red, green and blue components, hence each pixel will become 3 different inputs for the neural network.</p>
-
-<h3 id="hidden-layers">Hidden layers</h3>
-
-<p>A “layer” within a neural network is just a group of perceptrons that all perform the same exact mathematical operation to the inputs and produce an output. The catch is that each of them have different weights (parameters), therefore their output for a given input will be different amongst them. There are many types of layers, the most typical of them being a “dense” layer, which is another word to say that all the inputs are connected to all the neurons (individual perceptrons), and as said before, each of these connections have a weight associated with it, so that the operation that each neuron performs is a simple weighted sum of all the inputs.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-dense-layers.png" alt="post7-dense-layers" /></p>
-
-<p>The hidden layer is then typically connected to another dense layer, and their connection means that each output of a neuron from the first layer is treated effectively as an input for the subsequent one, and it is thus connected to every neuron.</p>
-
-<p>A neural network can have from one to as many layers as one can think, and the number of layers depends solely on the experience we have gathered on the particular problem we would like to solve.</p>
-
-<p>Another critical parameter of a hidden layer is the number of neurons it has, and again, we need to rely on experience to determine how many neurons are needed for a given problem. I have seen networks that vary from a couple of neurons to the thousands. And of course each hidden layer can have as many neurons as we please, so the number of combinations is vast.</p>
-
-<p>To the number of layers, their type and how many neurons each have, is what we call the <em>network topology</em> (including the number of inputs and outputs).</p>
-
-<h3 id="output">Output</h3>
-
-<p>At the very end of the chain, another layer lies (which behaves just like a hidden layer), but has the peculiarity that it is the final layer, and therefore whatever it calculates will be the output values of the whole network. The number of outputs the network has is a function of the problem we would like to solve. It could be as simple as one output, with its value representing a probability of an action (like in the case of the flee reaction of the housefly), to many outputs, perhaps if our network is trying to distinguish images of animals, one would have an output for each animal species, and the output would represent how much confidence the network has that the particular image belongs to the corresponding species.</p>
-
-<p>As we said, the neural network is just a collection of individual neurons, doing basic math operations on certain inputs in series of layers that eventually generate an output. This mesh of neurons is then “trained” on certain output values from known cases of the inputs; once it has learned it can then process new inputs, values that it has never seen before with surprisingly accurate results.</p>
-
-<p>Many of the problems neural networks solve, could be certainly worked out by other algorithms, however, since neural networks are in their core very basic operations, once trained, they are extremely efficient, hence much quicker and economical to produce results.</p>
-
-<p>There are a few more details on how a simple neural network operate that I purposedly left out to make this explanation as simple as possible. Thinks like biases, the activation functions and the math behind learning, the backpropagation algorithm, I will leave to a more in depth article. I will also write (perhaps in a series) about the more complex topologies combining different types of layers and other building blocks, a part from the perceptron.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-alexa.png" alt="Alexa recognizing speach" /></p>
-
-<p>Things like “Alexa”, are a bit more complex, but work on exactly the same principles. Let’s break down for example the case of asking “Alexa” to play a song in spotify. Alexa uses several different neural networks to acomplish this:</p>
-
-<h4 id="1-speech-recognition">1. Speech recognition</h4>
-
-<p>As a basic input we have our speech: the command <strong>“Alexa, play Van Halen”</strong>. This might seem quite simple for us humans to process, but for a machine is an incredible difficult feat to be able to understand speech, things like each individual voice timbre, entonation, intention and many more nuances of human spoken language make it so that traditional algorithms have struggled a lot with this. In our simplified example let’s say that we use a neural network to transform our spoken speech into text characters a computer is much more familiarized to learn.</p>
-
-<h4 id="2-understanding-what-we-mean-natural-language-understanding">2. Understanding what we mean (Natural Language Understanding)</h4>
-
-<p>Once the previous network managed to succesfuly convert our spoken words into text, there comes the even more difficult task of making sense of what we said. Things that we humans take for granted such as context, intonation and non verbal communication, help give our words meaning in a very subtle, but powerful way, a machine will have to do with much less information to correctly understand what we mean. It has to correctly identify the intention of our sentence and the subject or entities of what we mean.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-alexa-natural-lang.png" alt="post7-alexa-natural-lang" /></p>
-
-<p>The neural network has to identify that it received a command (by identifying its name), the command (“play music”), and our choice (“Van Halen”). And it does so by means of simple math operations as described before. Of course the network involved is quite complex and has different types of neurons and connection types, but the underlying principles remain.</p>
-
-<h4 id="3-replying-to-us">3. Replying to us</h4>
-
-<p>Once Alexa understood what we meant, it then proceeds to execute the action of the command it interpreted and it replies to us in turn using natural language. This is accomplished using a technique called speech synthesis, things like pitch, duration and intensity of the words and phonems are selected based on the “meaning” of what Alexa will respond to us: “Playing songs by Van Halen on Spotify” sounding quite naturally. And all is accomplished with neural networks executing many simple math operations.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-alexa-steps.png" alt="post7-alexa-steps" />
-<small>Although it seems quite complex, the process for AI to understand us can be boiled down to simple math operations</small></p>
-
-<p>Of course Amazon’s Alexa neural networks have undergone quite a lot of training to get to the level where they are, the beauty is that once trained, to perform their magic they just need a few mathematical operations.</p>
-
-<p>As said before, I will continue to write about the basics of neural networks, the next article in the series will dive a bit deeper into the math behind a basic neural network.</p>]]></content><author><name>Armando Maynez</name></author><category term="theory" /><category term="neural networks" /><category term="machine learning" /><category term="artificial intelligence" /><summary type="html"><![CDATA[ELI5: what is a neural network.]]></summary></entry><entry><title type="html">Starting the adventure</title><link href="http://localhost:4000/starting-the-adventure.html" rel="alternate" type="text/html" title="Starting the adventure" /><published>2021-03-24T00:00:00+09:00</published><updated>2021-03-24T00:00:00+09:00</updated><id>http://localhost:4000/starting-the-adventure</id><content type="html" xml:base="http://localhost:4000/starting-the-adventure.html"><![CDATA[<p>In the midst of a global pandemic caused by the SARS-COV2 coronavirus; I decided to start blogging. I wanted to blog since a long time, I have always enjoyed writing, but many unknowns and having “no time” for it prevented me from taking it up. Things like: “I don’t really know who my target audience is”, “what would my topic or topics be?”, “I don’t think I am a world-class expert in anything”, and many more kept stopping me from setting up my own blog. Now seemed like a good time as any so with those and tons of other questions in my mind I decided it was time to start.</p>
-
-<p>Funnily, this is not my first post. The birth of the blog came very natural as a way to “document” my newly established pursuit for getting myself into Machine Learning. This new adventure of mine comprises several things, and if I want to succeed I need to be serious about them all:</p>
-<ul>
-  <li>I want to start coding again! I used to code a long time ago, starting when I was 8 years old in a Tandy Color Computer hooked up to my parent’s TV.</li>
-  <li>Machine Learning is a vast, wide subject, I want to learn the generals, but also to select a few areas to focus on.</li>
-  <li>Setting up a blog to document my journey and share it:</li>
-  <li>Establish a learning and blogging routine. If I don’t do this, I am sure this endeavour will die off soon.</li>
-</ul>
-
-<p>As for the focus areas I will start with:</p>
-<ul>
-  <li>Neural Networks fundamentals: history, basic architecture and math behind them</li>
-  <li>Deep Neural Networks</li>
-  <li>Reinforcement Learning</li>
-  <li>Current state of the art: what is at the cutting edge now in terms of Deep Neural Networks and Reinforcement Learning?</li>
-</ul>
-
-<p>I selected the above areas to focus on based on my personal interests, I have been fascinated by the developments in reinforcement learning for a long time, in particular <a href="https://deepmind.com/blog">Deep Mind’s</a> awesome <a href="https://deepmind.com/blog/article/innovations-alphago">Go</a>, <a href="https://deepmind.com/blog/article/alphazero-shedding-new-light-grand-games-chess-shogi-and-go">Chess</a> and <a href="https://deepmind.com/blog/article/AlphaStar-Grandmaster-level-in-StarCraft-II-using-multi-agent-reinforcement-learning">Starcraft</a> playing agents. Therefore, I started reading a lot about it and even started a personal project for coding a <a href="./deep-q-learning-tic-tac-toe.html">tic-tac-toe learning agent</a>.</p>
-
-<p>With my limited knowledge I have drafted the following learning path:</p>
-
-<ol>
-  <li>Youtube: <a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw">Three Blue One Brown’s</a> videos on <a href="https://youtube.com/playlist?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi">Neural Networks</a>, <a href="https://youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr">Calculus</a> and <a href="https://youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Linear Algebra</a>. I cannot recommend them enough, they are of sufficient depth and use animation superbly to facilitate the understanding of the subjects.</li>
-  <li>Coursera: <a href="https://www.coursera.org/learn/machine-learning">Andrew Ng’s Machine Learning course</a></li>
-  <li>Book: <a href="https://www.amazon.com/dp/1617294438/ref=cm_sw_em_r_mt_dp_AV4DHT7CVE95D1SR2JJ8">Deep Learning with Python by Francois Chollet</a></li>
-  <li>Book: <a href="https://www.amazon.com/dp/0262193981/ref=cm_sw_em_r_mt_dp_10B6J4MDB7QE3YHBQF4X">Reinforcement Learning: An Introduction, by Richard S. Sutton and Andrew G. Barto</a></li>
-</ol>
-
-<p>As for practical work I decided to start by <a href="./ML-Library-from-scratch.html">coding my first models from scratch</a> (without using libraries such as Tensorflow), to be able to deeply understand the math and logic behind the models, so far it has proven to be priceless.</p>
-
-<p>For my next project I think I will start to do the basic hand-written digits recognition, which is the Machine Learning Hello World, for this I think I will start to use Tensorflow already.</p>
-
-<p>I will continue to write about my learning road, what I find interesting and relevant, and to document all my practical exercises, as well as news and the state of the art in the world of AI.</p>
-
-<p>So far, all I have learned has been so engaging that I am seriously thinking of a career change. I have 17 years of international experience in multinational corporations across various functions, such as Information Services, Sales, Customer Care and New Products Introduction, and sincerely, I am finding more joy in artificial intelligence than anything else I have worked on before. Let’s see where the winds take us.</p>
-
-<p>Thanks for reading!</p>
-
-<h3 id="ps-for-the-geeks-like-me-here-is-a-snippet-on-the-technical-side-of-the-blog">P.S. For the geeks like me, here is a snippet on the technical side of the blog.</h3>
-
-<h4 id="static-website-generator">Static Website Generator</h4>
-<p>I researched a lot on this, when I started I didn’t even know I needed a static website generator. I was just sure of one thing, I wanted my blog site to look modern, be easy to update and not to have anything extra or additional content or functionality I did not need.</p>
-
-<p>There is a myriad of website generators nowadays, after a lengthy search the ones I ended up considering are:</p>
-<ul>
-  <li><a href="https://wordpress.com/">wordpress</a></li>
-  <li><a href="https://www.wix.com/">wix</a></li>
-  <li><a href="https://www.squarespace.com/">squarespace</a></li>
-  <li><a href="https://ghost.org/">ghost</a></li>
-  <li><a href="https:webflow.com">webflow</a></li>
-  <li><a href="https://www.netlify.com/">netlify</a></li>
-  <li><a href="https://gohugo.io/">hugo</a></li>
-  <li><a href="https://www.gatsbyjs.com/docs/glossary/static-site-generator/">gatsby</a></li>
-  <li><a href="https://jekyllrb.com/">jekyll</a></li>
-</ul>
-
-<p>I started with the web interfaced generators with included hosting in their offerings:</p>
-
-<p><a href="https://wordpress.com/">wordpress</a> is the old standard, it is the one CMS I knew from before, and I thought I needed a fully fledged CMS, so I blindly ran towards it. Turns out, it has grown a lot since I remembered, it is now a fully fledged platform for complex websites and ecommerce development, even so I decided to give it a try, I picked a template and <a href="https://amaynez.wordpress.com/">created a site</a>. Even with the most simplistic and basic template I could find, there is a lot going on in the site. Setting it up was not as difficult or cumbersome as others claim, it took me about one hour to have it up and running, it looks good, but a bit crowded for my personal taste, and I found out it serves ads in your site for the readers, that is a big no for me.</p>
-
-<p>I have tried <a href="https://www.wix.com/">wix</a> and <a href="https://www.squarespace.com/">squarespace</a> before, they are fantastic for quick and easy website generation, but their free offering has ads, so again, a big no for me.</p>
-
-<p>I discovered <a href="https://ghost.org/">ghost</a> as the platform used by one of the bloggers I follow (<a href="https://ruder.io/">Sebastian Ruder</a>), turns out is a fantastic evolution over wordpress. It runs on the latest technologies, its interface is quite modern, and it is focused on one thing only: publishing. They have a paid hosting service, but the software is open sourced, therefore free to use in any hosting.</p>
-
-<p>I also tested webflow and even created a <a href="https://armando-maynez.webflow.io">mockup</a> there, the learning curve was quite smooth, and its CMS seems quite robust, but a bit too much for the functionalities I required.</p>
-
-<p>Next were the generators that don’t have a web interface, but can be easily set up:</p>
-
-<p>The first I tried was <a href="https://www.netlify.com/">netlify</a>, I also set up a <a href="https://amaynez.netlify.app/">test site</a> in it. Netlify provides free hosting, and to keep your source files it uses GitHub (a repository keeps the source files where it publishes from). It has its own CMS, Netlify CMS, and you have a choice of site generators: Hugo, Gatsby, MiddleMan, Preact CLI, Next.js, Elevently and Nuxt.js, and once you choose there are some templates for each. I did not find the variety of templates enticing enough, and the set up process was much more cumbersome than with wordpress (at least for my knowledge level). I choose Hugo for my test site.</p>
-
-<p>I also tested <a href="https://www.gatsbyjs.com/docs/glossary/static-site-generator/">gatsby</a> with it’s own Gatsby Cloud hosting service, <a href="https://amaynez.gatsbyjs.io/">here is my test site</a>. They also use GitHub as a base to host the source files to build the website, so you create a repository, and it is connected to it. I found the free template offerings quite limited for what I was looking for.</p>
-
-<p>Finally it came the turn for <a href="https://jekyllrb.com/">jekyll</a>, although an older, and slower generator (compared to Hugo and Gatsby), it was created by one of the founders of GitHub, so it’s integration with GitHub Pages is quite natural and painless, so much so, that to use them together you don’t even have to install Jekyll in your machine! You have two choices:</p>
-<ol>
-  <li>keep it all online, by having one repository in Github keep all the source files, modify or add them online, and having Jekyll build and publish your site to the special <code class="language-plaintext highlighter-rouge">gh-pages</code> repository everytime you change or add a new file to the source repository.</li>
-  <li>Have a synchronized local copy of the source files for the website, this way you can edit your blog and customize it in your choice of IDE (Integrated Development Environment). Then, when you update any file on your computer, you just “push” the changes to GitHub, and GitHub Pages automatically uses Jekyll to build and publish your site.</li>
-</ol>
-
-<p>I chose the second option, specially because I can manipulate files, like images, in my laptop, and everytime I sync my local repository with GitHub, they are updated and published automatically. Quite convenient.</p>
-
-<p>After testing with several templates to get the feel for it, I decided to keep Jekyll for my blog for several reasons: the convenience of not having to install anything extra on my computer to build my blog, the integration with GitHub Pages, the ease of use, the future proofing via integration with modern technologies such as react or vue and the vast online community that has produced tons of templates and useful information for issue resolution, customization and added functionality.</p>
-
-<p>I picked up a template, just forked the repository and started modifying the files to customize it, it was fast and easy, I even took it upon myself to add some functionality to the template (it served as a coding little project) like:</p>
-<ul>
-  <li>SEO meta tags</li>
-  <li>Dark mode (<a href="https://github.com/the-mvm/the-mvm.github.io/blob/a8d4f781bfbc4107b4842433701d28f5bbf1c520/_config.yml#L10">configurable in _config.yml file</a>)</li>
-  <li>automatic <a href="http://the-mvm.github.io/sitemap.xml">sitemap.xml</a></li>
-  <li>automatic <a href="http://the-mvm.github.io/archive/">archive page</a> with infinite scrolling capability</li>
-  <li><a href="https://the-mvm.github.io/tag/?tag=Coding">new page</a> of posts filtered by a single tag (without needing autopages from paginator V2), also with infinite scrolling</li>
-  <li>click to tweet functionality (just add a <code class="language-plaintext highlighter-rouge">&lt;tweet&gt; &lt;/tweet&gt;</code> tag in your markdown.</li>
-  <li>custom and responsive <a href="https://the-mvm.github.io/404.html">404 page</a></li>
-  <li>responsive and automatic Table of Contents (optional per post)</li>
-  <li>read time per post automatically calculated</li>
-  <li>responsive post tags and social share icons (sticky or inline)</li>
-  <li>included linkedin, reddit and bandcamp icons</li>
-  <li><em>copy link to clipboard</em> sharing option (and icon)</li>
-  <li>view on github link button (optional per post)</li>
-  <li>MathJax support (optional per post)</li>
-  <li>tag cloud in the home page</li>
-  <li>‘back to top’ button</li>
-  <li>comments ‘courtain’ to mask the disqus interface until the user clicks on it (<a href="https://github.com/the-mvm/the-mvm.github.io/blob/d4a67258912e411b639bf5acd470441c4c219544/_config.yml#L13">configurable in _config.yml</a>)</li>
-  <li><a href="https://github.com/the-mvm/the-mvm.github.io/blob/d4a67258912e411b639bf5acd470441c4c219544/assets/css/main.css#L8">CSS variables</a> to make it easy to customize all colors and fonts</li>
-  <li>added several pygments themes for code syntax highlight <a href="https://github.com/the-mvm/the-mvm.github.io/blob/e146070e9348c2e8f46cb90e3f0c6eb7b59c041a/_config.yml#L44">configurable from the _config.yml file</a>. See the <a href="https://github.com/the-mvm/the-mvm.github.io/tree/main/assets/css/highlighter">highlighter directory</a> for reference on the options.</li>
-  <li>responsive footer menu and footer logo (<a href="https://github.com/the-mvm/the-mvm.github.io/blob/d4a67258912e411b639bf5acd470441c4c219544/_config.yml#L7">if setup in the config file</a>)</li>
-  <li>smoother menu animations</li>
-</ul>
-
-<p><img src="./assets/img/template_screenshots/homepage-responsive.jpg" alt="my new blog" /></p>
-
-<p><img src="./assets/img/template_screenshots/light-toggle.png" alt="night theme toggle" /></p>
-
-<p>As a summary, Hugo and Gatsby might be much faster than Jekyll to build the sites, but their complexity I think makes them useful for a big site with plenty of posts. For a small site like mine, Jekyll provides sufficient functionality and power without the hassle.</p>
-
-<p>You can use the modified template yourself by <a href="https://github.com/the-mvm/the-mvm.github.io/fork/">forking my repository</a>. Let me know in the comments or feel free to contact me if you are interested in a detailed walkthrough on how to <a href="https://github.com/the-mvm/the-mvm.github.io#Installation">set it all up</a>.</p>
-
-<h4 id="hosting">Hosting</h4>
-<p>Since I decided on Jekyll to generate my site, the choice for hosting was quite obvious, <strong><a href="https://pages.github.com">Github Pages</a></strong> is very nicely integrated with it, it is free, and it has no ads! Plus the domain name isn’t too terrible (<a href="https://the-mvm.github.io">the-mvm.github.io</a>).</p>
-
-<h5 id="interplanetary-file-system">Interplanetary File System</h5>
-<p>To contribute to and test <a href="https://github.com/ipfs/ipfs#quick-summary">IPFS</a> I also set up a <a href="https://weathered-bread-8229.on.fleek.co/">mirror</a> in IPFS by using <a href="https://fleek.co">fleek.co</a>. I must confess that it was more troublesome than I imagined, it was definetively not plug and play because of the paths used to fetch resources. The nature of IPFS makes short absolute paths for website resources (like images, css and javascript files) inoperative; the easiest fix for this is to use relative paths, however the same relative path that works for the root directory (i.e. <code class="language-plaintext highlighter-rouge">/index.html</code>) does not work for links inside directories (i.e. <code class="language-plaintext highlighter-rouge">/tags/</code>), and since the site is static, while generating it, one must make the distinction between the different directory levels for the page to be rendered correctly.</p>
-
-<p>At first I tried a simple (but brute force solution):</p>
-
-<pre><code class="language-jekyll"># determine the level of the current file
-{% assign lvl = page.url | append:'X' | split:'/' | size %}
-# create the relative base (i.e. "../")
-{% capture relativebase %}{% for i in (3..lvl) %}../{% endfor %}{% endcapture %}
-{% if relativebase == '' %}
-	{% assign relativebase = './' %}
-{% endif %}
-...
-# Eliminate unecesary double backslashes
-{% capture post_url %}{{ relativebase }}{{ post.url }}{% endcapture %}
-{% assign post_url = post_url | replace: "//", "/" %}
-</code></pre>
-
-<p>This <code class="language-plaintext highlighter-rouge">jekyll/liquid</code> code was executed in every page (or include) that needed to reference a resource hosted in the same server.</p>
-
-<p>But this fix did not work for the search function, because it relies on a <code class="language-plaintext highlighter-rouge">search.json</code> file (also generated programmatically to be served as a static file), therefore when generating this file one either use the relative path for the <code class="language-plaintext highlighter-rouge">root</code> directory or for a nested directory, thus the search results will only link correctly the corresponding pages if the page where the user searched for something is in the corresponding scope.</p>
-
-<p>So the final solution was to make the whole site flat, meaning to live in a single directory. All pages and posts will live under the root directory, and by doing so, I can control how to address the relative paths for resources.</p>]]></content><author><name>Armando Maynez</name></author><category term="general blogging" /><category term="thoughts" /><category term="life" /><summary type="html"><![CDATA[Midlife career change: a disaster or an opportunity?]]></summary></entry><entry><title type="html">Deep Q Learning for Tic Tac Toe</title><link href="http://localhost:4000/deep-q-learning-tic-tac-toe.html" rel="alternate" type="text/html" title="Deep Q Learning for Tic Tac Toe" /><published>2021-03-19T06:14:20+09:00</published><updated>2021-03-19T06:14:20+09:00</updated><id>http://localhost:4000/deep-q-learning-tic-tac-toe</id><content type="html" xml:base="http://localhost:4000/deep-q-learning-tic-tac-toe.html"><![CDATA[<center><img style="float: left;margin-right: 1em;" src="./assets/img/posts/20210318/Game_Screen.png" width="310" height="300" /></center>
-
-<h2 id="background">Background</h2>
-<p>After many years of a corporate career (17) diverging from computer science, I have now decided to learn Machine Learning and in the process return to coding (something I have always loved!).</p>
-
-<p>To fully grasp the essence of ML I decided to start by <a href="./ML-Library-from-scratch.html">coding a ML library myself</a>, so I can fully understand the inner workings, linear algebra and calculus involved in Stochastic Gradient Descent. And on top learn Python (I used to code in C++ 20 years ago).</p>
-
-<p>I built a general purpose basic ML library that creates a Neural Network (only DENSE layers), saves and loads the weights into a file, does forward propagation and training (optimization of weights and biases) using SGD. I tested the ML library with the XOR problem to make sure it worked fine. You can read the blog post for it <a href="./ML-Library-from-scratch.html">here</a>.</p>
-
-<p>For the next challenge I am interested in reinforcement learning greatly inspired by Deep Mind’s astonishing feats of having their Alpha Go, Alpha Zero and Alpha Star programs learn (and be amazing at it) Go, Chess, Atari games and lately Starcraft; I set myself to the task of programming a neural network that will learn by itself how to play the ancient game of tic tac toe (or noughts and crosses).</p>
-
-<p>How hard could it be?</p>
-
-<p>Of course the first thing to do was to program the game itself, so I chose Python because I am learning it, so it gives me a good practice opportunity, and PyGame for the interface.
-Coding the game was quite straightforward, albeit for the hiccups of being my first PyGame and almost my first Python program ever.
-I created the game quite openly, in such a way that it can be played by two humans, by a human vs. an algorithmic AI, and a human vs. the neural network. And of course the neural network against a choice of 3 AI engines: random, <a href="https://en.wikipedia.org/wiki/Minimax">minimax</a> or hardcoded (an exercise I wanted to do since a long time).</p>
-
-<p>While training, the visuals of the game can be disabled to make training much faster.
-Now, for the fun part, training the network, I followed Deep Mind’s own DQN recommendations:</p>
-
-<ul><li>The network will be an approximation for the Q value function or Bellman equation, meaning that the network will be trained to predict the "value" of each move available in a given game state.</li><li>A replay experience memory was implemented. This meant that the neural network will not be trained after each move. Each move will be recorded in a special "memory" alongside with the state of the board and the reward it received for taking such an action (move).</li><li>After the memory is sizable enough, batches of random experiences sampled from the replay memory are used for every training round</li><li>A secondary neural network (identical to the main one) is used to calculate part of the Q value function (Bellman equation), in particular the future Q values. And then it is updated with the main network's weights every <em>n</em> games. This is done so that we are not chasing a moving target.</li></ul>
-
-<h2 id="designing-the-neural-network">Designing the neural network</h2>
-
-<center><img src="./assets/img/posts/20210318/Neural_Network_Topology.png" width="540" /></center>
-<p><br /></p>
-
-<p>The Neural Network chosen takes 9 inputs (the current state of the game) and outputs 9 Q values for each of the 9 squares in the board of the game (possible actions). Obviously some squares are illegal moves, hence while training there was a negative reward given to illegal moves hoping that the model would learn not to play illegal moves in a given position.</p>
-
-<p>I started out with two hidden layers of 36 neurons each, all fully connected and activated via ReLu. The output layer was initially activated using sigmoid to ensure that we get a nice value between 0 and 1 that represents the QValue of a given state action pair.</p>
-
-<h2 id="the-many-models">The many models…</h2>
-<h3 id="model-1---the-first-try">Model 1 - the first try</h3>
-
-<p>At first the model was trained by playing vs. a “perfect” AI, meaning a <a href="https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Game.py#L43">hard coded algorithm</a> that never looses and that will win if it is given the chance. After several thousand training rounds, I noticed that the Neural Network was not learning much; so I switched to training vs. a completely random player, so that it will also learn how to win. After training vs. the random player, the Neural Network seems to have made progress and is steadily diminishing the loss function over time.</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_across_all_episodes.png" width="540" /></center>
-<p><br /></p>
-
-<p>However, the model was still generating many illegal moves, so I decided to modify the reinforcement learning algorithm to punish more the illegal moves. The change consisted in populating with zeros all the corresponding illegal moves for a given position at the target values to train the network. This seemed to work very well for diminishing the illegal moves:</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves.png" width="540" /></center>
-<p><br /></p>
-
-<p>Nevertheless, the model was still performing quite poorly winning only around 50% of games vs. a completely random player (I expected it to win above 90% of the time). This was after only training 100,000 games, so I decided to keep training and see the results:</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves2.png" width="540" />
-<small>Wins: 65.46% Losses: 30.32% Ties: 4.23%</small></center>
-
-<p>Note that when training restarts, the loss and illegal moves are still high in the beginning of the training round, and this is caused by the epsilon greedy strategy that prefers exploration (a completely random move) over exploitation, this preference diminishes over time.</p>
-
-<p>After another round of 100,000 games, I can see that the loss function actually started to diminish, and the win rate ended up at 65%, so with little hope I decided to carry on and do another round of 100,000 games (about 2 hours in an i7 MacBook Pro):</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves3.png" width="540" />
-<small>Wins: 46.40% Losses: 41.33% Ties: 12.27%</small></center>
-
-<p>As you can see in the chart, the calculated loss not even plateaued, but it seemed to increase a bit over time, which tells me the model is not learning anymore. This was confirmed by the win rate decreasing with respect of the previous round to a meek 46.4% that looks no better than a random player.</p>
-
-<h3 id="model-2---linear-activation-for-the-output">Model 2 - Linear activation for the output</h3>
-
-<p>After not getting the results I wanted, I decided to change the output activation function to linear, since the output is supposed to be a Q value, and not a probability of an action.</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves4.png" width="540" /><br />
-<small>Wins: 47.60% Losses: 39% Ties: 13.4%</small></center>
-<p><br /></p>
-
-<p>Initially I tested with only 1000 games to see if the new activation function was working, the loss function appears to be decreasing, however it reached a plateau around a value of 1, hence still not learning as expected. I came across a <a href="https://github.com/bckenstler/CLR">technique by Brad Kenstler, Carl Thome and Jeremy Jordan</a> called Cyclical Learning Rate, which appears to solve some cases of stagnating loss functions in this type of networks. So I gave it a go using their Triangle 1 model.</p>
-
-<p>With the cycling learning rate in place, still no luck after a quick 1,000 games training round; so I decided to implement on top a decaying learning rate as per the following formula:</p>
-
-<center><img src="./assets/img/posts/20210318/lr_formula.jpeg" width="280" /></center>
-
-<p>The resulting learning rate combining the cycles and decay per epoch is:</p>
-<center><img src="./assets/img/posts/20210318/LR_cycle_decay.png" width="480" />
-<small>Learning Rate = 0.1, Decay = 0.0001, Cycle = 2048 epochs,<br />
-        max Learning Rate factor = 10x</small></center>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">true_epoch</span> <span class="o">=</span> <span class="n">epoch</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BATCH_SIZE</span>
-<span class="n">learning_rate</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">learning_rate</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">c</span><span class="p">.</span><span class="n">DECAY_RATE</span><span class="o">*</span><span class="n">true_epoch</span><span class="p">))</span>
-<span class="k">if</span> <span class="n">c</span><span class="p">.</span><span class="n">CLR_ON</span><span class="p">:</span> <span class="n">learning_rate</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">cyclic_learning_rate</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">,</span><span class="n">true_epoch</span><span class="p">)</span>
-</code></pre></div></div>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@staticmethod</span>
-<span class="k">def</span> <span class="nf">cyclic_learning_rate</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
-    <span class="n">max_lr</span> <span class="o">=</span> <span class="n">learning_rate</span><span class="o">*</span><span class="n">c</span><span class="p">.</span><span class="n">MAX_LR_FACTOR</span>
-    <span class="n">cycle</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="p">(</span><span class="n">epoch</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">c</span><span class="p">.</span><span class="n">LR_STEP_SIZE</span><span class="p">)))</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">abs</span><span class="p">((</span><span class="n">epoch</span><span class="o">/</span><span class="n">c</span><span class="p">.</span><span class="n">LR_STEP_SIZE</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">cycle</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">learning_rate</span><span class="o">+</span><span class="p">(</span><span class="n">max_lr</span><span class="o">-</span><span class="n">learning_rate</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,(</span><span class="mi">1</span><span class="o">-</span><span class="n">x</span><span class="p">))</span>
-</code></pre></div></div>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">c</span><span class="p">.</span><span class="n">DECAY_RATE</span> <span class="o">=</span> <span class="n">learning</span> <span class="n">rate</span> <span class="n">decay</span> <span class="n">rate</span>
-<span class="n">c</span><span class="p">.</span><span class="n">MAX_LR_FACTOR</span> <span class="o">=</span> <span class="n">multiplier</span> <span class="n">that</span> <span class="n">determines</span> <span class="n">the</span> <span class="nb">max</span> <span class="n">learning</span> <span class="n">rate</span>
-<span class="n">c</span><span class="p">.</span><span class="n">LR_STEP_SIZE</span> <span class="o">=</span> <span class="n">the</span> <span class="n">number</span> <span class="n">of</span> <span class="n">epochs</span> <span class="n">each</span> <span class="n">cycle</span> <span class="n">lasts</span>
-</code></pre></div></div>
-<p><br />With these many changes, I decided to restart with a fresh set of random weights and biases and try training more (much more) games.</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves6.png" width="540" />
-<small>1,000,000 episodes, 7.5 million epochs with batches of 64 moves each<br />
-Wins: 52.66% Losses: 36.02% Ties: 11.32%</small></center>
-
-<p>After <strong>24 hours!</strong>, my computer was able to run 1,000,000 episodes (games played), which represented 7.5 million training epochs of batches of 64 plays (480 million plays learned), the learning rate did decreased (a bit), but is clearly still in a plateau; interestingly, the lower boundary of the loss function plot seems to continue to decrease as the upper bound and the moving average remains constant. This led me to believe that I might have hit a local minimum.
-<a name="Model3"></a></p>
-<h3 id="model-3---new-network-topology">Model 3 - new network topology</h3>
-
-<p>After all the failures I figured I had to rethink the topology of the network and play around with combinations of different networks and learning rates.</p>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves7.png" width="540" />
-<small>100,000 episodes, 635,000 epochs with batches of 64 moves each<br />
-<b>Wins: 76.83%</b> Losses: 17.35% Ties: 5.82%</small></center>
-
-<p>I increased to 200 neurons each hidden layer. In spite of this great improvement the loss function was still in a plateau at around 0.1 (Mean Squared Error). Which, although it is greatly reduced from what we had, still was giving out only 77% win rate vs. a random player, the network was playing tic tac toe as a toddler!</p>
-
-<center><img src="./assets/img/posts/20210318/Game_Screen2.png" width="240" height="240" />
-<small>*I can still beat the network most of the time! (I am playing with the red X)*</small></center>
-
-<center><img src="./assets/img/posts/20210318/Loss_function_and_Illegal_moves10.png" width="540" />
-<small>100,000 more episodes, 620,000 epochs with batches of 64 moves each<br />
-<b>Wins: 82.25%</b> Losses: 13.28% Ties: 4.46%</small></center>
-
-<p><strong>Finally we crossed the 80% mark!</strong> This is quite an achievement, it seems that the change in network topology is working, although it also looks like the loss function is stagnating at around 0.15.</p>
-
-<p>After more training rounds and some experimenting with the learning rate and other parameters, I couldn’t improve past the 82.25% win rate.</p>
-
-<p>These have been the results so far:</p>
-
-<center><img src="./assets/img/posts/20210318/Models1to3.png" width="540" /></center>
-<p><br /></p>
-
-<p>It is quite interesting to learn how the many parameters (hyper-parameters as most authors call them) of a neural network model affect its training performance, I have played with:</p>
-<ul>
-  <li>the learning rate</li>
-  <li>the network topology and activation functions</li>
-  <li>the cycling and decaying learning rate parameters</li>
-  <li>the batch size</li>
-  <li>the target update cycle (when the target network is updated with the weights from the policy network)</li>
-  <li>the rewards policy</li>
-  <li>the epsilon greedy strategy</li>
-  <li>whether to train vs. a random player or an “intelligent” AI.</li>
-</ul>
-
-<p>And so far the most effective change has been the network topology, but being so close but not quite there yet to my goal of 90% win rate vs. a random player, I will still try to optimize further.</p>
-
-<tweet>Network topology seems to have the biggest impact on a neural network's learning ability.</tweet>
-
-<p><a name="Model4"></a></p>
-<h3 id="model-4---implementing-momentum">Model 4 - implementing momentum</h3>
-
-<p>I <a href="https://www.reddit.com/r/MachineLearning/comments/lzvrwp/p_help_with_a_reinforcement_learning_project/">reached out to the reddit community</a> and a kind soul pointed out that maybe what I need is to apply momentum to the optimization algorithm. So I did some research and ended up deciding to implement various optimization methods to experiment with:</p>
-
-<ul>
-  <li>Stochastic Gradient Descent with Momentum</li>
-  <li>RMSProp: Root Mean Square Plain Momentum</li>
-  <li>NAG: Nezterov’s Accelerated Momentum</li>
-  <li>Adam: Adaptive Moment Estimation</li>
-  <li>and keep my old vanilla Gradient Descent (vGD) ☺</li>
-</ul>
-
-<p><a name="optimization"></a><a href="https://the-mvm.github.io/neural-network-optimization-methods/">Click here for a detailed explanation and code of all the implemented optimization algorithms.</a></p>
-
-<p>So far, I have not been able to get better results with Model 4, I have tried all the momentum optimization algorithms with little to no success.
-<a name="Model5"></a></p>
-<h3 id="model-5---implementing-one-hot-encoding-and-changing-topology-again">Model 5 - implementing one-hot encoding and changing topology (again)</h3>
-<p>I came across an <a href="https://github.com/AxiomaticUncertainty/Deep-Q-Learning-for-Tic-Tac-Toe/blob/master/tic_tac_toe.py">interesting project in Github</a> that deals exactly with Deep Q Learning, and I noticed that he used “one-hot” encoding for the input as opposed to directly entering the values of the player into the 9 input slots. So I decided to give it a try and at the same time change my topology to match his:</p>
-
-<center><img src="./assets/img/posts/20210318/Neural_Network_Topology3.png" width="540" /></center>
-
-<p>So, ‘one hot’ encoding is basically changing the input of a single square in the tic tac toe board to three numbers, so that each state is represented with different inputs, thus the network can clearly differentiate the three of them. As the original author puts it, the way I was encoding, having 0 for empty, 1 for X and 2 for O, the network couldn’t easily tell that, for instance, O and X both meant occupied states, because one is two times as far from 0 as the other. With the new encoding, the empty state will be 3 inputs: (1,0,0), the X will be (0,1,0) and the O (0,0,1) as in the diagram.</p>
-
-<p>Still, no luck even with Model 5, so I am starting to think that there could be a bug in my code.</p>
-
-<p>To test this hypothesis, I decided to implement the same model using Tensorflow / Keras.</p>
-
-<p><a name="Model6"></a></p>
-<h3 id="model-6---tensorflow--keras">Model 6 - Tensorflow / Keras</h3>
-<center><img src="https://www.kubeflow.org/docs/images/logos/TensorFlow.png" width="100" height="100" /></center>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">PolicyNetwork</span> <span class="o">=</span> <span class="nc">Sequential</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">hidden_layers</span><span class="p">:</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">PolicyNetwork</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Dense</span><span class="p">(</span>
-                           <span class="n">units</span><span class="o">=</span><span class="n">layer</span><span class="p">,</span>
-                           <span class="n">activation</span><span class="o">=</span><span class="s">'relu'</span><span class="p">,</span>
-                           <span class="n">input_dim</span><span class="o">=</span><span class="n">inputs</span><span class="p">,</span>
-                           <span class="n">kernel_initializer</span><span class="o">=</span><span class="s">'random_uniform'</span><span class="p">,</span>
-                           <span class="n">bias_initializer</span><span class="o">=</span><span class="s">'zeros'</span><span class="p">))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">PolicyNetwork</span><span class="p">.</span><span class="nf">add</span><span class="p">(</span><span class="nc">Dense</span><span class="p">(</span>
-                        <span class="n">outputs</span><span class="p">,</span>
-                        <span class="n">kernel_initializer</span><span class="o">=</span><span class="s">'random_uniform'</span><span class="p">,</span>
-                        <span class="n">bias_initializer</span><span class="o">=</span><span class="s">'zeros'</span><span class="p">))</span>
-<span class="n">opt</span> <span class="o">=</span> <span class="nc">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="n">c</span><span class="p">.</span><span class="n">LEARNING_RATE</span><span class="p">,</span>
-           <span class="n">beta_1</span><span class="o">=</span><span class="n">c</span><span class="p">.</span><span class="n">GAMMA_OPT</span><span class="p">,</span>
-           <span class="n">beta_2</span><span class="o">=</span><span class="n">c</span><span class="p">.</span><span class="n">BETA</span><span class="p">,</span>
-           <span class="n">epsilon</span><span class="o">=</span><span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">,</span>
-           <span class="n">amsgrad</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-<span class="n">self</span><span class="p">.</span><span class="n">PolicyNetwork</span><span class="p">.</span><span class="nf">compile</span><span class="p">(</span><span class="n">optimizer</span><span class="o">=</span><span class="s">'adam'</span><span class="p">,</span>
-                           <span class="n">loss</span><span class="o">=</span><span class="s">'mean_squared_error'</span><span class="p">,</span>
-                           <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="s">'accuracy'</span><span class="p">])</span>
-</code></pre></div></div>
-<p>As you can see I am reusing all of my old code, and just replacing my Neural Net library with Tensorflow/Keras, keeping even my hyper-parameter constants.</p>
-
-<p>The training function changed to:</p>
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">reduce_lr_on_plateau</span> <span class="o">=</span> <span class="nc">ReduceLROnPlateau</span><span class="p">(</span><span class="n">monitor</span><span class="o">=</span><span class="s">'loss'</span><span class="p">,</span>
-                                         <span class="n">factor</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span>
-                                         <span class="n">patience</span><span class="o">=</span><span class="mi">25</span><span class="p">)</span>
-<span class="n">history</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">PolicyNetwork</span><span class="p">.</span><span class="nf">fit</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">asarray</span><span class="p">(</span><span class="n">states_to_train</span><span class="p">),</span>
-                                 <span class="n">np</span><span class="p">.</span><span class="nf">asarray</span><span class="p">(</span><span class="n">targets_to_train</span><span class="p">),</span>
-                                 <span class="n">epochs</span><span class="o">=</span><span class="n">c</span><span class="p">.</span><span class="n">EPOCHS</span><span class="p">,</span>
-                                 <span class="n">batch_size</span><span class="o">=</span><span class="n">c</span><span class="p">.</span><span class="n">BATCH_SIZE</span><span class="p">,</span>
-                                 <span class="n">verbose</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
-                                 <span class="n">callbacks</span><span class="o">=</span><span class="p">[</span><span class="n">reduce_lr_on_plateau</span><span class="p">],</span>
-                                 <span class="n">shuffle</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>With Tensorflow implemented, the first thing I noticed, was that I had an error in the calculation of the loss, although this only affected reporting and didn’t change a thing on the training of the network, so the results kept being the same, <strong>the loss function was still stagnating! My code was not the issue.</strong>
-<a name="Model7"></a></p>
-<h3 id="model-7---changing-the-training-schedule">Model 7 - changing the training schedule</h3>
-<p>Next I tried to change the way the network was training as per <a href="https://www.reddit.com/user/elBarto015">u/elBarto015</a> <a href="https://www.reddit.com/r/reinforcementlearning/comments/lzzjar/i_created_an_ai_for_super_hexagon_based_on/gqc8ka6?utm_source=share&amp;utm_medium=web2x&amp;context=3">advised me on reddit</a>.</p>
-
-<p>The way I was training initially was:</p>
-<ul>
-  <li>Games begin being simulated and the outcome recorded in the replay memory</li>
-  <li>Once a sufficient ammount of experiences are recorded (at least equal to the batch size) the Network will train with a random sample of experiences from the replay memory. The ammount of experiences to sample is the batch size.</li>
-  <li>The games continue to be played between the random player and the network.</li>
-  <li>Every move from either player generates a new training round, again with a random sample from the replay memory.</li>
-  <li>This continues until the number of games set up conclude.</li>
-</ul>
-
-<center><img src="./assets/img/posts/20210318/ReplayMemoryBefore.png" width="540" /></center>
-
-<p>The first change was to train only after every game concludes with the same ammount of data (a batch). This was still not giving any good results.</p>
-
-<p>The second change was more drastic, it introduced the concept of epochs for every training round, it basically sampled the replay memory for epochs * batch size experiences, for instance if epochs selected were 10, and batch size was 81, then 810 experiences were sampled out of the replay memory. With this sample the network was then trained for 10 epochs randomly using the batch size.</p>
-
-<p>This meant that I was training now effectively 10 (or the number of epochs selected) times more per game, but in batches of the same size and randomly shuffling the experiences each epoch.</p>
-
-<center><img src="./assets/img/posts/20210318/ReplayMemoryAfter.png" width="540" /></center>
-<p><br /></p>
-
-<p>After still playing around with some hyperparameters I managed to get similar performance as I got before, reaching 83.15% win rate vs. the random player, so I decided to keep training in rounds of 2,000 games each to evaluate performance. With almost every round I could see improvement:</p>
-
-<center><img src="./assets/img/posts/20210318/Model7HyperParameters.png" width="540" /><br />
-<img src="./assets/img/posts/20210318/Model7.png" width="480" />
-</center>
-<p><br /></p>
-
-<p>As of today, my best result so far is 87.5%, I will leave it rest for a while and keep investigating to find a reason for not being able to reach at least 90%. I read about <a href="https://medium.com/applied-data-science/how-to-train-ai-agents-to-play-multiplayer-games-using-self-play-deep-reinforcement-learning-247d0b440717">self play</a>, and it looks like a viable option to test and a fun coding challenge. However, before embarking in yet another big change I want to ensure I have been thorough with the model and have tested every option correctly.</p>
-
-<p>I feel the end is near… should I continue to update this post as new events unfold or shall I make it a multi post thread?</p>]]></content><author><name>Armando Maynez</name></author><category term="machine learning" /><category term="artificial intelligence" /><category term="reinforcement learning" /><category term="coding" /><category term="python" /><summary type="html"><![CDATA[Inspired by Deep Mind's astonishing feats of having their Alpha Go, Alpha Zero and Alpha Star programs learn (and be amazing at it) Go, Chess, Atari games and lately Starcraft; I set myself to the task of programming a neural network that will learn by itself how to play the ancient game of tic tac toe. How hard could it be?]]></summary></entry><entry><title type="html">Neural Network Optimization Methods and Algorithms</title><link href="http://localhost:4000/neural-network-optimization-methods.html" rel="alternate" type="text/html" title="Neural Network Optimization Methods and Algorithms" /><published>2021-03-13T04:32:20+09:00</published><updated>2021-03-13T04:32:20+09:00</updated><id>http://localhost:4000/neural-network-optimization-methods</id><content type="html" xml:base="http://localhost:4000/neural-network-optimization-methods.html"><![CDATA[<p>For the seemingly small project I undertook of <a href="./deep-q-learning-tic-tac-toe.html">creating a machine learning neural network that could learn by itself to play tic-tac-toe</a>, I bumped into the necesity of implementing at least one momentum algorithm for the optimization of the network during backpropagation.</p>
-
-<p>And since my original post for the TicTacToe project is quite large already, I decided to post separately these optimization methods and how did I implement them in my code.</p>
-
-<h3 id="adam">Adam</h3>
-<p><a href="https://ruder.io/optimizing-gradient-descent/index.html#adam">source</a></p>
-
-<p>Adaptive Moment Estimation (Adam) is an optimization method that computes adaptive learning rates for each weight and bias. In addition to storing an exponentially decaying average of past squared gradients \(v_t\) and an exponentially decaying average of past gradients \(m_t\), similar to momentum. Whereas momentum can be seen as a ball running down a slope, Adam behaves like a heavy ball with friction, which thus prefers flat minima in the error surface. We compute the decaying averages of past and past squared gradients \(m_t\) and \(v_t\) respectively as follows:</p>
-<p style="text-align:center">\(<br />
-\begin{align}<br />
-\begin{split}<br />
-m_t &amp;= \beta_1 m_{t-1} + (1 - \beta_1) g_t \\<br />
-v_t &amp;= \beta_2 v_{t-1} + (1 - \beta_2) g_t^2<br />
-\end{split}<br />
-\end{align}<br />
-\)</p>
-<p>\(m_t\) and \(v_t\) are estimates of the first moment (the mean) and the second moment (the uncentered variance) of the gradients respectively, hence the name of the method. As \(m_t\) and \(v_t\) are initialized as vectors of 0's, the authors of Adam observe that they are biased towards zero, especially during the initial time steps, and especially when the decay rates are small (i.e. \(\beta_1\) and \(\beta_2\) are close to 1).</p>
-<p>They counteract these biases by computing bias-corrected first and second moment estimates:</p>
-<p style="text-align:center">\(<br />
-\begin{align}<br />
-\begin{split}<br />
-\hat{m}_t &amp;= \dfrac{m_t}{1 - \beta^t_1} \\<br />
-\hat{v}_t &amp;= \dfrac{v_t}{1 - \beta^t_2} \end{split}<br />
-\end{align}<br />
-\)</p>
-<p>We then use these to update the weights and biases which yields the Adam update rule:</p>
-<p style="text-align:center">\(\theta_{t+1} = \theta_{t} - \dfrac{\eta}{\sqrt{\hat{v}_t} + \epsilon} \hat{m}_t\).</p>
-<p>The authors propose defaults of 0.9 for \(\beta_1\), 0.999 for \(\beta_2\), and \(10^{-8}\) for \(\epsilon\).</p>
-<p><a href="https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L243">view on github</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># decaying averages of past gradients
-</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                        <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                        <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                        <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                        <span class="p">))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                        <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                        <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                        <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                        <span class="p">))</span>
-
-<span class="c1"># decaying averages of past squared gradients
-</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span>
-                        <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                        <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA2</span><span class="p">)</span>
-                        <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                         <span class="p">))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span>
-                        <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                        <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA2</span><span class="p">)</span>
-                        <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span>
-                                         <span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                         <span class="p">))</span>
-
-<span class="k">if</span> <span class="n">c</span><span class="p">.</span><span class="n">ADAM_BIAS_Correction</span><span class="p">:</span>
-    <span class="c1"># bias-corrected first and second moment estimates
-</span>    <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                          <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                          <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                          <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                          <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-
-<span class="c1"># apply to weights and biases
-</span><span class="n">weight_col</span> <span class="o">-=</span> <span class="p">((</span><span class="n">eta</span> <span class="o">*</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                      <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                      <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">))))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">((</span><span class="n">eta</span> <span class="o">*</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                        <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                        <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">))))</span>
-</code></pre></div></div>
-
-<h3 id="sgd-momentum">SGD Momentum</h3>
-<p><a href="https://ruder.io/optimizing-gradient-descent/index.html#momentum">source</a></p>
-
-<p>Vanilla SGD has trouble navigating ravines, i.e. areas where the surface curves much more steeply in one dimension than in another, which are common around local optima. In these scenarios, SGD oscillates across the slopes of the ravine while only making hesitant progress along the bottom towards the local optimum.</p>
-<p>Momentum is a method that helps accelerate SGD in the relevant direction and dampens oscillations. It does this by adding a fraction \(\gamma\) of the update vector of the past time step to the current update vector:</p>
-<p style="text-align:center">\(<br />
-\begin{align}<br />
-\begin{split}<br />
-v_t &amp;= \beta_1 v_{t-1} + \eta \nabla_\theta J( \theta) \\<br />
-\theta &amp;= \theta - v_t<br />
-\end{split}<br />
-\end{align}<br />
-\)</p>
-<p>The momentum term \(\beta_1\) is usually set to 0.9 or a similar value.</p>
-<p>Essentially, when using momentum, we push a ball down a hill. The ball accumulates momentum as it rolls downhill, becoming faster and faster on the way (until it reaches its terminal velocity if there is air resistance, i.e. \(\beta_1 &lt; 1\)). The same thing happens to our weight and biases updates: The momentum term increases for dimensions whose gradients point in the same directions and reduces updates for dimensions whose gradients change directions. As a result, we gain faster convergence and reduced oscillation.</p>
-<p><a href="https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L210">view on github</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="o">*</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                       <span class="o">+</span><span class="p">(</span><span class="n">eta</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                       <span class="p">))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="o">*</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                       <span class="o">+</span><span class="p">(</span><span class="n">eta</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                       <span class="p">))</span>
-
-<span class="n">weight_col</span> <span class="o">-=</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-<span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-</code></pre></div></div>
-
-<h3 id="nesterov-accelerated-gradient-nag">Nesterov accelerated gradient (NAG)</h3>
-<p><a href="https://ruder.io/optimizing-gradient-descent/index.html#nesterovacceleratedgradient">source</a></p>
-
-<p>However, a ball that rolls down a hill, blindly following the slope, is highly unsatisfactory. We'd like to have a smarter ball, a ball that has a notion of where it is going so that it knows to slow down before the hill slopes up again.</p>
-<p>Nesterov accelerated gradient (NAG) is a way to give our momentum term this kind of prescience. We know that we will use our momentum term \(\beta_1 v_{t-1}\) to move the weights and biases \(\theta\). Computing \( \theta - \beta_1 v_{t-1} \) thus gives us an approximation of the next position of the weights and biases (the gradient is missing for the full update), a rough idea where our weights and biases are going to be. We can now effectively look ahead by calculating the gradient not w.r.t. to our current weights and biases \(\theta\) but w.r.t. the approximate future position of our weights and biases:</p>
-<p style="text-align:center">\(<br />
-\begin{align}<br />
-\begin{split}<br />
-v_t &amp;= \beta_1 v_{t-1} + \eta \nabla_\theta J( \theta - \beta_1 v_{t-1} ) \\<br />
-\theta &amp;= \theta - v_t<br />
-\end{split}<br />
-\end{align}<br />
-\)</p>
-<p>Again, we set the momentum term \(\beta_1\) to a value of around 0.9. While Momentum first computes the current gradient and then takes a big jump in the direction of the updated accumulated gradient, NAG first makes a big jump in the direction of the previous accumulated gradient, measures the gradient and then makes a correction, which results in the complete NAG update. This anticipatory update prevents us from going too fast and results in increased responsiveness, which has significantly increased the performance of Neural Networks on a number of tasks.</p>
-<p>Now that we are able to adapt our updates to the slope of our error function and speed up SGD in turn, we would also like to adapt our updates to each individual weight and bias to perform larger or smaller updates depending on their importance.</p>
-<p><a href="https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L219">view on github</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">v_prev</span> <span class="o">=</span> <span class="p">{</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span>
-          <span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]}</span>
-
-<span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-            <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">NAG_COEFF</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-           <span class="o">-</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-            <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">NAG_COEFF</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-           <span class="o">-</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-
-<span class="n">weight_col</span> <span class="o">+=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">*</span> <span class="n">v_prev</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-               <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-<span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">*</span> <span class="n">v_prev</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-               <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-</code></pre></div></div>
-
-<h3 id="rmsprop">RMSprop</h3>
-<p><a href="https://ruder.io/optimizing-gradient-descent/index.html#rmsprop">source</a></p>
-
-<p>RMSprop is an unpublished, adaptive learning rate method proposed by Geoff Hinton in <a href="http://www.cs.toronto.edu/~tijmen/csc321/slides/lecture_slides_lec6.pdf">Lecture 6e of his Coursera Class</a>.</p>
-<p>RMSprop was developed stemming from the need to resolve other method's radically diminishing learning rates.</p>
-<p style="text-align:center">\(<br />
-\begin{align}<br />
-\begin{split}<br />
-E[\theta^2]_t &amp;= \beta_1 E[\theta^2]_{t-1} + (1-\beta_1) \theta^2_t \\<br />
-\theta_{t+1} &amp;= \theta_{t} - \dfrac{\eta}{\sqrt{E[\theta^2]_t + \epsilon}} \theta_{t}<br />
-\end{split}<br />
-\end{align}<br />
-\)</p>
-<p>RMSprop divides the learning rate by an exponentially decaying average of squared gradients. Hinton suggests \(\beta_1\) to be set to 0.9, while a good default value for the learning rate \(\eta\) is 0.001.</p>
-<p><a href="https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L232">view on github</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                      <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                      <span class="o">+</span> <span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                      <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                        <span class="p">))</span>
-<span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                      <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                      <span class="o">+</span> <span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                      <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                        <span class="p">))</span>
-
-<span class="n">weight_col</span> <span class="o">-=</span> <span class="p">(</span><span class="n">eta</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-              <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">+</span><span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">)))</span>
-              <span class="p">)</span>
-<span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">eta</span> <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-               <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">+</span><span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">)))</span>
-                <span class="p">)</span>
-</code></pre></div></div>
-
-<h3 id="complete-code">Complete code</h3>
-<p>All in all the code ended up like this:
-<a href="https://github.com/amaynez/TicTacToe/blob/b429e5637fe5f61e997f04c01422ad0342565640/entities/Neural_Network.py#L1">view on github</a></p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nd">@staticmethod</span>
-<span class="k">def</span> <span class="nf">cyclic_learning_rate</span><span class="p">(</span><span class="n">learning_rate</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
-    <span class="n">max_lr</span> <span class="o">=</span> <span class="n">learning_rate</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">MAX_LR_FACTOR</span>
-    <span class="n">cycle</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">floor</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="n">epoch</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span>
-                    <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">LR_STEP_SIZE</span><span class="p">))</span>
-                    <span class="p">)</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nf">abs</span><span class="p">((</span><span class="n">epoch</span> <span class="o">/</span> <span class="n">c</span><span class="p">.</span><span class="n">LR_STEP_SIZE</span><span class="p">)</span>
-        <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">cycle</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">learning_rate</span>
-        <span class="o">+</span> <span class="p">(</span><span class="n">max_lr</span> <span class="o">-</span> <span class="n">learning_rate</span><span class="p">)</span>
-        <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">maximum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">x</span><span class="p">))</span>
-
-<span class="k">def</span> <span class="nf">apply_gradients</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">):</span>
-    <span class="n">true_epoch</span> <span class="o">=</span> <span class="n">epoch</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BATCH_SIZE</span>
-    <span class="n">eta</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">learning_rate</span>
-            <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">DECAY_RATE</span> <span class="o">*</span> <span class="n">true_epoch</span><span class="p">))</span>
-
-    <span class="k">if</span> <span class="n">c</span><span class="p">.</span><span class="n">CLR_ON</span><span class="p">:</span>
-        <span class="n">eta</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="nf">cyclic_learning_rate</span><span class="p">(</span><span class="n">eta</span><span class="p">,</span> <span class="n">true_epoch</span><span class="p">)</span>
-
-    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">weight_col</span> <span class="ow">in</span> <span class="nf">enumerate</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">weights</span><span class="p">):</span>
-
-        <span class="k">if</span> <span class="n">c</span><span class="p">.</span><span class="n">OPTIMIZATION</span> <span class="o">==</span> <span class="s">'vanilla'</span><span class="p">:</span>
-            <span class="n">weight_col</span> <span class="o">-=</span> <span class="n">eta</span>
-                        <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                        <span class="o">/</span> <span class="n">c</span><span class="p">.</span><span class="n">BATCH_SIZE</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="n">eta</span>
-                        <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                        <span class="o">/</span> <span class="n">c</span><span class="p">.</span><span class="n">BATCH_SIZE</span>
-
-        <span class="k">elif</span> <span class="n">c</span><span class="p">.</span><span class="n">OPTIMIZATION</span> <span class="o">==</span> <span class="s">'SGD_momentum'</span><span class="p">:</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                                   <span class="o">*</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                                   <span class="o">+</span><span class="p">(</span><span class="n">eta</span>
-                                   <span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                                   <span class="p">))</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                                   <span class="o">*</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                                   <span class="o">+</span><span class="p">(</span><span class="n">eta</span>
-                                   <span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                                   <span class="p">))</span>
-
-            <span class="n">weight_col</span> <span class="o">-=</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-
-        <span class="k">elif</span> <span class="n">c</span><span class="p">.</span><span class="n">OPTIMIZATION</span> <span class="o">==</span> <span class="s">'NAG'</span><span class="p">:</span>
-            <span class="n">v_prev</span> <span class="o">=</span> <span class="p">{</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)],</span>
-                      <span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]}</span>
-
-            <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                        <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">NAG_COEFF</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                       <span class="o">-</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                        <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">NAG_COEFF</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                       <span class="o">-</span> <span class="n">eta</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span>
-
-            <span class="n">weight_col</span> <span class="o">+=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">*</span> <span class="n">v_prev</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                           <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+=</span> <span class="p">((</span><span class="o">-</span><span class="mi">1</span> <span class="o">*</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">*</span> <span class="n">v_prev</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                           <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span> <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-
-        <span class="k">elif</span> <span class="n">c</span><span class="p">.</span><span class="n">OPTIMIZATION</span> <span class="o">==</span> <span class="s">'RMSProp'</span><span class="p">:</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                            <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                            <span class="o">*</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                            <span class="o">+</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                            <span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                            <span class="p">))</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                            <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                            <span class="o">*</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                            <span class="o">+</span><span class="p">((</span><span class="mi">1</span><span class="o">-</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                            <span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                            <span class="p">))</span>
-
-            <span class="n">weight_col</span> <span class="o">-=</span> <span class="p">(</span><span class="n">eta</span>
-                          <span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                          <span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">+</span><span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">)))</span>
-                          <span class="p">)</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">(</span><span class="n">eta</span>
-                          <span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                          <span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span><span class="o">+</span><span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">)))</span>
-                            <span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">c</span><span class="p">.</span><span class="n">OPTIMIZATION</span> <span class="o">==</span> <span class="s">"ADAM"</span><span class="p">:</span>
-            <span class="c1"># decaying averages of past gradients
-</span>            <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span>
-                                <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                              <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                              <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                              <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                                    <span class="p">))</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span>
-                                <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span>
-                              <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                              <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA1</span><span class="p">)</span>
-                              <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-                                    <span class="p">))</span>
-
-            <span class="c1"># decaying averages of past squared gradients
-</span>            <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span>
-                                    <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span><span class="o">+</span><span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                                    <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA2</span><span class="p">)</span>
-                                    <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span>
-                                            <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span>
-                                                <span class="n">self</span><span class="p">.</span><span class="n">gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                                     <span class="p">))</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span> <span class="p">((</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span>
-                                    <span class="o">*</span> <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                                    <span class="o">+</span> <span class="p">((</span><span class="mi">1</span> <span class="o">-</span> <span class="n">c</span><span class="p">.</span><span class="n">BETA2</span><span class="p">)</span>
-                                    <span class="o">*</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">square</span><span class="p">(</span>
-                                            <span class="n">np</span><span class="p">.</span><span class="nf">array</span><span class="p">(</span>
-                                                <span class="n">self</span><span class="p">.</span><span class="n">bias_gradients</span><span class="p">[</span><span class="n">i</span><span class="p">])))</span>
-                                     <span class="p">))</span>
-
-            <span class="k">if</span> <span class="n">c</span><span class="p">.</span><span class="n">ADAM_BIAS_Correction</span><span class="p">:</span>
-                <span class="c1"># bias-corrected first and second moment estimates
-</span>                <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                                <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                              <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-                <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                                <span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                              <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA1</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-                <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                                <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                              <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-                <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span> <span class="o">=</span>
-                                <span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                              <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">c</span><span class="p">.</span><span class="n">BETA2</span> <span class="o">**</span> <span class="n">true_epoch</span><span class="p">))</span>
-
-            <span class="c1"># apply to weights and biases
-</span>            <span class="n">weight_col</span> <span class="o">-=</span> <span class="p">((</span><span class="n">eta</span>
-                            <span class="o">*</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"dW"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                            <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">))))</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">bias</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-=</span> <span class="p">((</span><span class="n">eta</span>
-                            <span class="o">*</span> <span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">v</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)]</span>
-                            <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">s</span><span class="p">[</span><span class="s">"db"</span> <span class="o">+</span> <span class="nf">str</span><span class="p">(</span><span class="n">i</span><span class="p">)])</span>
-                            <span class="o">+</span> <span class="n">c</span><span class="p">.</span><span class="n">EPSILON</span><span class="p">))))</span>
-
-    <span class="n">self</span><span class="p">.</span><span class="nf">gradient_zeros</span><span class="p">()</span>
-</code></pre></div></div>]]></content><author><name>Armando Maynez</name></author><category term="coding" /><category term="machine learning" /><category term="optimization" /><category term="deep Neural networks" /><summary type="html"><![CDATA[Some neural network optimization algorithms mostly to implement momentum when doing back propagation.]]></summary></entry></feed>
+<small><a href="https://www.jwt.com/en/work/thenextrembrandt">The Next Rembrandt</a> is a computer-generated 3-D–printed painting developed by a facial-recognition algorithm that scanned data from 346 known paintings by the Dutch painter in a process lasting 18 months. The portrait is based on 168,263 fragments from Rembrandt’s works.</small></p>]]></content><author><name>Armando Maynez</name></author><category term="opinion" /><category term="copyright" /><category term="creativity" /><category term="neural networks" /><category term="machine learning" /><category term="artificial intelligence" /><summary type="html"><![CDATA[As neural networks are used more and more in the creative process, text, images and even music are now created by AI, but who owns the copyright for those works?]]></summary></entry></feed>
