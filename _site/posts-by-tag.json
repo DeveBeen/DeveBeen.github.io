@@ -13,22 +13,16 @@
     
       
   {
-  "tag" : "artificial intelligence",
-  "posts" : [
-      
-      "./AI-and-intellectual-property.html",
-      
-      "./back-to-basics.html",
-      
-      "./deep-q-learning-tic-tac-toe.html"
-      
-    ]
-  } ,
-    
-      
-  {
   "tag" : "basic",
   "posts" : [
+      
+      "./DOM.html",
+      
+      "./PWA.html",
+      
+      "./JsHosting.html",
+      
+      "./CORS.html",
       
       "./Vue-React.html",
       
@@ -63,38 +57,10 @@
     
       
   {
-  "tag" : "coding",
+  "tag" : "cors",
   "posts" : [
       
-      "./deep-q-learning-tic-tac-toe.html",
-      
-      "./neural-network-optimization-methods.html",
-      
-      "./ML-Library-from-scratch.html",
-      
-      "./conways-game-of-life.html",
-      
-      "./single-neuron-perceptron.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "copyright",
-  "posts" : [
-      
-      "./AI-and-intellectual-property.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "creativity",
-  "posts" : [
-      
-      "./AI-and-intellectual-property.html"
+      "./CORS.html"
       
     ]
   } ,
@@ -111,10 +77,10 @@
     
       
   {
-  "tag" : "deep Neural networks",
+  "tag" : "dom",
   "posts" : [
       
-      "./neural-network-optimization-methods.html"
+      "./DOM.html"
       
     ]
   } ,
@@ -123,6 +89,14 @@
   {
   "tag" : "front-end",
   "posts" : [
+      
+      "./DOM.html",
+      
+      "./PWA.html",
+      
+      "./JsHosting.html",
+      
+      "./CORS.html",
       
       "./Vue-React.html",
       
@@ -147,16 +121,6 @@
     
       
   {
-  "tag" : "general blogging",
-  "posts" : [
-      
-      "./starting-the-adventure.html"
-      
-    ]
-  } ,
-    
-      
-  {
   "tag" : "git",
   "posts" : [
       
@@ -167,40 +131,22 @@
     
       
   {
+  "tag" : "hoisting",
+  "posts" : [
+      
+      "./JsHosting.html"
+      
+    ]
+  } ,
+    
+      
+  {
   "tag" : "javascript",
   "posts" : [
       
+      "./JsHosting.html",
+      
       "./Java-Basic.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "life",
-  "posts" : [
-      
-      "./starting-the-adventure.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "machine learning",
-  "posts" : [
-      
-      "./AI-and-intellectual-property.html",
-      
-      "./back-to-basics.html",
-      
-      "./deep-q-learning-tic-tac-toe.html",
-      
-      "./neural-network-optimization-methods.html",
-      
-      "./ML-Library-from-scratch.html",
-      
-      "./single-neuron-perceptron.html"
       
     ]
   } ,
@@ -217,22 +163,6 @@
     
       
   {
-  "tag" : "neural networks",
-  "posts" : [
-      
-      "./AI-and-intellectual-property.html",
-      
-      "./back-to-basics.html",
-      
-      "./ML-Library-from-scratch.html",
-      
-      "./single-neuron-perceptron.html"
-      
-    ]
-  } ,
-    
-      
-  {
   "tag" : "node.js",
   "posts" : [
       
@@ -243,24 +173,10 @@
     
       
   {
-  "tag" : "optimization",
+  "tag" : "pwa",
   "posts" : [
       
-      "./neural-network-optimization-methods.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "python",
-  "posts" : [
-      
-      "./deep-q-learning-tic-tac-toe.html",
-      
-      "./ML-Library-from-scratch.html",
-      
-      "./conways-game-of-life.html"
+      "./PWA.html"
       
     ]
   } ,
@@ -271,26 +187,6 @@
   "posts" : [
       
       "./Vue-React.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "reinforcement learning",
-  "posts" : [
-      
-      "./deep-q-learning-tic-tac-toe.html"
-      
-    ]
-  } ,
-    
-      
-  {
-  "tag" : "thoughts",
-  "posts" : [
-      
-      "./starting-the-adventure.html"
       
     ]
   } ,

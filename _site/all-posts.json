@@ -1,6 +1,14 @@
 {
   "posts" : [
     
+    "./DOM.html",
+    
+    "./PWA.html",
+    
+    "./JsHosting.html",
+    
+    "./CORS.html",
+    
     "./Vue-React.html",
     
     "./Environment.html",
@@ -17,23 +25,7 @@
     
     "./CSR-SSR-MAP-SPA.html",
     
-    "./Interface.html",
-    
-    "./AI-and-intellectual-property.html",
-    
-    "./back-to-basics.html",
-    
-    "./starting-the-adventure.html",
-    
-    "./deep-q-learning-tic-tac-toe.html",
-    
-    "./neural-network-optimization-methods.html",
-    
-    "./ML-Library-from-scratch.html",
-    
-    "./conways-game-of-life.html",
-    
-    "./single-neuron-perceptron.html"
+    "./Interface.html"
     
   ]
 }

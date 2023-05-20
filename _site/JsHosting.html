@@ -7,9 +7,9 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>So, what is a neural network? - The Minimum Viable Model</title>
-	<link rel="canonical" href="http://localhost:4000/back-to-basics.html">
-	<meta name="description" content="ELI5: what is a neural network.">
+	<title>Js Hoisting이란? - The Minimum Viable Model</title>
+	<link rel="canonical" href="http://localhost:4000/JsHosting.html">
+	<meta name="description" content="Js Hoisting이란 무엇인지 알아보고 이해하자.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 <script type="application/ld+json">
@@ -19,13 +19,13 @@
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "http://localhost:4000"},
-  "headline": "So, what is a neural network?",
-  "abstract": "ELI5: what is a neural network.",
-    "keywords": "neural networks, machine learning, artificial intelligence",
-    "wordcount": "1932",
-    "image": ["http://localhost:4000/assets/imgposts/20210402/post7-header.webp"],
-  "datePublished": "2021-04-02 00:00:00 +0900",
-  "dateModified": "2021-04-02 00:00:00 +0900",
+  "headline": "Js Hoisting이란?",
+  "abstract": "Js Hoisting이란 무엇인지 알아보고 이해하자.",
+    "keywords": "front-end, javascript, hoisting, basic",
+    "wordcount": "358",
+    "image": ["http://localhost:4000/assets/img./assets/posts/20230416/interface.png"],
+  "datePublished": "2023-05-07 00:00:00 +0900",
+  "dateModified": "2023-05-07 00:00:00 +0900",
   "author": {
     "@type": "Person",
     "name": "Armando Maynez"},
@@ -40,30 +40,30 @@
 }
 </script>
 <!-- Open Graph data -->
-<meta property="og:url" content="http://localhost:4000/back-to-basics.html"/>
+<meta property="og:url" content="http://localhost:4000/JsHosting.html"/>
 <meta property="og:type" content="article"/>
-<meta property="og:title" content="So, what is a neural network?"/>
-<meta property="og:description" content="ELI5: what is a neural network."/>
-<meta property="og:image" content="http://localhost:4000/assets/imgposts/20210402/post7-header.webp"/>
-<meta property="og:image:alt" content="So, what is a neural network?"/>
+<meta property="og:title" content="Js Hoisting이란?"/>
+<meta property="og:description" content="Js Hoisting이란 무엇인지 알아보고 이해하자."/>
+<meta property="og:image" content="http://localhost:4000/assets/img./assets/posts/20230416/interface.png"/>
+<meta property="og:image:alt" content="Js Hoisting이란?"/>
 <meta property="og:site_name" content="The Minimum Viable Model" />
-<meta property="article:published_time" content="2021-04-02 00:00:00 +0900" />
-<meta property="article:modified_time" content="2021-04-02 00:00:00 +0900" />
-<meta property="article:tag" content="neural networks, machine learning, artificial intelligence" />
+<meta property="article:published_time" content="2023-05-07 00:00:00 +0900" />
+<meta property="article:modified_time" content="2023-05-07 00:00:00 +0900" />
+<meta property="article:tag" content="front-end, javascript, hoisting, basic" />
 <meta property="fb:admins" content="ar.maybach" />
 <!-- Schema.org markup for Google -->
-<meta itemprop="name" content="So, what is a neural network?">
-<meta itemprop="description" content="ELI5: what is a neural network.">
-<meta itemprop="image" content="http://localhost:4000/assets/imgposts/20210402/post7-header.webp">
+<meta itemprop="name" content="Js Hoisting이란?">
+<meta itemprop="description" content="Js Hoisting이란 무엇인지 알아보고 이해하자.">
+<meta itemprop="image" content="http://localhost:4000/assets/img./assets/posts/20230416/interface.png">
 <!-- Twitter Card data -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@MvmThe">
-<meta name="twitter:title" content="So, what is a neural network?">
-<meta name="twitter:description" content="ELI5: what is a neural network.">
+<meta name="twitter:title" content="Js Hoisting이란?">
+<meta name="twitter:description" content="Js Hoisting이란 무엇인지 알아보고 이해하자.">
 <meta name="twitter:creator" content="">
 <meta data-rh="true" name="twitter:label1" content="Word count"/>
-<meta data-rh="true" name="twitter:data1" content="1932"/>
-<meta name="twitter:image:src" content="http://localhost:4000/assets/img/posts/20210402/post7-header.webp">
+<meta data-rh="true" name="twitter:data1" content="358"/>
+<meta name="twitter:image:src" content="http://localhost:4000/assets/img/./assets/posts/20230416/interface.png">
 	<!-- Windows Phone -->
 	<meta name="msapplication-navbutton-color" content="#311e3e">
 	<!-- iOS Safari -->
@@ -139,7 +139,7 @@
 
 <section class="hidden">
   <div class="post">
-      <a  class="post-list-title" href="./back-to-basics.html">So, what is a neural network?</a>
+      <a  class="post-list-title" href="./JsHosting.html">Js Hoisting이란?</a>
       
 
   <span class = "post-card-meta">
@@ -151,7 +151,7 @@
     
       
       <span class="page_meta-date">
-        <time datetime="2021-04-02T00:00:00+09:00">April 2, 2021</time>
+        <time datetime="2023-05-07T00:00:00+09:00">May 7, 2023</time>
       </span>
     
     
@@ -163,7 +163,7 @@
     
     <span class="page_meta-readtime">
       
-        9 minute read
+        1 minute read
       
     </span>
   
@@ -171,7 +171,7 @@
   </span>
 
         <div class="post-excerpt">
-            <p>The omnipresence of technology nowadays has made it commonplace to read news about AI, just a quick glance at today’s headlines, and I get:</p><ul> <li><a href="https://www.morningbrew.com/emerging-tech/stories/2021/03/29/one-biggest-advancements-ai-also-sparked-fierce-debate-heres?utm_source=morning_brew">This Powerful AI Technique Led to Clashes at Google and Fierce Debate in Tech.</a></li> <li><a href="https://fortune.com/2021/04/02/ai-forecasting-supply-chain-factories-caterpillar-agco/">How A.I.-powered companies dodged the worst damage from COVID</a></li> <li><a href="https://www.mobihealthnews.com/news/emea/ai-technology-detects-ticking-time-bomb-arteries">AI technology detects ‘ticking time bomb’ arteries</a></li> <li><a href="https://www.genengnews.com/insights/ai-in-drug-discovery-starts-to-live-up-to-the-hype/">AI in Drug Discovery Starts to Live Up to the Hype</a></li> <li><a href="https://www.c4isrnet.com/artificial-intelligence/2021/04/02/pentagon-seeks-commercial-solutions-to-get-its-data-ready-for-ai/">Pentagon seeks commercial solutions to get its data ready for AI</a></li></ul><p>Topics from business, manufacturing, supply chain, medicine and biotech and even defense are covered in those news headlines, definitively the...<a class="read-more" href="./back-to-basics.html"> read more</a>
+            <h2 id="1-호이스팅-hoisting">1. 호이스팅 (Hoisting)</h2><ul> <li>호이스팅은 코드가 실행하기 전 변수선언/함수선언이 해당 스코프의 최상단으로 끌어 올려진 것만 같은 현상을 말한다. 이에 개발자는 코드를 어디에 작성해도 실행 시 코드가 최상단으로 끌어올려저서 실행된다.</li> <li>자바스크립트 엔진은 코드를 실행하기 전에 실행 가능한 코드를 형상화하고 구분하는 과정(실행 컨텍스트 과정 중 하나)을 거치는데 이때, 모든 선언을 스코프에 등록하기 때문에 이때 변수는 초기화가 되진 않았지만 생성은 되어있는 상태가 되어 이러한 현상이 발생한다.</li></ul><p><img src="https://images.velog.io/post-images/surim014/b75bd470-2d25-11ea-8ac1-434d92578245/JavaScript-Hoisting.png" alt="image" /></p><hr /><h2 id="2-함수의-호이스팅">2. 함수의 호이스팅</h2><ul> <li>자바스크립트에서는 함수를 정의하는 방법으로 아래와 같이 함수 표현식과 함수 선언식이 있다.</li></ul><div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 함수 선언식</span><span class="kd">function</span> <span class="nf">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span> <span...<a class="read-more" href="./JsHosting.html"> read more</a>
         </div>
   </div>
 </section>
@@ -269,17 +269,17 @@
 </header> <!-- End Header -->
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="So, what is a neural network?">
-<meta itemprop="description" content="ELI5: what is a neural network.">
-<meta itemprop="datePublished" content="2021-04-02T00:00:00+09:00">
+    <meta itemprop="headline" content="Js Hoisting이란?">
+<meta itemprop="description" content="Js Hoisting이란 무엇인지 알아보고 이해하자.">
+<meta itemprop="datePublished" content="2023-05-07T00:00:00+09:00">
 
     <div class="page-image">
-      <div class="cover-image" style="background: url('./assets/img/posts/20210402/post7-header.webp') center no-repeat; background-size: cover;"></div>
+      <div class="cover-image" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;"></div>
     </div>
     <div class="wrapper">
       <div class="page-content">
         <div class="header-page">
-          <h1 class="page-title">So, what is a neural network?</h1>
+          <h1 class="page-title">Js Hoisting이란?</h1>
           
 
   <span class = "post-page-meta">
@@ -291,7 +291,7 @@
     
       
       <span class="page_meta-date">
-        <time datetime="2021-04-02T00:00:00+09:00">April 2, 2021</time>
+        <time datetime="2023-05-07T00:00:00+09:00">May 7, 2023</time>
       </span>
     
     
@@ -303,7 +303,7 @@
     
     <span class="page_meta-readtime">
       
-        9 minute read
+        1 minute read
       
     </span>
   
@@ -322,11 +322,13 @@
     
         <ul class="tags side">
             
-                <li><a href="./tag.html?tag=neural+networks" class="tag side">neural networks</a></li>
+                <li><a href="./tag.html?tag=front-end" class="tag side">front-end</a></li>
             
-                <li><a href="./tag.html?tag=machine+learning" class="tag side">machine learning</a></li>
+                <li><a href="./tag.html?tag=javascript" class="tag side">javascript</a></li>
             
-                <li><a href="./tag.html?tag=artificial+intelligence" class="tag side">artificial intelligence</a></li>
+                <li><a href="./tag.html?tag=hoisting" class="tag side">hoisting</a></li>
+            
+                <li><a href="./tag.html?tag=basic" class="tag side">basic</a></li>
             
     
         </ul>
@@ -335,11 +337,11 @@
     <div class="share-hover side">
         <span class="share-button side"><svg fill="currentColor" width="25" height="25" class="side"><g fill-rule="evenodd"><path d="M15.6 5a.42.42 0 0 0 .17-.3.42.42 0 0 0-.12-.33l-2.8-2.79a.5.5 0 0 0-.7 0l-2.8 2.8a.4.4 0 0 0-.1.32c0 .12.07.23.16.3h.02a.45.45 0 0 0 .57-.04l2-2V10c0 .28.23.5.5.5s.5-.22.5-.5V2.93l2.02 2.02c.08.07.18.12.3.13.11.01.21-.02.3-.08v.01"></path><path d="M18 7h-1.5a.5.5 0 0 0 0 1h1.6c.5 0 .9.4.9.9v10.2c0 .5-.4.9-.9.9H6.9a.9.9 0 0 1-.9-.9V8.9c0-.5.4-.9.9-.9h1.6a.5.5 0 0 0 .35-.15A.5.5 0 0 0 9 7.5a.5.5 0 0 0-.15-.35A.5.5 0 0 0 8.5 7H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"></path></g></svg></span>
         <div class="share-icons side" id="sidebar-icons">
-            <a class="twitter" href="https://twitter.com/intent/tweet?text=So, what is a neural network?&url=http://localhost:4000/back-to-basics.html" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a class="facebook" href="https://facebook.com/sharer.php?u=http://localhost:4000/back-to-basics.html" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a class="reddit" href="http://www.reddit.com/submit?url=http://localhost:4000/back-to-basics.html&title=So, what is a neural network?" title="Submit to Reddit" rel="nofollow" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a>
-            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/back-to-basics.html&title=So, what is a neural network?&summary=ELI5: what is a neural network.&source=http://localhost:4000/back-to-basics.html" title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a class="email" href="mailto:?subject=So, what is a neural network?&body=ELI5: what is a neural network.%0A%0ARead more here: http://localhost:4000/back-to-basics.html" title="Share via e-mail" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Js Hoisting이란?&url=http://localhost:4000/JsHosting.html" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="facebook" href="https://facebook.com/sharer.php?u=http://localhost:4000/JsHosting.html" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="reddit" href="http://www.reddit.com/submit?url=http://localhost:4000/JsHosting.html&title=Js Hoisting이란?" title="Submit to Reddit" rel="nofollow" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/JsHosting.html&title=Js Hoisting이란?&summary=Js Hoisting이란 무엇인지 알아보고 이해하자.&source=http://localhost:4000/JsHosting.html" title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="email" href="mailto:?subject=Js Hoisting이란?&body=Js Hoisting이란 무엇인지 알아보고 이해하자.%0A%0ARead more here: http://localhost:4000/JsHosting.html" title="Share via e-mail" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
             <a class="copy-link" onclick="copyToClipboard()" title="Copy to clipboard" rel="nofollow" target="_blank"><svg width="20px" fill="currentColor" class="side" viewBox="0 0 18 18"><path d="M16.94 1.1A3.7 3.7 0 0 0 14.3 0c-1 0-1.94.39-2.64 1.1L7.43 5.3c-.91.92-2.09 3.2 0 5.27a.75.75 0 0 0 .82.16c.09-.03.17-.09.24-.15a.74.74 0 0 0 0-1.06c-1.16-1.15-.77-2.39-.02-3.16l4.24-4.22a2.2 2.2 0 0 1 1.58-.65c.6 0 1.16.23 1.58.65.86.87.86 2.29 0 3.16L12.7 8.47a.74.74 0 0 0 1.04 1.05l3.17-3.16a3.73 3.73 0 0 0 0-5.27h.03zM9.54 7.4a.74.74 0 0 0 0 1.06c1.16 1.15.76 2.39 0 3.16l-4.22 4.22c-.42.42-.99.65-1.59.65a2.23 2.23 0 0 1-1.58-3.82l3.17-3.16A.73.73 0 0 0 5.54 9a.78.78 0 0 0-.22-.52.77.77 0 0 0-1.05 0L1.1 11.64A3.72 3.72 0 0 0 3.74 18c1 0 1.94-.39 2.65-1.1l4.23-4.2c.21-.22.94-1.02 1.13-2.2.18-1.12-.2-2.15-1.12-3.07-.27-.27-.78-.27-1.06 0l-.02-.02z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></a>
         </div>
     </div>
@@ -349,113 +351,110 @@
 
         
         
-        <p>The omnipresence of technology nowadays has made it commonplace to read news about AI, just a quick glance at today’s headlines, and I get:</p>
+        <h2 id="1-호이스팅-hoisting">1. 호이스팅 (Hoisting)</h2>
 <ul>
-  <li><a href="https://www.morningbrew.com/emerging-tech/stories/2021/03/29/one-biggest-advancements-ai-also-sparked-fierce-debate-heres?utm_source=morning_brew">This Powerful AI Technique Led to Clashes at Google and Fierce Debate in Tech.</a></li>
-  <li><a href="https://fortune.com/2021/04/02/ai-forecasting-supply-chain-factories-caterpillar-agco/">How A.I.-powered companies dodged the worst damage from COVID</a></li>
-  <li><a href="https://www.mobihealthnews.com/news/emea/ai-technology-detects-ticking-time-bomb-arteries">AI technology detects ‘ticking time bomb’ arteries</a></li>
-  <li><a href="https://www.genengnews.com/insights/ai-in-drug-discovery-starts-to-live-up-to-the-hype/">AI in Drug Discovery Starts to Live Up to the Hype</a></li>
-  <li><a href="https://www.c4isrnet.com/artificial-intelligence/2021/04/02/pentagon-seeks-commercial-solutions-to-get-its-data-ready-for-ai/">Pentagon seeks commercial solutions to get its data ready for AI</a></li>
+  <li>호이스팅은 코드가 실행하기 전 변수선언/함수선언이 해당 스코프의 최상단으로 끌어 올려진 것만 같은 현상을 말한다. 이에 개발자는 코드를 어디에 작성해도 실행 시 코드가 최상단으로 끌어올려저서 실행된다.</li>
+  <li>자바스크립트 엔진은 코드를 실행하기 전에 실행 가능한 코드를 형상화하고 구분하는 과정(실행 컨텍스트 과정 중 하나)을 거치는데 이때, 모든 선언을 스코프에 등록하기 때문에 이때 변수는 초기화가 되진 않았지만 생성은 되어있는 상태가 되어 이러한 현상이 발생한다.</li>
 </ul>
 
-<p>Topics from business, manufacturing, supply chain, medicine and biotech and even defense are covered in those news headlines, definitively the advancements on the fields of artificial intelligence, in particular machine learning and deep neural networks have permeated into our daily lives and are here to stay. But, do the general population know what are we talking about when we say “an AI”?  I assume most people correctly imagine a computer algorithm or perhaps the more adventurous minds think of a physical machine, an advanced computer entity or even a robot, getting smarter by itself with every use-case we throw at it. And most people will be right, when “an AI” is mentioned it is indeed an algorithm run by a computer, and there is where the boundary of their knowledge lies.</p>
+<p><img src="https://images.velog.io/post-images/surim014/b75bd470-2d25-11ea-8ac1-434d92578245/JavaScript-Hoisting.png" alt="image" /></p>
 
-<p>They say that the best way to learn something is to try to explain it, so in a personal exercise I will try to do an ELI5 (<strong>E</strong>xplain it <strong>L</strong>ike <strong>I</strong> am <strong>5</strong>) version of what is a neural network.</p>
+<hr />
 
-<p>Let’s start with a little history, humans have been tinkering with the idea of an intelligent machine for a while now, some even say that the idea of artificial intelligence was conceived by the ancient greeks (<a href="https://www.thinkautomation.com/bots-and-ai/a-history-of-automation-the-rise-of-robots-and-ai/">source</a>), and several attempts at devising “intelligent” machines have been made through history, a notable one was ‘The Analytical Engine’ created by Charles Babbage in 1837:</p>
-
-<p><img src="./assets/img/posts/20210402/post7-analytical-engine.jpg" alt="The Analytical Engine" />
-<small>The Analytical Engine of Charles Babbage - 1837</small></p>
-
-<p>Then, in the middle of last century by trying to create a model of how our brain works, Neural Networks were born. Around that time, Frank Rosenblatt at Cornell trying to understand the simple decision system present in the eye of a common housefly,  proposed the idea of a <a href="./single-neuron-perceptron.html">perceptron</a>, a very simple system that processes certain inputs with basic math operations and produces an output.</p>
-
-<p><img src="./assets/img/posts/20210125/Perceptron.png" alt="A perceptron" /></p>
-
-<p>To illustrate, let’s say that the brain of the housefly is a perceptron, its inputs are whatever values are produced by the multiple cells in its eyes, when the eye cell detects “something” it’s output will be a 1, and if there is nothing a 0. Then the combination of all those inputs can be processed by the perceptron (the fly brain), and the output is a simple 0 or 1 value. If it is a 1 then the brain is telling the fly to flee and if it is a 0 it means it is safe to stay where it is.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-housefly-eye.jpg" alt="A housefly eye" /></p>
-
-<p>We can imagine then that if many of the eye cells of the fly produce 1s, it means that an object is quite near, and therefore the perceptron will calculate a 1, it is time to flee.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-fly-vision.jpg" alt="The fly vision" /></p>
-
-<p>The perceptron is just a math operation, one that multiplies certain input values with preset “parameters” (called weights) and adds up the resulting multiplications to generate a value.</p>
-
-<p>Then the magic spark was ignited, the parameters (weights) of the perceptron could be “learnt” by a process of minimizing the difference between known results of particular observations, and what the perceptron is actually calculating. It is this process of learning what we call <strong>training the neural network</strong>.</p>
-
-<tweet>This idea is so powerful that even today it is one of the fundamental building blocks of what we call AI.</tweet>
-
-<p>From this I will try to explain how this simple concept can have such diverse applications as natural language processing (think Alexa), image recognition like medical diagnosis from a CTR scan, autonomous vehicles, etc.</p>
-
-<p>A basic neural network is a combination of perceptrons in different arrangements, the perceptron therefore was downgraded from “fly brain” to “network neuron”.
-<img src="./assets/img/posts/20210402/post7-multilayer-perceptron.png" alt="A multilayer perceptron" /></p>
-
-<p>A neural network has different components, in its basic form it has:</p>
+<h2 id="2-함수의-호이스팅">2. 함수의 호이스팅</h2>
 <ul>
-  <li>Input</li>
-  <li>Hidden layers</li>
-  <li>Output</li>
+  <li>자바스크립트에서는 함수를 정의하는 방법으로 아래와 같이 함수 표현식과 함수 선언식이 있다.</li>
 </ul>
 
-<p><img src="./assets/img/posts/20210228/nnet_flow.gif" alt="Neural network components" /></p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 함수 선언식</span>
+<span class="kd">function</span> <span class="nf">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
 
-<h3 id="input">Input</h3>
+<span class="c1">// 함수 표현식</span>
+<span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
 
-<p>The inputs of a neural network are in their essence just numbers, therefore anything that can be converted to a number can become an input. Letters in a text, pixels in an image, frequencies in a sound wave, values from a sensor, etc. are all different things that when converted to a numerical value serve as inputs for the neural network. This is one of the reasons why applications of neural networks are so diverse.</p>
+<ul>
+  <li>기본적으로 둘 다 함수를 만드는 동일한 기능을 하지만, 함수 표현식 같은 경우는 함수를 변수에 할당하므로 유연성이 높으며, 호이스팅이 강제로 진행되지 않아 개발자에게 혼동을 주지 않는다.</li>
+</ul>
 
-<p>Inputs can be as many as one need for the task at hand, from maybe 9 inputs to teach a neural network how to play tic-tac-toe to thousands of pixels from a camera for an autonomous vehicle. Since the input of a perceptron needs to be a single value, if for example a color pixel is chosen as input, it most likely will be broken into three different values; its  red, green and blue components, hence each pixel will become 3 different inputs for the neural network.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+ 
+<span class="kd">function</span> <span class="nf">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span> 
+<span class="p">}</span>
+ 
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</code></pre></div></div>
 
-<h3 id="hidden-layers">Hidden layers</h3>
+<ul>
+  <li>위와 같은 코드는 함수 선언식을 사용한 것으로 함수를 뒤늦게 생성하였더라도 함수 호이스팅이 발생하여 5와 7이 출력된다.</li>
+  <li>이러한 구조는 함수를 선언하기 전에 함수를 선언한 것처럼 보여지기에 개발하는데 혼동을 줄 수 있어 함수 선언식이 아닌 함수 표현식을 권장한다.</li>
+</ul>
 
-<p>A “layer” within a neural network is just a group of perceptrons that all perform the same exact mathematical operation to the inputs and produce an output. The catch is that each of them have different weights (parameters), therefore their output for a given input will be different amongst them. There are many types of layers, the most typical of them being a “dense” layer, which is another word to say that all the inputs are connected to all the neurons (individual perceptrons), and as said before, each of these connections have a weight associated with it, so that the operation that each neuron performs is a simple weighted sum of all the inputs.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
 
-<p><img src="./assets/img/posts/20210402/post7-dense-layers.png" alt="post7-dense-layers" /></p>
+<span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+ 
+<span class="p">}</span>
+ 
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</code></pre></div></div>
 
-<p>The hidden layer is then typically connected to another dense layer, and their connection means that each output of a neuron from the first layer is treated effectively as an input for the subsequent one, and it is thus connected to every neuron.</p>
+<ul>
+  <li>위 코드는 함수 표현식을 사용하혀 정의한 것으로 함수를 정의하기 전에 add(2,3)을 호출했기 때문에 에러가 발생한다.</li>
+  <li>그 후 함수를 정의한 후에 실행한 add(3, 4)는 정상적으로 실행되는데 이는 호이스팅이 일어나지 않았기 때문이다.</li>
+</ul>
 
-<p>A neural network can have from one to as many layers as one can think, and the number of layers depends solely on the experience we have gathered on the particular problem we would like to solve.</p>
+<hr />
 
-<p>Another critical parameter of a hidden layer is the number of neurons it has, and again, we need to rely on experience to determine how many neurons are needed for a given problem. I have seen networks that vary from a couple of neurons to the thousands. And of course each hidden layer can have as many neurons as we please, so the number of combinations is vast.</p>
+<h2 id="3-변수-호이스팅">3. 변수 호이스팅</h2>
+<ul>
+  <li>함수 뿐만 아니라 변수에서도 위와 같은 호이스팅 현상이 일어나는데 이는 var을 사용해서 정의했을 때를 이야기한다.</li>
+</ul>
 
-<p>To the number of layers, their type and how many neurons each have, is what we call the <em>network topology</em> (including the number of inputs and outputs).</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
-<h3 id="output">Output</h3>
+<span class="kd">function</span> <span class="nf">printNum</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p>At the very end of the chain, another layer lies (which behaves just like a hidden layer), but has the peculiarity that it is the final layer, and therefore whatever it calculates will be the output values of the whole network. The number of outputs the network has is a function of the problem we would like to solve. It could be as simple as one output, with its value representing a probability of an action (like in the case of the flee reaction of the housefly), to many outputs, perhaps if our network is trying to distinguish images of animals, one would have an output for each animal species, and the output would represent how much confidence the network has that the particular image belongs to the corresponding species.</p>
+<span class="nf">printNum</span><span class="p">();</span>
 
-<p>As we said, the neural network is just a collection of individual neurons, doing basic math operations on certain inputs in series of layers that eventually generate an output. This mesh of neurons is then “trained” on certain output values from known cases of the inputs; once it has learned it can then process new inputs, values that it has never seen before with surprisingly accurate results.</p>
+<span class="c1">// undefined</span>
+<span class="c1">// 20</span>
+</code></pre></div></div>
 
-<p>Many of the problems neural networks solve, could be certainly worked out by other algorithms, however, since neural networks are in their core very basic operations, once trained, they are extremely efficient, hence much quicker and economical to produce results.</p>
+<ul>
+  <li>처음에 전역변수로 값을 선언했음에도 첫 변수 호출값은 undefined가 나왔다. 이는 변수 호이스팅이 일어나 아래 코드와 같이 선언된 것처럼 변하기 때문이다.</li>
+</ul>
 
-<p>There are a few more details on how a simple neural network operate that I purposedly left out to make this explanation as simple as possible. Thinks like biases, the activation functions and the math behind learning, the backpropagation algorithm, I will leave to a more in depth article. I will also write (perhaps in a series) about the more complex topologies combining different types of layers and other building blocks, a part from the perceptron.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
 
-<p><img src="./assets/img/posts/20210402/post7-alexa.png" alt="Alexa recognizing speach" /></p>
+<span class="kd">function</span> <span class="nf">printNum</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">globalNum</span><span class="p">;</span> <span class="c1">// 함수 호이스팅에 의해 변수의 선언 부분이 이동</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+    <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+<span class="p">}</span>
 
-<p>Things like “Alexa”, are a bit more complex, but work on exactly the same principles. Let’s break down for example the case of asking “Alexa” to play a song in spotify. Alexa uses several different neural networks to acomplish this:</p>
+<span class="nf">printNum</span><span class="p">();</span>
+</code></pre></div></div>
 
-<h4 id="1-speech-recognition">1. Speech recognition</h4>
+<ul>
+  <li>이러한 특징 때문에 코드의 가독성을 해치거나, 예상치 못한 동작을 일으키기도 하므로 변수를 선언할때는 var 키워드는 사용하지 않는 것을 권장하며 ES6의 let 이나 const 키워드를 사용하는 것을 강력히 권장한다. let, const로 변수를 선언하면 <a href="#단어정리">블록 스코프</a>를 가지며 호이스팅이 발생하지 않기 때문이다.</li>
+</ul>
 
-<p>As a basic input we have our speech: the command <strong>“Alexa, play Van Halen”</strong>. This might seem quite simple for us humans to process, but for a machine is an incredible difficult feat to be able to understand speech, things like each individual voice timbre, entonation, intention and many more nuances of human spoken language make it so that traditional algorithms have struggled a lot with this. In our simplified example let’s say that we use a neural network to transform our spoken speech into text characters a computer is much more familiarized to learn.</p>
+<hr />
 
-<h4 id="2-understanding-what-we-mean-natural-language-understanding">2. Understanding what we mean (Natural Language Understanding)</h4>
-
-<p>Once the previous network managed to succesfuly convert our spoken words into text, there comes the even more difficult task of making sense of what we said. Things that we humans take for granted such as context, intonation and non verbal communication, help give our words meaning in a very subtle, but powerful way, a machine will have to do with much less information to correctly understand what we mean. It has to correctly identify the intention of our sentence and the subject or entities of what we mean.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-alexa-natural-lang.png" alt="post7-alexa-natural-lang" /></p>
-
-<p>The neural network has to identify that it received a command (by identifying its name), the command (“play music”), and our choice (“Van Halen”). And it does so by means of simple math operations as described before. Of course the network involved is quite complex and has different types of neurons and connection types, but the underlying principles remain.</p>
-
-<h4 id="3-replying-to-us">3. Replying to us</h4>
-
-<p>Once Alexa understood what we meant, it then proceeds to execute the action of the command it interpreted and it replies to us in turn using natural language. This is accomplished using a technique called speech synthesis, things like pitch, duration and intensity of the words and phonems are selected based on the “meaning” of what Alexa will respond to us: “Playing songs by Van Halen on Spotify” sounding quite naturally. And all is accomplished with neural networks executing many simple math operations.</p>
-
-<p><img src="./assets/img/posts/20210402/post7-alexa-steps.png" alt="post7-alexa-steps" />
-<small>Although it seems quite complex, the process for AI to understand us can be boiled down to simple math operations</small></p>
-
-<p>Of course Amazon’s Alexa neural networks have undergone quite a lot of training to get to the level where they are, the beauty is that once trained, to perform their magic they just need a few mathematical operations.</p>
-
-<p>As said before, I will continue to write about the basics of neural networks, the next article in the series will dive a bit deeper into the math behind a basic neural network.</p>
-
+<h1 id="단어정리">단어정리</h1>
+<p>블록 스코프 : 주어진 코드 불록 안에서만 사용할 수 있도록 외부 코드와 단절 시키는 영역이다.</p>
 
         <aside class="sidebar inline" id="post-end">
     
@@ -466,11 +465,13 @@
     
         <ul class="tags inline">
             
-                <li><a href="./tag.html?tag=neural+networks" class="tag inline">neural networks</a></li>
+                <li><a href="./tag.html?tag=front-end" class="tag inline">front-end</a></li>
             
-                <li><a href="./tag.html?tag=machine+learning" class="tag inline">machine learning</a></li>
+                <li><a href="./tag.html?tag=javascript" class="tag inline">javascript</a></li>
             
-                <li><a href="./tag.html?tag=artificial+intelligence" class="tag inline">artificial intelligence</a></li>
+                <li><a href="./tag.html?tag=hoisting" class="tag inline">hoisting</a></li>
+            
+                <li><a href="./tag.html?tag=basic" class="tag inline">basic</a></li>
             
     
         </ul>
@@ -479,11 +480,11 @@
     <div class="share-hover inline">
         <span class="share-button inline"><svg fill="currentColor" width="25" height="25" class="inline"><g fill-rule="evenodd"><path d="M15.6 5a.42.42 0 0 0 .17-.3.42.42 0 0 0-.12-.33l-2.8-2.79a.5.5 0 0 0-.7 0l-2.8 2.8a.4.4 0 0 0-.1.32c0 .12.07.23.16.3h.02a.45.45 0 0 0 .57-.04l2-2V10c0 .28.23.5.5.5s.5-.22.5-.5V2.93l2.02 2.02c.08.07.18.12.3.13.11.01.21-.02.3-.08v.01"></path><path d="M18 7h-1.5a.5.5 0 0 0 0 1h1.6c.5 0 .9.4.9.9v10.2c0 .5-.4.9-.9.9H6.9a.9.9 0 0 1-.9-.9V8.9c0-.5.4-.9.9-.9h1.6a.5.5 0 0 0 .35-.15A.5.5 0 0 0 9 7.5a.5.5 0 0 0-.15-.35A.5.5 0 0 0 8.5 7H7a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h11a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"></path></g></svg></span>
         <div class="share-icons inline" id="post-end-icons">
-            <a class="twitter" href="https://twitter.com/intent/tweet?text=So, what is a neural network?&url=http://localhost:4000/back-to-basics.html" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a class="facebook" href="https://facebook.com/sharer.php?u=http://localhost:4000/back-to-basics.html" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-            <a class="reddit" href="http://www.reddit.com/submit?url=http://localhost:4000/back-to-basics.html&title=So, what is a neural network?" title="Submit to Reddit" rel="nofollow" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a>
-            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/back-to-basics.html&title=So, what is a neural network?&summary=ELI5: what is a neural network.&source=http://localhost:4000/back-to-basics.html" title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-            <a class="email" href="mailto:?subject=So, what is a neural network?&body=ELI5: what is a neural network.%0A%0ARead more here: http://localhost:4000/back-to-basics.html" title="Share via e-mail" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=Js Hoisting이란?&url=http://localhost:4000/JsHosting.html" title="Share on Twitter" rel="nofollow" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a class="facebook" href="https://facebook.com/sharer.php?u=http://localhost:4000/JsHosting.html" title="Share on Facebook" rel="nofollow" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a class="reddit" href="http://www.reddit.com/submit?url=http://localhost:4000/JsHosting.html&title=Js Hoisting이란?" title="Submit to Reddit" rel="nofollow" target="_blank"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+            <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=http://localhost:4000/JsHosting.html&title=Js Hoisting이란?&summary=Js Hoisting이란 무엇인지 알아보고 이해하자.&source=http://localhost:4000/JsHosting.html" title="Share on LinkedIn" rel="nofollow" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a class="email" href="mailto:?subject=Js Hoisting이란?&body=Js Hoisting이란 무엇인지 알아보고 이해하자.%0A%0ARead more here: http://localhost:4000/JsHosting.html" title="Share via e-mail" rel="nofollow" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
             <a class="copy-link" onclick="copyToClipboard()" title="Copy to clipboard" rel="nofollow" target="_blank"><svg width="20px" fill="currentColor" class="inline" viewBox="0 0 18 18"><path d="M16.94 1.1A3.7 3.7 0 0 0 14.3 0c-1 0-1.94.39-2.64 1.1L7.43 5.3c-.91.92-2.09 3.2 0 5.27a.75.75 0 0 0 .82.16c.09-.03.17-.09.24-.15a.74.74 0 0 0 0-1.06c-1.16-1.15-.77-2.39-.02-3.16l4.24-4.22a2.2 2.2 0 0 1 1.58-.65c.6 0 1.16.23 1.58.65.86.87.86 2.29 0 3.16L12.7 8.47a.74.74 0 0 0 1.04 1.05l3.17-3.16a3.73 3.73 0 0 0 0-5.27h.03zM9.54 7.4a.74.74 0 0 0 0 1.06c1.16 1.15.76 2.39 0 3.16l-4.22 4.22c-.42.42-.99.65-1.59.65a2.23 2.23 0 0 1-1.58-3.82l3.17-3.16A.73.73 0 0 0 5.54 9a.78.78 0 0 0-.22-.52.77.77 0 0 0-1.05 0L1.1 11.64A3.72 3.72 0 0 0 3.74 18c1 0 1.94-.39 2.65-1.1l4.23-4.2c.21-.22.94-1.02 1.13-2.2.18-1.12-.2-2.15-1.12-3.07-.27-.27-.78-.27-1.06 0l-.02-.02z" clip-rule="evenodd" fill-rule="evenodd"></path></svg></a>
         </div>
     </div>
@@ -536,9 +537,40 @@
           
           
 
-          <a href="./Vue-React.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+          <a href="./DOM.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
             <div class="recent-item-title">
-              <span>Vue VS React</span>
+              <span>DOM이란?</span>
+              
+
+  <span class = "recent-item-meta">
+  
+  
+  
+  
+    
+    
+    <p class="page_meta-readtime">
+      
+        less than 1 minute read
+      
+    </p>
+  
+  
+  </span>
+
+            </div>
+          </a>
+        </div>
+      
+    
+      
+        <div class="recent-item">
+          
+          
+
+          <a href="./PWA.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+            <div class="recent-item-title">
+              <span>PWA란?</span>
               
 
   <span class = "recent-item-meta">
@@ -567,9 +599,9 @@
           
           
 
-          <a href="./Environment.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+          <a href="./JsHosting.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
             <div class="recent-item-title">
-              <span>Node.js 환경 VS 브라우저 환경</span>
+              <span>Js Hoisting이란?</span>
               
 
   <span class = "recent-item-meta">
@@ -581,7 +613,7 @@
     
     <p class="page_meta-readtime">
       
-        2 minute read
+        1 minute read
       
     </p>
   
@@ -598,9 +630,9 @@
           
           
 
-          <a href="./REST-API-RESTFUL-API.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
+          <a href="./CORS.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
             <div class="recent-item-title">
-              <span>REST-API? RESTFUL-API?</span>
+              <span>CORS란?</span>
               
 
   <span class = "recent-item-meta">
@@ -613,37 +645,6 @@
     <p class="page_meta-readtime">
       
         2 minute read
-      
-    </p>
-  
-  
-  </span>
-
-            </div>
-          </a>
-        </div>
-      
-    
-      
-        <div class="recent-item">
-          
-          
-
-          <a href="./Session-Cookie.html" class="recent-item-img" style="background: url('./assets/img/./assets/posts/20230416/interface.png') center no-repeat; background-size: cover;">
-            <div class="recent-item-title">
-              <span>Session? Cookie?</span>
-              
-
-  <span class = "recent-item-meta">
-  
-  
-  
-  
-    
-    
-    <p class="page_meta-readtime">
-      
-        3 minute read
       
     </p>
   
@@ -880,14 +881,14 @@
     }
 
     function copyToClipboard() {
-      navigator.clipboard.writeText('http://localhost:4000/back-to-basics.html').then(function() {
+      navigator.clipboard.writeText('http://localhost:4000/JsHosting.html').then(function() {
       alerts = document.getElementsByClassName('alert')
       for (i=0; i < alerts.length; i++){
         alerts[i].innerHTML='\u00ABlink copied\u00BB';
         setTimeout((function(i){ return function(){alerts[i].innerHTML='';}})(i), 1600 );
       };
       }, function() {
-        prompt("Unable to copy, please use this link:", "http://localhost:4000/back-to-basics.html");
+        prompt("Unable to copy, please use this link:", "http://localhost:4000/JsHosting.html");
       });
     }
 
