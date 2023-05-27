@@ -20,7 +20,7 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Starter Kit
+title:                 Dev Been
 
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
@@ -29,7 +29,7 @@ description:           >
   with a focus on personal sites that are meant to impress.
 
 # A shorter description for the sidebar.
-tagline:               Change `tagline` in `_config.yml`
+tagline:               Developer HappyBeen Blog
 
 # A list of keywords for your blog
 keywords:              []
@@ -86,7 +86,7 @@ theme: jekyll-theme-hydejack
 
 # Customizaton
 # ----------------------------------------------------------------------------------------
- 
+
 # Sidebar image and theme color of the site.
 accent_image:          /assets/img/sidebar-bg.jpg
 accent_color:          rgb(79,177,186)
@@ -420,4 +420,4 @@ jekyll_compose:
         path: /assets/img/sidebar-bg.jpg
       links:
         - title: Project Link
-          url: https://example.com
+          url: https://DeveBeen.github.io
