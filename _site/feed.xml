@@ -1,596 +1,839 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-27T11:46:48+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev Been</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/example/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2023-05-26T16:49:04+09:00</updated><id>http://localhost:4000/example/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/example/2020-07-03-introducing-hydejack-9/"><![CDATA[<p class="lead">Version 9 is the most complete version of Hydejack yet.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-05-27T12:26:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Dev Been</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><entry><title type="html">JavaScript의 동작원리</title><link href="http://localhost:4000/example/2023-05-26-JS-Operaiting/" rel="alternate" type="text/html" title="JavaScript의 동작원리" /><published>2023-05-26T00:00:00+09:00</published><updated>2023-05-27T12:26:47+09:00</updated><id>http://localhost:4000/example/JS-Operaiting</id><content type="html" xml:base="http://localhost:4000/example/2023-05-26-JS-Operaiting/"><![CDATA[]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Js의 동작원리를 알아보자.]]></summary></entry><entry><title type="html">DOM이란?</title><link href="http://localhost:4000/example/2023-05-14-DOM/" rel="alternate" type="text/html" title="DOM이란?" /><published>2023-05-14T00:00:00+09:00</published><updated>2023-05-27T12:25:23+09:00</updated><id>http://localhost:4000/example/DOM</id><content type="html" xml:base="http://localhost:4000/example/2023-05-14-DOM/"><![CDATA[<hr />
 
-<p><a href="#linking-in-style">Modernized</a> <a href="#whats-in-the-cards">design</a>, <a href="#ready-for-the-big-screen">big headlines</a>, big new features: <a href="#built-in-search">Built-In Search</a>, <a href="#sticky-table-of-contents">Sticky Table of Contents</a>, and <a href="#auto-hiding-navbar">Auto-Hiding Navbar</a>. That <a href="#and-much-more">and more</a> is Hydejack 9.</p>
-
-<ul class="large-only" id="markdown-toc">
-  <li><a href="#linking-in-style" id="markdown-toc-linking-in-style">Linking in Style</a></li>
-  <li><a href="#ready-for-the-big-screen" id="markdown-toc-ready-for-the-big-screen">Ready for the Big Screen</a></li>
-  <li><a href="#whats-in-the-cards" id="markdown-toc-whats-in-the-cards">What’s in the Cards?</a></li>
-  <li><a href="#built-in-search" id="markdown-toc-built-in-search">Built-In Search</a></li>
-  <li><a href="#auto-hiding-navbar" id="markdown-toc-auto-hiding-navbar">Auto-Hiding Navbar</a></li>
-  <li><a href="#sticky-table-of-contents" id="markdown-toc-sticky-table-of-contents">Sticky Table of Contents</a></li>
-  <li><a href="#and-much-more" id="markdown-toc-and-much-more">…and much more</a></li>
-  <li><a href="#even-more-to-come" id="markdown-toc-even-more-to-come">Even More to Come</a></li>
-  <li><a href="#get-it-now" id="markdown-toc-get-it-now">Get It Now</a></li>
-</ul>
-
-<h2 id="linking-in-style">Linking in Style</h2>
-
-<p>Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the <a href="#linking-in-style">link style</a> has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.</p>
-
-<h2 id="ready-for-the-big-screen">Ready for the Big Screen</h2>
-
-<p>The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.</p>
-
-<p>With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
-
-<h2 id="whats-in-the-cards">What’s in the Cards?</h2>
-
-<p>Hydejack 9 now lets you use content cards for both projects and posts. 
-The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the <code class="language-plaintext highlighter-rouge">blog</code> layout. The new <code class="language-plaintext highlighter-rouge">grid</code> layout lets you do that.</p>
-
-<p>Good images are key to making the most out of content cards. For that reason, a <a href="/docs/basics/#adding-images">chapter on images</a> has been added to the documentation.</p>
-
-<h2 id="built-in-search">Built-In Search</h2>
-
-<p>Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
-
-<p>The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.</p>
-
-<p>Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.</p>
-
-<h2 id="auto-hiding-navbar">Auto-Hiding Navbar</h2>
-
-<p>A navbar that’s there when you need it, and disappears when you don’t. Simple as that.</p>
-
-<h2 id="sticky-table-of-contents">Sticky Table of Contents</h2>
-
-<p>Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
-What’s unique about it is that it simply picks up the table of contents already created by kramdown’s <code class="language-plaintext highlighter-rouge">{:toc}</code> tag and transparently upgrades it to a fully dynamic version.</p>
-
-<h2 id="and-much-more">…and much more</h2>
-
-<p>Other noteworthy changes include:</p>
+<h2 id="1-dom이란">1. DOM이란?</h2>
 <ul>
-  <li>Support for Jekyll 4</li>
-  <li>Choice between MathJax and KaTeX for math rendering</li>
-  <li>Use of <code class="language-plaintext highlighter-rouge">jekyll-include-cache</code> for drastically improved page building speeds</li>
-  <li>New variables configuration file — adjust content width, sidebar width, font size, etc…</li>
-  <li>…and the option to disable grouping projects by year.</li>
+  <li>DOM(Document Object Model)은 말 해석 그대로 문서 객체 모델을 말하며, 웹 브라우저가 hml 파일을 받아 렌더링하는 과정에서 문서를 해석할 때 사용된다.</li>
+  <li>브라우저는 렌더링 할 때 xml, html 파일을 트리 형식으로 태그별 객체화하여 정리하여 렌더링을 한다. 보통 DOM의 가장 상위 태그는 html이다.</li>
 </ul>
 
-<p>Read the the <a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> for the full scope of features and improvements made in Hydejack 9.
-Maybe just glance at it to confirm that it is indeed a pretty long list.</p>
-
-<h2 id="even-more-to-come">Even More to Come</h2>
-
-<p>New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.</p>
-
-<h2 id="get-it-now">Get It Now</h2>
-<p>The Free Version of Hydejack is now availabe on <a href="https://rubygems.org/gems/jekyll-theme-hydejack">RubyGems</a>
-and for the first time also on <a href="https://github.com/hydecorp/hydejack/packages">GitHub Packages</a>. 
-The source code is available on <a href="https://github.com/hydecorp/hydejack">GitHub</a> as always.</p>
-
-<p>The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:</p>
-
-<div class="gumroad-product-embed" data-gumroad-product-id="nuOluY"><a href="https://gumroad.com/l/nuOluY">Loading…</a></div>
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-    </li>
-    <li id="fn:2" role="doc-endnote">
-
-      <p>Search was mainly tested for English and German. Please let me know about issues in other languages. 
-  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
-  If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-    </li>
-  </ol>
-</div>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="http://localhost:4000/example/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+09:00</published><updated>2023-05-26T16:49:04+09:00</updated><id>http://localhost:4000/example/example-content-iii</id><content type="html" xml:base="http://localhost:4000/example/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
-Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
-so that your content remains compatible with other Jekyll themes.</p>
-
-<h2 id="large-tables">Large Tables</h2>
-
-<table class="scroll-table">
-  <thead>
-    <tr>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-    </tr>
-    <tr>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-    </tr>
-    <tr>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-    </tr>
-    <tr>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="code-blocks">Code blocks</h2>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
-<span class="c1">// arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="c1">// Call the function</span>
-<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span>
-</code></pre></div></div>
-
-<h2 id="math">Math</h2>
-<p>Lorem ipsum \(f(x) = x^2\).</p>
-
-\[\begin{aligned}
-  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
-            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
-            &amp;= (x_1, \ldots, x_n)
-               \left(\begin{array}{ccc}
-                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
-                 \vdots          &amp; \ddots &amp; \vdots         \\
-                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
-               \end{array}\right)
-               \left(\begin{array}{c}
-                 y_1    \\
-                 \vdots \\
-                 y_n
-               \end{array}\right)
-\end{aligned}\]
-
-<h2 id="message-boxes">Message boxes</h2>
-<p class="message"><strong>NOTE</strong>: You can add a message box.</p>
-
-<h2 id="large-text">Large text</h2>
-<p class="lead">You can add large text.</p>
-
-<h2 id="large-images">Large images</h2>
-<p><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" /></p>
-
-<h2 id="captions-to-images">Captions to images</h2>
-<p class="figure"><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" />
-A caption to an image.</p>
-
-<h2 id="large-quotes">Large quotes</h2>
-<blockquote class="lead">
-  <p>You can make a quote “pop out”.</p>
-</blockquote>
-
-<h2 id="faded-text">Faded text</h2>
-<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="http://localhost:4000/example/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+09:00</published><updated>2023-05-26T16:49:04+09:00</updated><id>http://localhost:4000/example/example-content-ii</id><content type="html" xml:base="http://localhost:4000/example/2017-11-23-example-content-ii/"><![CDATA[<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
-
-<p>There should be whitespace between paragraphs.</p>
-
-<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
-
-<p><a href="another-page">Link to another page</a>.</p>
-
-<ul class="large-only" id="markdown-toc">
-  <li><a href="#header-2" id="markdown-toc-header-2">Header 2</a>    <ul>
-      <li><a href="#header-3" id="markdown-toc-header-3">Header 3</a>        <ul>
-          <li><a href="#header-4" id="markdown-toc-header-4">Header 4</a>            <ul>
-              <li><a href="#header-5" id="markdown-toc-header-5">Header 5</a>                <ul>
-                  <li><a href="#header-6" id="markdown-toc-header-6">Header 6</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#theres-a-horizontal-rule-below-this" id="markdown-toc-theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</a></li>
-      <li><a href="#here-is-an-unordered-list" id="markdown-toc-here-is-an-unordered-list">Here is an unordered list:</a></li>
-      <li><a href="#and-an-ordered-list" id="markdown-toc-and-an-ordered-list">And an ordered list:</a></li>
-      <li><a href="#and-a-nested-list" id="markdown-toc-and-a-nested-list">And a nested list:</a></li>
-      <li><a href="#small-image" id="markdown-toc-small-image">Small image</a></li>
-      <li><a href="#large-image" id="markdown-toc-large-image">Large image</a></li>
-      <li><a href="#definition-lists" id="markdown-toc-definition-lists">Definition lists</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="header-2">Header 2</h2>
-
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
-
-<h3 id="header-3">Header 3</h3>
-
-<blockquote>
-  <p>This is a blockquote following a header.</p>
-
-  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-</blockquote>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nf">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
-
-<h4 id="header-4">Header 4</h4>
-
-<ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-</ul>
-
-<h5 id="header-5">Header 5</h5>
-
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
-
-<h6 id="header-6">Header 6</h6>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+<p><img src="https://yozm.wishket.com/media/news/1803/image003.png" alt="image" /></p>
 
 <hr />
 
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
+<h2 id="2-dom을-왜-쓰는가">2. DOM을 왜 쓰는가?</h2>
 <ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
+  <li>DOM은 html을 위한 api라 할 수 있으며 html을 탐색할 때 사용되고 html의 구조를 바꿀 수도 있도록 한다. 이러한 작업을 해주는 언어가 JavaScript라 할 수 있다.</li>
+  <li>즉, JavaScript를 이용하여 DOM이란 장소에서 트리 형태로 저장된 html을 수정할 수 있다.</li>
+  <li>중요한 것은 DOM은 HTML이랑 같은 것이 아니다!!</li>
 </ul>
 
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
-
-<h3 id="small-image">Small image</h3>
-
-<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
-
-<h3 id="large-image">Large image</h3>
-
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
-
-<h3 id="definition-lists">Definition lists</h3>
-
-<dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
-  <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
-</dl>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Hello Would<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;div&gt;&lt;img</span> <span class="na">src=</span><span class="s">"example.png"</span> <span class="nt">/&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[A page showing how regular markdown content is styled in Hydejack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content</title><link href="http://localhost:4000/example/2012-02-07-example-content/" rel="alternate" type="text/html" title="Example Content" /><published>2012-02-07T00:00:00+09:00</published><updated>2023-05-26T16:49:04+09:00</updated><id>http://localhost:4000/example/example-content</id><content type="html" xml:base="http://localhost:4000/example/2012-02-07-example-content/"><![CDATA[<p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. <em>Aenean eu leo quam.</em> Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
-
-<blockquote>
-  <p>Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-</blockquote>
-
-<p>Etiam porta <strong>sem malesuada magna</strong> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-
-<h2 id="inline-html-elements">Inline <abbr title="HyperText Markup Language">HTML</abbr> elements</h2>
-
-<p><abbr title="HyperText Markup Language">HTML</abbr> defines a long list of available inline tags, a complete list of which can be found on the <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element">Mozilla Developer Network</a>.</p>
-
 <ul>
-  <li><strong>To bold text</strong>, use <code class="language-plaintext highlighter-rouge">**To bold text**</code>.</li>
-  <li><em>To italicize text</em>, use <code class="language-plaintext highlighter-rouge">*To italicize text*</code>.</li>
-  <li>Abbreviations, like <abbr title="HyperText Markup Language">HTML</abbr> should be defined like this <code class="language-plaintext highlighter-rouge">*[HTML]: HyperText Markup Language</code>.</li>
-  <li>Citations, like <cite>— Mark otto</cite>, should use <code class="language-plaintext highlighter-rouge">&lt;cite&gt;</code>.</li>
-  <li><del>Deleted</del> text should use <code class="language-plaintext highlighter-rouge">~~deleted~~</code> and <ins>inserted</ins> text should use <code class="language-plaintext highlighter-rouge">&lt;ins&gt;</code>.</li>
-  <li>Superscript <sup>text</sup> uses <code class="language-plaintext highlighter-rouge">&lt;sup&gt;</code> and subscript <sub>text</sub> uses <code class="language-plaintext highlighter-rouge">&lt;sub&gt;</code>.</li>
+  <li>위 html 코드는 아래와 같은 DOM 트리 구조를 가진다 할 수 있다.</li>
 </ul>
 
-<p>Most of these elements are styled by browsers with few modifications on our part.</p>
-
-<h2 id="heading-2">Heading 2</h2>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-
-<h3 id="heading-3">Heading 3</h3>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
-
-<h4 id="heading-4">Heading 4</h4>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
-
-<h5 id="heading-5">Heading 5</h5>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
-
-<h6 id="heading-6">Heading 6</h6>
-<p>Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor.</p>
-
-<h2 id="code">Code</h2>
-
-<p>Cum sociis natoque penatibus et magnis dis <code class="language-plaintext highlighter-rouge">code element</code> montes, nascetur ridiculus mus.</p>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
-<span class="c1">// arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="c1">// Call the function</span>
-<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span>
-</code></pre></div></div>
-
-<h2 id="lists">Lists</h2>
-
-<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FkVzgW%2Fbtq2ESZsu45%2FASisLkqw5n9dQhbVz53nU1%2Fimg.png" alt="image" /></p>
 
 <ul>
-  <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
-  <li>Donec id elit non mi porta gravida at eget metus.</li>
-  <li>Nulla vitae elit libero, a pharetra augue.</li>
+  <li>이에 자바스크립트를 통해 HTML에서 데이터를 가져올 때나 웹 페이지를 동적으로 만들고 싶을 때 DOM을 사용한다.</li>
 </ul>
 
-<p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+<hr />
+
+<h2 id="3-dom-활용-렌더링">3. DOM 활용 렌더링</h2>
+<ul>
+  <li>브라우저는 DOM을 이용하여 어떻게 화면을 렌더링할까?</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F6iIDm%2Fbtq2EgGcBUS%2F4laPkkfFZ5WNffOfI7wB31%2Fimg.png" alt="image" /></p>
 
 <ol>
-  <li>Vestibulum id ligula porta felis euismod semper.</li>
-  <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
-  <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+  <li>브라우저는 html 태그를 파싱해 돔 트리를 구성하며 동시에 브라우저는 스타일 시트에서 css를 파싱하여 스타일 규칙들을 만들어낸다.</li>
+  <li>위에서 언급한 돔 트리와 스타일 규칙 두 가지 합쳐서 렌더 트리를 만들어낸다.</li>
 </ol>
 
-<p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+<p>[DOM의 문제점]</p>
+<ul>
+  <li>DOM은 업데이트 하는데 너무 많은 비용이 드는데 일반적인 앱에는 DOM을 구성하는 수천개 이상의 노드가 있을 수도 있기에 DOM을 업데이트하는데 많은 비용이 들 수도 있다.</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[DOM이란 무엇인지 알아보고 이해하자.]]></summary></entry><entry><title type="html">PWA란?</title><link href="http://localhost:4000/example/2023-05-13-PWA/" rel="alternate" type="text/html" title="PWA란?" /><published>2023-05-13T00:00:00+09:00</published><updated>2023-05-27T12:24:55+09:00</updated><id>http://localhost:4000/example/PWA</id><content type="html" xml:base="http://localhost:4000/example/2023-05-13-PWA/"><![CDATA[<hr />
 
-<dl>
-  <dt>HyperText Markup Language (<abbr title="HyperText Markup Language">HTML</abbr>)</dt>
-  <dd>The language used to describe and define the content of a Web page</dd>
-  <dt>Cascading Style Sheets (<abbr title="Cascading Style Sheets">CSS</abbr>)</dt>
-  <dd>Used to describe the appearance of Web content</dd>
-  <dt>JavaScript (<abbr title="JavaScript">JS</abbr>)</dt>
-  <dd>The programming language used to build advanced Web sites and applications</dd>
-</dl>
+<h2 id="1-pwaprogressive-web-apps">1. PWA(Progressive Web Apps)?</h2>
+<ul>
+  <li>PWA란 모바일 사이트에서 네이티브 앱과 같은 UX를 제공하는 기술을 말한다. 즉, 모바일 사이트에서 앱을 사용한 것과 같이 홈 화면에 아이콘 등을 배치하고 오프라인 열람 등을 제공하는 기술이다.</li>
+</ul>
 
-<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.</p>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdEgfhr%2FbtqPLOW7VR0%2FIy2gOQWMMUZGrxrYu5PhDK%2Fimg.jpg" alt="image" /></p>
 
-<h2 id="images">Images</h2>
+<hr />
 
-<p>Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.</p>
+<h2 id="2-pwa의-특징">2. PWA의 특징</h2>
 
-<p><img src="https://via.placeholder.com/800x400" alt="800x400" title="Large example image" /></p>
+<ol>
+  <li>반응형 디자인 : PWA는 네이티브 앱과 같이 기본적으로 반응형 디자인을 염두해 개발한다. 반응형 디자인은 다양한 화면 크기와 방향에 맞게 레이아웃과 콘텐츠를 자동으로 조정하여 스마트폰, 태블릿 및 데스크탑과 같은 다양한 장치에서 일관된 사용자 경험을 보장한다.</li>
+  <li>연결독립성 : PWA는 기본 브라우저 스레드와 별도로 백그라운드에서 실행되는 <a href="##서비스워커">서비스워커</a>를 사용한다.</li>
+  <li>앱처럼 사용 : PWA는 사용자의 장치에 설치되어 일반 앱처럼 아이콘 등을 배치할 수 있으며 기존 URL 바를 보여주는 부분이 없이 실행이 가능해 앱처럼 사용가능하다.</li>
+  <li>푸시 알림 : PWA는 앱이 활성화 되지 않아도 사용자에게 푸시 알림을 보낼 수 있다.</li>
+  <li>백그라운드 동기화 : PWA는 백그라운드에서도 최신상태로 유지할 수 있다.</li>
+  <li>보안 컨텍스트 : PWA는 HTTPS를 통해 제공되어 사용자와 앱간의 보안 연결을 보장해야 한다.</li>
+  <li>검색 : PWA는 웹이기 때문에 앱스토어에서 앱을 설치할 필요 없이 검색 엔진 통해 검색하고 URL을 통해 공유할 수 있다.</li>
+</ol>
 
-<p><img src="https://via.placeholder.com/400x200" alt="400x200" title="Medium example image" /></p>
+<p>[PWA의 장점]</p>
 
-<p><img src="https://via.placeholder.com/200x200" alt="200x200" title="Small example image" /></p>
+<ol>
+  <li>플렛폼과 호환성 : PWA는 최신 웹 브라우저가 있는 모든 플랫폼에서 실행할 수 있어 Andriod, iOS 등 다양한 플랫폼에 대해 호환성이 좋아 별도 앱을 개발할 필요가 없다.</li>
+  <li>업데이트 속도 : PWA는 서버에서 직접 업데이트 할 수 있어 사용자가 앱에서 수동으로 업데이트 하지 않아도 된디.</li>
+  <li>오프라인 엑세스 : 서비스 워커는 PWA가 오프라인에서도 작업할 수 있도록한다.</li>
+  <li>앱과 같은 UX : PWA는 장치의 홈 화면에 설치할 수 있으며 푸시 알림과 같은 기능을 지원하여 기본 앱과 유사한 사용자 경험을 제공한다.</li>
+  <li>개발 및 유지비용 절감 : PWA는 웹 기술을 사용하므로 개발자는 기존 웹기술을 활용하고 여러 플랫폼에 대한 단일 코드베이스를 유지 관리하여 개발 및 유지 관리 비용을 줄일 수 있다.</li>
+</ol>
 
-<h2 id="tables">Tables</h2>
+<p>[PWA의 단점]</p>
 
-<p>Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+<ol>
+  <li>제한된 기능 : PWA는 고급 카메라 제어 또는 특정 센서와 같은 모든 기본 장치 및 API에 액세스하지 못할 수 있다.</li>
+  <li>가시성 감소 : PWA는 기존 앱들과는 다르게 앱스토어에서 나열되어 있지 않아 가시성이 떨어진다.</li>
+  <li>일관성 부족 : 최신 브라우저는 PWA를 지원하지만 다양한 플렛폼 간에 구현이 다를 수 있다.</li>
+</ol>
+
+<hr />
+
+<h2 id="3-서비스워커">3. 서비스워커</h2>
+<ul>
+  <li>서비스워커란 브라우저가 백그라운드에서 실행하는 웹페이지랑은 다르게 별개로 작동하는 스크립트로 오프라인 문제를 해결하기 위해서 만들어졌다.</li>
+  <li>서비스 워커는 개발자에게 오프라인 환경을 통제할 수 있는 권한을 부여하여 오프라인 환경에서 캐시와의 상호작용, 백그라운드 동기화, 푸시알림 등의 기능을 가능하게 했다.</li>
+</ul>
+
+<p>[서비스워커 특징]</p>
+<ol>
+  <li>서비스워커는 사용자가 요청해야 동작하며, 할 일을 모두 마쳐야지 종료된다.</li>
+  <li>서비스워커는 웹페이지 밖에서 동작하기 때문에 웹브라우저의 열고 닫힘과 무관하게 작동한다.</li>
+  <li>웹페이지 밖에서 동작하기 때문에 DOM요소에 접근할 수 있다.</li>
+</ol>
+
+<p><img src="https://fe-developers.kakaoent.com/static/aa1b6334ea93131d44c021a7e8fb9bfe/0f67e/service-worker-lifecycle-diagram.png" alt="image" /></p>
+
+<hr />]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[PWA가 무엇인지 알아보고 이해하자.]]></summary></entry><entry><title type="html">호이스팅 (Hoisting)</title><link href="http://localhost:4000/example/2023-05-13-JsHoisting/" rel="alternate" type="text/html" title="호이스팅 (Hoisting)" /><published>2023-05-13T00:00:00+09:00</published><updated>2023-05-27T12:23:35+09:00</updated><id>http://localhost:4000/example/JsHoisting</id><content type="html" xml:base="http://localhost:4000/example/2023-05-13-JsHoisting/"><![CDATA[<ul>
+  <li>호이스팅은 코드가 실행하기 전 변수선언/함수선언이 해당 스코프의 최상단으로 끌어 올려진 것만 같은 현상을 말한다. 이에 개발자는 코드를 어디에 작성해도 실행 시 코드가 최상단으로 끌어올려저서 실행된다.</li>
+  <li>자바스크립트 엔진은 코드를 실행하기 전에 실행 가능한 코드를 형상화하고 구분하는 과정(실행 컨텍스트 과정 중 하나)을 거치는데 이때, 모든 선언을 스코프에 등록하기 때문에 이때 변수는 초기화가 되진 않았지만 생성은 되어있는 상태가 되어 이러한 현상이 발생한다.</li>
+</ul>
+
+<p><img src="https://images.velog.io/post-images/surim014/b75bd470-2d25-11ea-8ac1-434d92578245/JavaScript-Hoisting.png" alt="image" /></p>
+
+<hr />
+
+<h2 id="2-함수의-호이스팅">2. 함수의 호이스팅</h2>
+<ul>
+  <li>자바스크립트에서는 함수를 정의하는 방법으로 아래와 같이 함수 표현식과 함수 선언식이 있다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 함수 선언식</span>
+<span class="kd">function</span> <span class="nf">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 함수 표현식</span>
+<span class="kd">const</span> <span class="nx">add</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<ul>
+  <li>기본적으로 둘 다 함수를 만드는 동일한 기능을 하지만, 함수 표현식 같은 경우는 함수를 변수에 할당하므로 유연성이 높으며, 호이스팅이 강제로 진행되지 않아 개발자에게 혼동을 주지 않는다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+ 
+<span class="kd">function</span> <span class="nf">add</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span> 
+<span class="p">}</span>
+ 
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>위와 같은 코드는 함수 선언식을 사용한 것으로 함수를 뒤늦게 생성하였더라도 함수 호이스팅이 발생하여 5와 7이 출력된다.</li>
+  <li>이러한 구조는 함수를 선언하기 전에 함수를 선언한 것처럼 보여지기에 개발하는데 혼동을 줄 수 있어 함수 선언식이 아닌 함수 표현식을 권장한다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+
+<span class="kd">var</span> <span class="nx">add</span> <span class="o">=</span> <span class="nf">function </span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">x</span> <span class="o">+</span> <span class="nx">y</span><span class="p">;</span>
+ 
+<span class="p">}</span>
+ 
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">add</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">));</span>
+</code></pre></div></div>
+
+<ul>
+  <li>위 코드는 함수 표현식을 사용하혀 정의한 것으로 함수를 정의하기 전에 add(2,3)을 호출했기 때문에 에러가 발생한다.</li>
+  <li>그 후 함수를 정의한 후에 실행한 add(3, 4)는 정상적으로 실행되는데 이는 호이스팅이 일어나지 않았기 때문이다.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-변수-호이스팅">3. 변수 호이스팅</h2>
+<ul>
+  <li>함수 뿐만 아니라 변수에서도 위와 같은 호이스팅 현상이 일어나는데 이는 var을 사용해서 정의했을 때를 이야기한다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nf">printNum</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+    <span class="kd">var</span> <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nf">printNum</span><span class="p">();</span>
+
+<span class="c1">// undefined</span>
+<span class="c1">// 20</span>
+</code></pre></div></div>
+
+<ul>
+  <li>처음에 전역변수로 값을 선언했음에도 첫 변수 호출값은 undefined가 나왔다. 이는 변수 호이스팅이 일어나 아래 코드와 같이 선언된 것처럼 변하기 때문이다.</li>
+</ul>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+
+<span class="kd">function</span> <span class="nf">printNum</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">globalNum</span><span class="p">;</span> <span class="c1">// 함수 호이스팅에 의해 변수의 선언 부분이 이동</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+    <span class="nx">globalNum</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="nb">document</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="nx">globalNum</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="nf">printNum</span><span class="p">();</span>
+</code></pre></div></div>
+
+<ul>
+  <li>이러한 특징 때문에 코드의 가독성을 해치거나, 예상치 못한 동작을 일으키기도 하므로 변수를 선언할때는 var 키워드는 사용하지 않는 것을 권장하며 ES6의 let 이나 const 키워드를 사용하는 것을 강력히 권장한다. let, const로 변수를 선언하면 <a href="#단어정리">블록 스코프</a>를 가지며 호이스팅이 발생하지 않기 때문이다.</li>
+</ul>
+
+<hr />
+
+<h1 id="단어정리">단어정리</h1>
+<p>블록 스코프 : 주어진 코드 불록 안에서만 사용할 수 있도록 외부 코드와 단절 시키는 영역이다.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Js Hoisting이란 무엇인지 알아보고 이해하자.]]></summary></entry><entry><title type="html">CORS란?</title><link href="http://localhost:4000/example/2023-05-12-CORS/" rel="alternate" type="text/html" title="CORS란?" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-27T12:23:04+09:00</updated><id>http://localhost:4000/example/CORS</id><content type="html" xml:base="http://localhost:4000/example/2023-05-12-CORS/"><![CDATA[<hr />
+
+<h2 id="1-cors란">1. CORS란?</h2>
+<ul>
+  <li>CORS(Cross-Origin Resource Sharing)는 영단어 그대로 해석하면 “교차 출처 리소스 공유”로 추가 HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 애플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 브라우저에 알려주는 체제이다.</li>
+  <li>즉, <a href="#단어정리">한 출처(origin)</a>에서 실행되고 있는 웹 애플리케이션이 <a href="#단어정리">다른 출처(cross-origin)</a>에 원하는 리소스 접근권한을 알려주는 메커니즘이다.</li>
+</ul>
+
+<p><img src="https://hanamon.kr/wp-content/uploads/2021/09/CORS.png" alt="image" /></p>
+
+<hr />
+
+<h2 id="2-정책">2. 정책</h2>
+<ul>
+  <li>HTTP 요청에 대해서 HTML은 Cross-Origin 정책을 따르기 때문에 기본적으로 Cross-Origin 요청이 가능하다. 예를들어 HTML에서 link 태그에서 다른 origin의 css 등의 리소스에 접근하는 것이 가능하고, img 태그에서 다른 jpg, png 등의 리소스에 접근하는 것이 가능하다.</li>
+  <li>하지만 예외적으로 script 태그 내 HTTP 요청에 대하여는 보안상 이유로 Same-Origin 정책을 따르기에 Cross-Origin 요청이 불가능하다.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-사용처-보안상-문제">3. 사용처? 보안상 문제?</h2>
+<ul>
+  <li>CORS는 그러면 보안상의 문제는 없는지?, 왜 사용하는지? 라는 의문이 들 수도 있다고 생각한다. 그러기 위해서는 먼저 SOP(동일 출처 정책)을 이해해야 한다.</li>
+  <li>SPO는 브라우저의 보안상 만들어졌는다. 우리 브라우저는 <a href="#단어정리">능동적 공격</a>, <a href="#단어정리">수동적 공격</a>을 받을 수 있다. 이때 서로 다른 사이트 간에 통신이 이루어지는 부분에서 공격을 받을 수 있고 이는 보안 문제로 이어지기에 웹 브라우저는 SPO라는 정책으로 다른 사이트 간에 통신인 교차 출처를 막아 보안 문제를 해결했다.</li>
+  <li>이러한 정책은 보안 문제는 해결했지만 결국 교차 출처가 불가능해지기에 사이트 간 데이터 공유가 어려워져 HTTP 요청을 통해 교차 출처를 통해 데이터 공유가 가능하게 하는 CORS를 사용하기 시작했다.</li>
+</ul>
+
+<hr />
+
+<h2 id="4-cors-시나리오">4. CORS 시나리오</h2>
+<ul>
+  <li>CORS라는 정책은 강력하기 때문에 CORS 이슈가 많이 등장할 수 밖에 없다. 즉, 안전성은 보장 받았지만 그만큼 까다로워 정책 위반 ERROR가 많이 발생한다는 것이다.</li>
+  <li>이를 해결하기 위해 우리는 CORS의 동작 시나리오를 살펴볼 필요가 있다.</li>
+  <li>CORS의 동작 시나리오는 아래와 같이 크게 3가지로 분류할 수 있다.</li>
+</ul>
+
+<ol>
+  <li>간단한 요청(Simple Request) : 특정 조건을 만족하는 요청의 경우에는 허락 없이도 다른 출처에 HTTP 요청을 보낼 수 있다.</li>
+  <li>사전 점검 요청 (Preflight Request) : 브라우저는 실제 요청 전 preflight라는 HTTP 사전 요청을 진행 후 사전 요청이 가능하면 실제 HTTP 요청을 보낸다.</li>
+  <li>인증 정보를 포함한 요청(Credentialed Request) : 말 그대로 요청 시에 인증 정보를 보관한 헤더와 같이 요청하여 교차 출처가 가능하게 하는 요청 시나리오다.</li>
+</ol>
+
+<hr />
+
+<h2 id="5-preflight가-왜-필요한가">5. preflight가 왜 필요한가?</h2>
+<ul>
+  <li>CORS 문제를 인식하지 못하는 서버를 위해서 preflight가 필요하다. 예를 들어 preflight가 없는 상황에서 교차 출처를 서버에 요청하면 서버는 CORS 설정이 없기 때문에 요구한 대로 정보를 그대로 가져온 후에 브라우저는 교차 출처 리소스라는 응답을 받기에 뒤늦게 브라우저가 Error를 띄워버려도 DB에서 이미 데이터가 증발했을 수도 있다.</li>
+</ul>
+
+<p>[Preflight가 없을 때]
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fc8zxWZ%2FbtrgOulF1h9%2F2kw1reQOx4zJhDl7ogodAK%2Fimg.png" alt="image" /></p>
+
+<p>[Preflight가 있을 때]
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FU2BMh%2FbtrgXhq6z51%2FHS4xNjJLJm1agjfYYWGAg1%2Fimg.png" alt="image" /></p>
+
+<h1 id="단어정리">단어정리</h1>
+<ul>
+  <li>origin : 특정페이지에 접근할 때 사용되는 URL의 Scheme(프로토콜), host(도메인), 포트를 말한다.</li>
+  <li>cross-origin : origin과 Scheme(프로토콜), host(도메인), 포트 중 하나라도 다른 URL을 말한다.</li>
+  <li>능동적 공격 : 해커가 브라우저에 직접 침투하여 행동하여 공격하는 것을 말한다.</li>
+  <li>수동적 공격 : 해커가 브라우저에 함정을 파둬 사용자 행동을 통해 공격하는 것을 말한다.</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[CORS가 무엇인지 알아보고 해결 방안을 생각해보자.]]></summary></entry><entry><title type="html">Node.js 환경와 브라우저 환경</title><link href="http://localhost:4000/example/2023-05-07-Environment/" rel="alternate" type="text/html" title="Node.js 환경와 브라우저 환경" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-27T12:21:24+09:00</updated><id>http://localhost:4000/example/Environment</id><content type="html" xml:base="http://localhost:4000/example/2023-05-07-Environment/"><![CDATA[<hr />
+<h2 id="1-nodejs란">1. Node.js란?</h2>
+<ul>
+  <li>Node.js는 <a href="#단어정리">V8 JavaScript 엔진</a>으로 빌드되어 외부에 있는  JavaScript 코드를 실행하는 오픈소스 <a href="#단어정리">크로스 플렛폼</a> 백엔드 <a href="#단어정리">런타임 환경</a>이다.</li>
+  <li>Node.js를 사용하여 개발자는 자바스크립트를 사용해서 명령줄 도구를 작성하고 서버측 스크립팅을 실행하여 페이지를 사용자의 웹 브라우저로 보내기 전에 동적 웹 페이지 컨텐츠를 생성할 수 있다.</li>
+  <li>즉, Node.js는 웹 어플리케이션을 통합하는 JS를 어디에서나 적용하고 쓸 수 있는 패러다임을 제공하는 서버측 스크립트, 클라이언트측 스크립트가 아닌 단일 프로그래밍 언어이다.</li>
+  <li>Node.js는 이벤트 기반, 논 블로킹 I/O 모델이라는 특성으로 높은 처리 성능을 가지고 있다는 것이 특징이다.</li>
+</ul>
+
+<p>[이벤트 기반]<br />
+<img src="https://velog.velcdn.com/images%2Feunnbi%2Fpost%2Fd27f23af-53fd-44fc-81f3-74d10a2c6c7d%2Fimage.png" alt="image" /></p>
+<ul>
+  <li>이벤트 기반은 이벤트 루프를 통해 이벤트 발생 시 미리 지정한 작업을 수행하는 방식을 이야기 한다.</li>
+  <li>이벤트 루프는 여러 이벤트가 동시 발생할 때 어떤 것을 우선 처리할 지 우선순위를 판단하는 사이클이다.</li>
+  <li>Node.js는 이벤트가 종료될 때까지 이벤트 처리를 위한 작업을 반복한다.</li>
+</ul>
+
+<p>[논 블로킹 I/O 모델]<br /></p>
+<ul>
+  <li>작업에는 두 가지 종류가 있는데 동시에 실행될 수 있는 작업과 동시에 실행될 수 없는 작업이있다. 이 중 논 블로킹은 이전 작업이 완료될 때까지 대기하지 않고 다음 작업을 수행하는 것을 말한다.</li>
+  <li>Node.js는 싱글스레드 논 블로킹 방식으로 스레드는 하나지만 비동기식으로 이전작업의 완료를 기다리지 않고 다음 작업을 실행한다.</li>
+</ul>
+
+<hr />
+<h2 id="2-브라우저">2. 브라우저?</h2>
+<ul>
+  <li>브라우저 환경을 알기 위해서 먼저 브라우저가 정확히 뭔지 알아야한다.</li>
+  <li>브라우저는 사전적 의미로는 인터넷상에서 웹에 연결 시켜주는 윈도우 기반의 소프트웨어이다. 쉽게 말해서 사용자인 우리가 웹에 접근하기 위한 도구를 브라우저라고 정의한다.</li>
+  <li>아래 사진과 같이 우리가 아는 브라우저는 여러 종류가 있다.<br />
+<img src="https://t1.daumcdn.net/cfile/tistory/2670B14957BA8B2E0C" alt="image" /><br /></li>
+</ul>
+
+<hr />
+<h2 id="3-nodejs-브라우저-환경">3. Node.js, 브라우저 환경?</h2>
+<ul>
+  <li>그렇다면 여기에 환경을 붙이면 정확히 무엇을 말하는 것이냐? 우리가 보통 개발 환경하면은 어떤 뜻으로 해석하는가? 그렇다 개발을 위해 셋팅하는 환경을 말한다.</li>
+  <li>위에 두가지도 직역하자면 Node.js 환경은 Node.js를 사용하기 위해 셋팅하는 환경, 브라우저 환경은 브라우저를 사용하기 위해 셋팅하는 환경을 말한다.</li>
+  <li>그러면 셋팅을 누가 하느냐? 개발환경은 보통 개발자가 언어를 채택하여 셋팅하는 방식이지만 위에 두 환경은 그 셋팅 주체가 JavaScript로 통일(약속)되어 있다.
+<img src="https://miro.medium.com/v2/resize:fit:1400/1*BPSx-c--z6r7tY29L19ukQ.png" alt="image" /></li>
+</ul>
+
+<hr />
+<h2 id="4-nodejs-환경과-브라우저-환경의-차이점">4. Node.js 환경과 브라우저 환경의 차이점</h2>
+<ul>
+  <li>이제 확실하게 Node.js 환경이 뭔지, 브라우저 환경이 무엇인지 알았을 것이다. 그렇다면 이 둘의 차이점이 무엇인지 알아보자.</li>
+</ul>
+
+<p>[Node.js와 브라우저의 차이점]</p>
+<ol>
+  <li>존재목적 : 브라우저는 HTML,CSS,JS를 실행하여 사용자의 웹 화면에 랜더링하는 것이 주 목적이지만 Node.js는 서버 개발 환경을 제공하는 것이 주목적이다. 이에 둘 다 JS의 코어인 <a href="#단어정리">ECMAScript</a>를 실행하나 이외 추가적인 API는 서로 호환되지 않는다.</li>
+  <li>API : 브라우저는 시각적 표현이 필요한 것과 다르게 node.js는 필요가 없어 UI관련 API에도 차이가 있고, Node.js는 브라우저에서 사용가능한 window,document 객체가 없어 웹 플렛폼 API가 Node.js에는 호환되지 않는다.</li>
+  <li>JS Engine : Node.js는 구글 Chrome 브라우저에서 사용하는 V8 엔진을 자바스크립트 실행 엔진으로 사용하지만 브라우저는 종류와 버전에 따라 엔진이 다양하다.</li>
+  <li>제어 : Node.js에서는 우리가 직접환경을 제어하여 버전 이동이 가능하지만 브라우저는 환경이 정해져 있기에 불가능하다.
+<br />
+<br />
+    <ul>
+      <li>이러한 차이점들로 Node.js는 컴퓨터의 깊은 부분을 제어하는 백엔드 기술에 최적화 되어 있음을 알 수 있다.</li>
+    </ul>
+  </li>
+</ol>
+
+<hr />
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>V8 JavaScript 엔진 : 웹 브라우저를 만드는데 기반을 제공하는 오픈소스 자바스크립트 엔진으로 자바스크립트를 바이트 코드로 변환하여 읽어 웹 브라우저 내부의 속도 개선을 위해 만들어졌다.</li>
+  <li>크로스 플렛폼 : 컴퓨터 프로그램, 운영체제, 프로그래밍 언어 등 여러종류의 컴퓨터 플랫폼에서 동작할 수 있다는 뜻이다.</li>
+  <li>런타임 환경 : 런타임을 위해 시스템 적인 자원을 운영체제에게 요청하기 위해 엑세스할 수 있도록 해주는 환경을 말한다.</li>
+  <li>ECMAScript : Ecma International이 ECMA-262 기술 규격에 따라 정의하고 있는 표준화된 스크립트 프로그래밍 언어를 말하며 자바 스크립트를 표준화하기 위해 사용된다.</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Node.js 환경과 브라우저 환경의 정의와 차이점을 알아보자.]]></summary></entry><entry><title type="html">Vue와 React</title><link href="http://localhost:4000/example/2023-05-07-Vue-React/" rel="alternate" type="text/html" title="Vue와 React" /><published>2023-05-07T00:00:00+09:00</published><updated>2023-05-27T12:22:34+09:00</updated><id>http://localhost:4000/example/Vue-React</id><content type="html" xml:base="http://localhost:4000/example/2023-05-07-Vue-React/"><![CDATA[<hr />
+<h2 id="1-vuejs">1. Vue.js?</h2>
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fu5WAs%2Fbtr9qC5h0xP%2FfbpbQzd5tlxv3ilL6ukcAK%2Fimg.png" alt="image" /></p>
+<ul>
+  <li>웹 화면을 만들기 위한 프론트엔드 라이브러리이자 점진적 프레임워크이다.</li>
+  <li>배우기 쉽게 만들어져 프로트엔드 개발에 있어 react와 함께 대중적인 오픈소스 js 프레임워크이다.</li>
+  <li>SPA를 구축하는데 사용한다.</li>
+  <li>MVVM패턴의 ViewModel에 해당하여, UI코드와 데이터제어 제어 로직을 분리했다.
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcVeP4L%2FbtrvZIubnnT%2FCZKbN7k7uHkvIssYIAgjWk%2Fimg.png" alt="image" /></li>
+</ul>
+
+<p>[구성요소]</p>
+<ul>
+  <li>View(html DOM): 사용자에게 보이는 화면이다.</li>
+  <li>Model(JS): 데이터를 담는 용기로 보통은 서버에서 가져온 javascript 객체를 저장한다.</li>
+  <li>ViewModel: View와 Model의 중간 영역으로 DomListener와 DataBinding을 제공하는 영역이다.</li>
+  <li>DOM: HTML 문서에 들어가는 요소(tag, class, attribute 등)의 정보를 담고 있는 트리 형태의 데이터이다.</li>
+  <li>DOM Listener: DOM의 변경에 대한 즉각적으로 반응하여 특정 로직을 수행하는 장치이다.</li>
+  <li>Data Binding: View에 표시되는 내용과 모델의 데이터를 동기화한다.</li>
+  <li>
+    <p>Vue에서는 기본적으로 단방향 데이터바인딩으로 컴포넌트간 통신은 상위 컴포넌트에서 하위컴포넌트로 전달한다.</p>
+  </li>
+  <li>Vue.js로 Hello World 출력 프로그램 짜기 <br /></li>
+</ul>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">"viewport"</span> <span class="na">content=</span><span class="s">"width=device-width, initial-scale=1.0"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Hello World<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"app"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+    <span class="nt">&lt;script&gt;</span>
+      <span class="k">new</span> <span class="nc">Vue</span><span class="p">({</span>
+        <span class="na">el</span><span class="p">:</span> <span class="dl">"</span><span class="s2">#app</span><span class="dl">"</span><span class="p">,</span>
+        <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">message</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Vue.js - Hello World </span><span class="dl">"</span><span class="p">,</span>
+        <span class="p">},</span>
+      <span class="p">});</span>
+    <span class="nt">&lt;/script&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<hr />
+<h2 id="2-react">2. React?</h2>
+<p><img src="https://lessipe.com/file/course/15561812324742.png" alt="image" /></p>
+<ul>
+  <li>React는 javascript 라이브러리 중 하나로 사용자 인터페이스를 만들기 위해 사용한다. 페이스북(메타)와 개발자 및 기업들인 공동체에 의해 유지보수된다.</li>
+  <li>Vue와 같이 SPA 개발 시 자주 사용된다.</li>
+</ul>
+
+<p>[React의 특징]</p>
+<ol>
+  <li>Data Flow : 데이터의 흐름이 단방향성이다.</li>
+  <li><a href="#단어정리">Component</a> 기반 구조 : React는 UI를 여러 컴포넌트로 쪼개진 독립된 컴포넌트를 조합하여 구현한다.</li>
+  <li>Virtual Dom : Vue와 같이 데이터를 객체로 간주하는 트리구조의 형태를 가진다.</li>
+  <li>Props : 부모 컴포넌트에서 자식 컴포넌트로 데이터를 전달하는 데이터로 자식 컴포넌트에서는 props를 변경 불가능하게 하는 특징을 가지고 있다.</li>
+  <li>State : 컴포넌트 내부에 선언하여 값을 바꾸는 용도이며, 동적인 데이터를 다룰 때 사용된다.</li>
+  <li>JSX : JS 문법을 확장시킨 것으로, 필수사용은 아니지만 UI 코드 작업 시 시각적으로 도움이 된다.</li>
+</ol>
+
+<hr />
+<h2 id="3-프레임워크-라이브러리">3. 프레임워크? 라이브러리?</h2>
+<p>[프레임워크?]</p>
+<ul>
+  <li>프레임워크(Framework)는 제어의 역전 개념이 적용된 소프트웨어의 기반 구조가 되는 대표적인 기술이다.</li>
+</ul>
+
+<p>[프레임워크의 특징]</p>
+<ul>
+  <li>특정 개념들의 추상화를 제공하는 재사용이 가능한 여러 클래스나 컴포넌트로 구성되어 있습니다.</li>
+  <li>추상적인 개념들이 문제를 해결하기 위해 같이 작업하는 방법을 정의합니다.</li>
+  <li>높은 수준에서 패턴들을 조작화 할 수 있습니다.</li>
+</ul>
+
+<p>[라이브러리?]</p>
+<ul>
+  <li>라이브러리(Library)는 활용가능한 도구들의 집합으로 개발자가 만들어둔 클래스를 호출하여 사용하는 방식으로 활용할 수 있다.</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F2344774D577B359522" alt="image" /></p>
+
+<p>[프레임워크 VS 라이브러리]</p>
+<ul>
+  <li>둘의 가장 큰 차이점은 제어 흐름에 대한 주도성이 누구에게 있냐에 있다.</li>
+  <li>프레임워크는 전체적인 흐름을 프레임워크가 가지고 있으며 사용자는 그 안에서 코드를 짜 넣는 반면 라이브러리는 사용자가 전체적인 흐름을 가지고 있어 사용자가 주도성을 가지고 있다.</li>
+  <li>간단하게 말해서 프레임워크는 누가 이미 만들어 놓은 틀에서 조금씩의 조작으로 만들어가는 기술이고, 라이브러리는 누군가가 만들어 놓은 또는 내가 만든 기능들을 호출하여 사용하면서 만들어가는 기술이다.</li>
+</ul>
+
+<hr />
+<h2 id="4-vue-vs-react">4. Vue VS React?</h2>
+<ul>
+  <li>위에 프레임워크와 라이브러리의 차이를 알았으니 Vue와 React의 사용처에 대한 조금은 왔을거라고 생각한다. 간단히 말해서 정해진 규칙대로 만들어진 프레임워크로 코드 통일성을 가지고 싶다면 Vue, 자유로운 코드 형식으로 자유도가 높은 코드를 사용하고 싶으면 React를 사용하면 된다.</li>
+  <li>위에 특성으로 Vue는 자유도가 떨어지고 Vue에서 제공해주는 문법으로만 코딩을 해야한다는 답답함이 있고, React는 개발자마다 코드가 다 달라 어떤 코딩을 해야하는지 감을 잡기 쉽지 않고 스타일을 통일할 때도 지속적인 커뮤니케이션 비용이 발생한다.</li>
+  <li>아직 감이 안온다면 아래 예시 내옹을 보자.</li>
+</ul>
+
+<p>[Vue를 사용해야 하는 상황]</p>
+<ul>
+  <li>프론트엔드 초보자 : 제어 흐름이 정해져있고 통일성이 있기에 초보자 입장에서 집입장벽이 낮고 쉽게 코드 통일하기 좋다.</li>
+  <li>개발자들의 코드를 많이 참고하는 사람 : 위에서 말한 것과 동일하게 Vue에서 정해진 규칙으로 코딩하기에 개발자들의 코드를 읽고 이해하기가 쉽다.</li>
+</ul>
+
+<p>[React를 사용해야 하는 상황]</p>
+<ul>
+  <li>프론트엔드 실력자 : 제어 흐름이 개발자에게 달려 있어 개발자의 생각으로 커스터마이징이 가능하며 높은 자유도를 가져 방대한 생태계가 존재한다.</li>
+  <li>규모가 큰 프로젝트 : 컴포넌트를 작은 단위로 쪼개 UI를 재사용하는 방면에서 코드의 직관성이 보장되기에 대규모 프로젝트를 진행할 때 적절하다.</li>
+</ul>
+
+<p>[둘의 시장 점유율]</p>
+
+<p><img src="https://www.dong-ki.com/wp-content/uploads/2022/06/image-7.png" alt="image" /></p>
+<ul>
+  <li>NPM trend에서 각 프레임워크의 다운로드 수치이다.</li>
+  <li>보는 것과 같이 자유도가 높은 면에서 이점이 많기에 당연히 react가 점유율이 높다는 것을 볼 수 있다.</li>
+</ul>
+
+<hr />
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>Component : 독립적인 단위의 소프트웨어 모듈이다.</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Vue와 React가 무엇인지 알아보고 차이점을 확인해보자]]></summary></entry><entry><title type="html">REST-API? RESTFUL-API?</title><link href="http://localhost:4000/example/2023-05-06-REST-API-RESTFUL-API/" rel="alternate" type="text/html" title="REST-API? RESTFUL-API?" /><published>2023-05-06T00:00:00+09:00</published><updated>2023-05-27T12:20:25+09:00</updated><id>http://localhost:4000/example/REST-API-RESTFUL-API</id><content type="html" xml:base="http://localhost:4000/example/2023-05-06-REST-API-RESTFUL-API/"><![CDATA[<hr />
+<h2 id="1-rest란-무엇인가">1. REST란 무엇인가?</h2>
+<ul>
+  <li>REST(REpresentational State Transfer)는 정보를 주고 받는 방식에 있어 개발자들이 널리 쓰이는 일종의 형식으로 기본적으로 웹의 기존 기술과 HTTP 기술을 그대로 사용하기에 웹의 장점을 최대한 사용할 수 있는 아키텍쳐 스타일이다.</li>
+</ul>
+
+<p>[REST의 구성요소]</p>
+<ul>
+  <li>URI : 서버의 존재하는 고유한 ID를 가진 자원으로 Client는 url을 이용하여 자원에 대한 조작을 Server에 요청한다.</li>
+  <li>Method : <a href="#단어정리">HTTP 프로토콜의 Method</a>를 사용한다.</li>
+  <li>Representation of Resouce : Client가 Server와 주고 받는 데이터 형식으로 JSON, XML, TEXT, <a href="#단어정리">RSS</a> 등이 있다.</li>
+</ul>
+
+<p>[REST의 특징]</p>
+<ul>
+  <li>Server-Client 구조 : 자원을 요청하는 쪽이 Client, 자원을 가진 쪽이 Server로 서로의 역할을 확실히 하므로 의존성을 줄인다.</li>
+  <li>Stateless(무상태) : Client의 context를 Server에 저장하지 않아 세션과 쿠키같은 context 정보를 신경쓰지 않아도 되기에 개발이 쉬워지고, Server는 각 요청이 모두 별개로 처리 되기에 일관성이 있다. 이때문에 서비스의 자유도가 높다.</li>
+  <li>Cacheable(캐시 처리 가능) : 웹 표준 HTTP 프로토콜을 그대로 사용하기에 HTTP 프로토콜의 캐싱 기능을 사용할 수 있다.</li>
+  <li>Layered System(계층구조) : Client는 REST API 서버만 호출하며 REST Server는 다층 계층으로 구성될 수 있다.</li>
+  <li>Code-On-Demend : 서버로부터 스크립트를 받아서 클라이언트에서 실행한다. (무조건 충족할 필요는 없다.)</li>
+  <li>인터페이스 일관성 : URI로 지정한 자원에 대한 조작을 통일되고 한정적인 인터페이스로 수행하며 HTTP 표준 프로토콜에 따르는 모든 플랫폼에서 사용이 가능하다.</li>
+</ul>
+
+<p>[REST가 필요한 이유]</p>
+<ul>
+  <li>어플리케이션의 분리 통합을 위해서 필요하다.</li>
+  <li>다양한 클라이언트의 등장으로 다양한 브라우저와 모바일에서도 통신이 가능해야 한다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-rest-api">2. REST API?</h2>
+<ul>
+  <li>API는 인터넷상에서 데이터를 전송하고 이용할 수 있게 하는 소프트웨어 인터페이스이다.</li>
+  <li>REST 개념과 합쳐서 REST API는 REST 기반 API이다. REST API를 사용하는 이유는 REST 기반으로 시스템을 분산해 확장성과 재사용성을 높여 유지보수와 운용을 편리하게 하기 위함이다.</li>
+  <li>따라서 REST API는 HTTP를 잘 사용하기위해, URI와 HTTP메소드를 사용해서, URI로 어떤 자원에 접근할 것인지, 메소드로 어떤 행위를 할것인지 표현하여 설계된 API를 말한다.</li>
+</ul>
+
+<p>[REST API의 특징]</p>
+<ul>
+  <li>REST는 HTTP 표준을 기반으로 구현하므로, HTTP를 지원하는 프로그램 언어로 클라이언트, 서버를 구현할 수 있다.</li>
+  <li>각 요청이 어떤 동작이나 정보를 위한 것인지를 요청의 모습으로 추론이 가능하다.</li>
+</ul>
+
+<p>[REST API 설계 방법]</p>
+<ol>
+  <li>URI은 정보의 자원을 표현 해야 한다.</li>
+  <li>자원에 대한 행위는 HTTP method로 표현하며 이는 URI에 포함되지 않는다.</li>
+</ol>
+
+<hr />
+
+<h2 id="3-restful-api">3. RESTFUL API?</h2>
+<ul>
+  <li>REST API는 아래와 같은 설계규칙이 있다.</li>
+</ul>
+
+<p>[설계규칙]</p>
+<ol>
+  <li>URI는 명사를 사용한다. (Resource 이름은 동사가 아닌 명사)</li>
+  <li>슬래시(/)로 계층관계를 표현하며 해당 기호는 마지막에 오지 않는다.</li>
+  <li>Underbar(_)를 사용하지 않고 hyphen(-)을 사용한다.</li>
+  <li>URI는 소문자로만 구성한다.</li>
+  <li>HTTP 응답상태 코드를 명시하여 잘못된 요청에 대한 피드백을 남겨야한다.</li>
+  <li>URI에는 파일 확장자가 포함되지 않는다.</li>
+</ol>
+
+<ul>
+  <li>RESTFUL API는 이러한 설계규칙을 잘 지켜서 설계된 REST API를 말한다.</li>
+</ul>
+
+<p><img src="https://velog.velcdn.com/images/gomuzom/post/4d78ca3b-d4ee-4723-b55b-6a12d5566e30/image.png" alt="image" /></p>
+
+<hr />
+
+<h2 id="단어정리">단어정리</h2>
+<p><br />
+[HTTP 프로토콜의 Method]<br /></p>
 
 <table>
   <thead>
     <tr>
-      <th style="text-align: left">Name</th>
-      <th style="text-align: left">Upvotes</th>
-      <th style="text-align: left">Downvotes</th>
+      <th style="text-align: center">이름</th>
+      <th style="text-align: center">기능</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">Alice</td>
-      <td style="text-align: left">10</td>
-      <td style="text-align: left">11</td>
+      <td style="text-align: center">GET</td>
+      <td style="text-align: center">Read : URL이 가진 정보를 검색하기 위해 서버에 요청한다.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Bob</td>
-      <td style="text-align: left">4</td>
-      <td style="text-align: left">3</td>
+      <td style="text-align: center">POST</td>
+      <td style="text-align: center">Create : 클라이언트에서 서버로 전달하려는 정보를 보낸다.</td>
     </tr>
     <tr>
-      <td style="text-align: left">Charlie</td>
-      <td style="text-align: left">7</td>
-      <td style="text-align: left">9</td>
+      <td style="text-align: center">PUT</td>
+      <td style="text-align: center">Update : 데이터 전부 내용을 갱신할 때 주로 사용</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">PATCH</td>
+      <td style="text-align: center">Update : 데이터 일부 내용을 갱신할 때 주로 사용</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">DELETE</td>
+      <td style="text-align: center">Delete : 정보를 삭제하는 메소드이나 보안 문제로 대부분 비활성화</td>
     </tr>
   </tbody>
-  <tfoot>
-    <tr>
-      <td style="text-align: left">Totals</td>
-      <td style="text-align: left">21</td>
-      <td style="text-align: left">23</td>
-    </tr>
-  </tfoot>
 </table>
 
-<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.</p>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Howdy! This is an example blog post that shows several types of HTML content supported in this theme.]]></summary></entry></feed>
+<p><br /></p>
+<ul>
+  <li>RSS : Real Simple Syndication의 약자로 뉴스나 블로그에서 주로 사용하는 콘텐츠 표현 파일형식이다.</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[REST-API, RESTFUL-API가 무엇인지 알아보자.]]></summary></entry><entry><title type="html">Session? Cookie?</title><link href="http://localhost:4000/example/2023-05-04-Session-Cookie/" rel="alternate" type="text/html" title="Session? Cookie?" /><published>2023-05-04T00:00:00+09:00</published><updated>2023-05-27T12:20:29+09:00</updated><id>http://localhost:4000/example/Session-Cookie</id><content type="html" xml:base="http://localhost:4000/example/2023-05-04-Session-Cookie/"><![CDATA[<hr />
+
+<h2 id="1-쿠키cookie란">1. 쿠키(Cookie)란?</h2>
+<ul>
+  <li>쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일로 클라이언트의 상태 정보를 로컬에 저장했다가 참조한다.</li>
+  <li>사용자 인증이 유효한 시간을 명시할 수 있고, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.</li>
+  <li>하나의 쿠기값은 4KB로 클라이언트에 300개까지 쿠키를 저장가능하며 도메인당 20개의 값만 가질 수 있다.</li>
+  <li><a href="#단어정리">Response Header</a>에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있습니다.</li>
+  <li>쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 <a href="#단어정리">Request Header</a>를 넣어서 자동으로 서버에 전송합니다.</li>
+</ul>
+
+<p>[쿠키를 사용하는 이유]</p>
+<ul>
+  <li>세션관리(Session Management) : 서버에 저장해야 할 정보를 관리한다.</li>
+  <li>개인화(Personalization) : 사용자 선호, 테마 등을 세팅한다.</li>
+  <li>트래킹(Tracking) : 사용자의 행동을 기록하고 분석한다.</li>
+</ul>
+
+<p>[쿠키의 구성요소]</p>
+<ul>
+  <li>이름 : 쿠키를 구별하는데 사용되는 이름</li>
+  <li>값 : 쿠키의 이름과 관련된 값</li>
+  <li>유효시간 : 쿠키의 유지시간</li>
+  <li>도메인 : 쿠키를 전송할 도메인</li>
+  <li>경로 : 쿠키를 전송할 경로</li>
+  <li>보안 : 보안 연결 설정</li>
+  <li>HttpOnly : HTTP 외 다른 통신 사용 가능</li>
+</ul>
+
+<p>[쿠키의 동작순서]<br />
+1) 클라이언트가 페이지를 요청<br />
+2) 서버에서 쿠키를 생성하여 HTTP 헤더에 쿠키를 포함하여 응답<br />
+3) 브라우저가 종료되어도 쿠키 만료시간이 있다면 클러이언트에서 보관<br />
+4) 같은 요청 시 HTTP 헤더에 쿠키를 포함시켜 보냄<br />
+5) 서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답<br /></p>
+
+<p><img src="https://velog.velcdn.com/images%2Fxchdtk%2Fpost%2F0051a36c-41be-4b63-a618-c8b8e490f254%2Fimage.png" alt="image" /></p>
+
+<p>[쿠키의 단점]</p>
+<ul>
+  <li>쿠키에 대한 정보를 매번 헤더에 추가하여 보내기에 트래픽을 많이 발생시킨다.</li>
+  <li>쿠기의 대한 정보가 유출되면 보안 문제도 발생하기에 보안이 취약하다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-세션session이란">2. 세션(Session)이란?</h2>
+<ul>
+  <li>세션은 쿠키를 기반하고 있지만 사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 서버 측에서 관리하는 데이터 파일이다.</li>
+  <li>서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지하고 접속시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능하다.</li>
+  <li>클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션 ID입니다.</li>
+</ul>
+
+<p>[세션의 동작순서]<br />
+1) 클라이언트가 서버에 Resource를 요청합니다.<br />
+2) 서버에서는 HTTP Request를 통해 쿠키에서 세션 ID를 확인을 한 후에 없으면 쿠키를 셋팅하여 새로 발행한 세션 ID 보냅니다.<br />
+3) 클라이언트는 HTTP Request 헤더에 세션 ID를 포함하여 원하는 Resource를 요청을 합니다.<br />
+4) 서버는 세션 ID를 통해 해당 세션을 찾아 클라이언트 상태 정보를 유지하며 적절한 응답을 합니다.<br /></p>
+
+<p>[세션의 장점]</p>
+<ul>
+  <li>신뢰할 수 있는 유저인지 서버에서 추가로 확인 가능 (최초 접속 때를 제외하고 세션ID만 사용)</li>
+  <li>저장 개수나 용량 제한 없어 서버 용량이 충분하다면 큰 용량을 허용한다.</li>
+  <li>데이터를 <a href="#단어정리">Hash Table</a>에 저장. 한 번에 많은 정보를 하나의 세션 객체에 저장 가능</li>
+  <li>세션 ID만 보내므로, 세션의 크기가 커도 네트워크 부하가 거의 없다.</li>
+  <li>서버에 저장되므로 클라이언트의 웹브라우저에 의존하지 않아도 된다.</li>
+</ul>
+
+<p>[세션의 단점]</p>
+<ul>
+  <li>사용자에 대한 정보를 서버에 두기 때문에 사용자가 많아질수록 서버 메모리를 많이 차지한다.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-쿠키-or-세션">3. 쿠키 or 세션?</h2>
+<ul>
+  <li>세션은 결국 쿠키를 사용한 것이기에 쿠키와 세션은 비슷한 역할을 하며, 동작원리도 비슷하다.</li>
+  <li>둘이 비슷한 역할을 하나 쿠키는 서버 자원을 전혀 사용하지 않고, 세션은 서버의 자원을 사용해 사용자의 정보가 저장되는 위치가 다르다는 차이점이 있다.</li>
+  <li>보안 면에서 세션이 더 우수하며, 요청 속도는 쿠키가 세션보다 더 빠릅니다. 그 이유는 세션은 서버의 처리가 필요하기 때문입니다.
+보안면에서 쿠키는 클라이언트 로컬에 저장되기에 request에서 <a href="#단어정리">스니핑</a>을 당할 우려가 있어 보안에 취약하지만 세션은 세션 ID만 저장하고 서버에서 그것을 구분해서 처리하기에 보안성이 좋다.<br />
+<img src="data:image/png;base64,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" alt="image" /></li>
+</ul>
+
+<hr />
+
+<h2 id="4-로컬스토리지localstorage">4. 로컬스토리지(LocalStorage)</h2>
+<ul>
+  <li>LocalStorage는 Local:헌지의,Storage:저장소로 말 그대로 현지의 저장소. 즉, 사용자의 로컬에 존재하는 저장소를 말한다.</li>
+  <li>로컬 스토리지는 만료시간이 존재하지 않아 페이지나 브러우저를 닫아도 반 영구적으로 유지되는 저장소이다.</li>
+  <li>로컬 스토리지는 key와 value 형태로 이루어진다.<br /></li>
+</ul>
+
+<p>[로컬 스토리지 메소드,속성]<br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">이름</th>
+      <th style="text-align: center">구분</th>
+      <th style="text-align: center">쿠키</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">setitem(key,value)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값으로 데이터를 저장</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">getitem(key)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값의 이름을 가진 데이터를 가져옴</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">removeitem</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값의 이름을 가진 데이터를 삭제</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">key(index)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 인덱스를 가진 키 값을 가져옴</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">clear()</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">모든 데이터를 삭제</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">length</td>
+      <td style="text-align: center">속성</td>
+      <td style="text-align: center">저장된 데이터 수를 가져옴</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>Response Header : 위치 또는 서버 자체에 대한 정보(이름, 버전 등)와 같이 응답에 대한 부가적인 정보를 갖는 헤더이다.</li>
+  <li>Request Header : HTTP 요청에서 사용되지만 메시지의 컨텐츠와는 관련이 없는 헤더이다.</li>
+  <li>Hash Table : 해시 테이블은 (Key, Value)로 데이터를 저장하는 자료구조 중 하나로 빠르게 데이터를 검색할 수 있는 자료구조이다.</li>
+  <li>스니핑 : 네트워크 트래픽을 도청하는 과정을 말한다.<br />
+<img src="data:image/png;base64,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" alt="image" /></li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[세션과 쿠키 그리고 로컬스토리지가 무엇인지 알아보자.]]></summary></entry><entry><title type="html">Git,Github?</title><link href="http://localhost:4000/example/2023-04-29-Git-Github/" rel="alternate" type="text/html" title="Git,Github?" /><published>2023-04-29T00:00:00+09:00</published><updated>2023-05-27T12:20:40+09:00</updated><id>http://localhost:4000/example/Git-Github</id><content type="html" xml:base="http://localhost:4000/example/2023-04-29-Git-Github/"><![CDATA[<hr />
+
+<h2 id="1-githubgit이란">1. Github,Git이란?</h2>
+<ul>
+  <li>git이란 Distributed version control system이다. 즉, 직역하면 분산 버전 관리 시스템으로 분산해서 버전을 관리(변화,변경)를 하는 시스템을 말한다.</li>
+  <li>github라는 Web Service의 주요 기능인 원격 저장소 역할을 한다.</li>
+  <li>GoogleDrive 같은 원격 저장소와는 버전으로 관리 되어 하위 버전 이동 또는 버전 업데이트가 자유롭다.</li>
+  <li>github는 이러한 git을 사용하여 현업과 프로젝트 버전관리등의 유용한 기능을 하는 개발자의 커뮤니티이다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-그래서-버전-관리를-왜-하는데">2. 그래서 버전 관리를 왜 하는데?</h2>
+<ul>
+  <li>다양한 이유가 있지만 먼저 간단하게 시각적으로 보자면 아래와 같은 상황을 방지하기 위함이다.
+    <blockquote>
+      <p>“조별과제_김원빈.pptx”<br />
+“조별과제_김원빈_성준수정.pptx”<br />
+“조별과제_김원빈_성준수정_최종.pptx”<br />
+“조별과제_김원빈_성준수정_최종_의최종.pptx”<br />
+“조별과제_김원빈_성준수정_최종_의최종_을철현수정.pptx”<br />
+“조별과제_김원빈_성준수정_최종_의최종_을철현수정_최종.pptx”<br />
+ . . .</p>
+    </blockquote>
+  </li>
+  <li>위와 같은 방식을 버전 관리라고 한다. 즉, 과거 파일을 백업해두는 방법이다. 위 같은 방식도 작업하기엔 문제도 없고 백업 기능도 있기에 괜찮아 보일 수 있으나 큰 문제가 있다.</li>
+  <li>위 파일은 조별과제이다. 개인이 작업하는게 아니라 조원들이 관리하다가 너도나도 파일을 수정한다면 파일 백업 의미가 없어져 버린다.</li>
+  <li>아래와 같은 이유로 깃허브를 사용한다고 할 수 있다.</li>
+</ul>
+
+<p>[팀 프로젝트 버전 관리의 문제]<br />
+1) 여러 개의 파일 버전을 일관되게 관리하기 힘들다.(누가 가장 최신 파일을 가지고 있는지 모른다.<br />
+2) 누가/무엇을/어떻게 변경하였는지 기록,확인,공유가 어렵다.<br />
+3) 서로의 변경 내역을 덮어씌우거나 지워버려 오류가 발생할 수 있다.<br />
+4) 변경 전 버전을 특정할 수 없으므로 내용을 이전 상태로 돌리기도 어렵다.<br />
+<img src="https://user-images.githubusercontent.com/61172021/92212736-65180200-eecd-11ea-8756-eb669f047081.png" alt="image" /></p>
+
+<hr />
+<h2 id="3-git-flow-개념-이해하기">3. Git-Flow 개념 이해하기</h2>
+<ul>
+  <li>git-flow는 과거 Vincent Driessen이라는 사람의 블로그를 통해 알려진 Git 개발 방식의 방법론으로 기능적인 것이 아닌 약속의 의미를 가지고 있는 방법론이다.</li>
+  <li>git-flow는 아래와 같이 5가지 <a href="#단어정리">브랜치(branch)</a>로 나뉜다.</li>
+</ul>
+
+<p>[Git-Flow 전략]<br /></p>
+<ul>
+  <li><b>master</b> : 기준인 역할을 하는 브랜치로 제품을 배포하는 최종 브랜치이다.<br /></li>
+  <li><b>develop</b> : 개발할 때의 메인 브랜치로. 구현해야할 기능이 발생하면 feature 브랜치를 생성 및 개발, 구현 완료 후 develop 브랜치로 병합한다. 다음 배포 버전까지 개발 완료 후 <a href="#단어정리">QA Test</a>를위해 release 브랜치로 <a href="#단어정리">머지(merge)</a>된다<br /></li>
+  <li><b>feature</b> : 이슈 및 기능을 구현하기 위해 생성하는 브랜치로 develop 브랜치에서 생성한다. 기능 구현이 완료되면 develop 브랜치에 머지하고 feature 브랜치는 삭제한다.<br /></li>
+  <li><b>release</b> : develop에 저장되어 QA를 진행하여 통과 시 master 브랜치에 머지하는 QA 진행 브랜치이다.<br /></li>
+  <li><b>hotfix</b> : 게임을 한 사람들에게는 익숙한 이름의 브랜치로 배포 후 release 브랜치에서 발견 못한 버그가 발생하여 긴급한 수정이 필요할 때 생성하는 브랜치이다. master에서 생성하고 수정 후 master, develop 브랜치에 머지하고 hotfix 브렌치는 삭제한다.<br /></li>
+</ul>
+
+<h2 id="4-git-flow-상세">4. Git-Flow 상세</h2>
+<ul>
+  <li>위에 git-flow에 사용되는 브랜치를 알아봤다. 하지만 저렇게 정의를 해두는 것은 알겠지만 정의만 보고 흐름이 잘 보이지 않는다.</li>
+  <li>그렇다면 각 브랜치의 모습을 하나씩 보며 흐름을 이해해보자.</li>
+</ul>
+
+<p><b>[master branch]</b><br /></p>
+<ul>
+  <li>배포가능한 상태를 관리하는 브랜치<br /></li>
+</ul>
+
+<p><b>[develop branch]</b><br /></p>
+<ul>
+  <li>다음 버전을 개발하는 브랜치</li>
+  <li>평소 개발 시 기준이 되는 개발 브랜치이다.<br /></li>
+</ul>
+
+<p><img src="https://lh4.googleusercontent.com/CZlG9QPr4RYMGAJ3z2ihWV6UuyJRqEmYSwm4Du3AeaFCc2-lrrEG-rWA6YkWKyFvAye_uKv0123vXLt4JY_dey_KkDk8VdPAHvDOgzLg2pwTE0k6li-dL_YUWpP-8Ck8Xrbx4ouS" alt="image" /></p>
+
+<p><b>[feature branch]</b><br /></p>
+<ul>
+  <li>기능을 개발하는 브랜치로 develop 브랜치에서 뻗어나와 좀 더 세부적으로 개발하기 위한 역할을 하는 보조 브랜치이다.</li>
+  <li>feature 브랜치는 기능을 완성할 때까지 유지하며, 완료되면 develop 브랜치에 머지한다.</li>
+  <li>물론 기능이 별로다 싶으면 버린다. (develop에 머지하지 않았으니 영향을 미치지 않는다. 그러니 확실하다 싶으면 머지하는 것이 중요하다.)</li>
+</ul>
+
+<p><img src="https://lh6.googleusercontent.com/J9X6SYLWwSLiLb6JAd_HBMFeTXpzwIZIMUkqtJpXZzi5cg42gIHLx3F99X-wSVIoFEc0u7NCY08yl-xTFolFlwfR0ytJWxZntoZS3-5WWq_oAlIO_MfJWKQfQYur_8ed7D_vzPF3" alt="image" /></p>
+
+<p><b>[release branch]</b><br /></p>
+<ul>
+  <li>필터 역할을 하는 브랜치로 develop에서 master로 머지하기 전에 최종 수정을 위해 QA하는 브랜치이다.</li>
+  <li>중요한 것은 release 브랜치에서 수정된 사항이 있으면 develop 브랜치에도 머지를 시켜줘야 다음 버전 개발에 꼬이지 않는다.</li>
+</ul>
+
+<p><img src="https://lh5.googleusercontent.com/4mXmoEov9sqhCEo6vxFF8eOrvrc5hyo0SvW6YLgJMoauuejV0ketnm9yxjc1JyiUqjZnWwMCQr71JATvU1mAlxk3NPrQcglpWTpaIbIL1aiJbVXJ2e4DSocSo5eeG_I6zOQVfZ9A" alt="image" /></p>
+
+<p><b>[hotfix branch]</b><br /></p>
+<ul>
+  <li>배포 버전에서 긴급 수정이 필요할 때, master에서 분기하는 브랜치이다.</li>
+  <li>긴급 수정을 하는 동시에 develop 브랜치에서 아무러 작용없이 개발할 수 있어 나뉜 브랜치이며, 수정 후 master에 바로 머지를 한다.</li>
+  <li>이 또한 중요한 것은 수정 후 release 브랜치처럼 develop 브랜치에도 머지해야하는 것이다.</li>
+</ul>
+
+<p><img src="https://lh5.googleusercontent.com/_jcNDU-WEGylP-1Z5CFOIYBDjwOmaqUi6DslzKGZ39rts9IXEEBdyq7NvF1jrlXnLg2dn_mL-tnvINUrUFSx4UOlAkOov_EpwW6eF1zRHYEK8xRB__GyG5HrpEWWFjHNa23WhF8I" alt="image" /></p>
+
+<ul>
+  <li>최종적으로 보는 흐름</li>
+</ul>
+
+<p><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&amp;fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdSKdav%2FbtrCVRy7XUT%2FLKQdnMfcWPsCPf6ogKMq90%2Fimg.png" alt="image" /></p>
+
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>브랜치(branch) : 직역하면 나뭇가지란 뜻으로 직역 뜻과 같이 나뭇가지 처럼 뻗어나가는 가지 중 한가지를 말하며 Git 개발 작업에서는 이를 하나의 작업라인을 말할 때 사용한다.</li>
+  <li>QA Test : Quality Assurance Test로 품질 보증 시험으로 소프트웨어가 개발 되었을 때, 이것이 적절한 디자인 패턴을 적재적소에 사용해 확작성이 있고 유지보수가 좋은 코드인지, 기존 소프트웨어 보다 좋은 또는 편리한 기능을 제시하는지, 기존 소프트웨어보다 성능면에서 좋은지 검증하는 단계라 볼 수 있다.</li>
+  <li>머지(merge) : 병합이라는 뜻을 가진 것처럼 나뭇가지로 뻗어나간 수 많은 나뭇가지 중 어떠한 나뭇가지인 작업라인을 또다른 작업라인으로 병합 시켜준다는 말이다.</li>
+</ul>]]></content><author><name>&lt;firstname&gt; &lt;lastname&gt;</name><email>&lt;mail@domain.tld&gt;</email></author><category term="example" /><summary type="html"><![CDATA[Git,Github가 무엇인지 알아보고, Git Flow 개념을 이해해보자.]]></summary></entry></feed>

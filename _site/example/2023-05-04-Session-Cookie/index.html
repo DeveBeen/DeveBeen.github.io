@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en"><!--
+ __  __                __                                     __
+/\ \/\ \              /\ \             __                    /\ \
+\ \ \_\ \   __  __    \_\ \      __   /\_\      __       ___ \ \ \/'\
+ \ \  _  \ /\ \/\ \   /'_` \   /'__`\ \/\ \   /'__`\    /'___\\ \ , <
+  \ \ \ \ \\ \ \_\ \ /\ \L\ \ /\  __/  \ \ \ /\ \L\.\_ /\ \__/ \ \ \\`\
+   \ \_\ \_\\/`____ \\ \___,_\\ \____\ _\ \ \\ \__/.\_\\ \____\ \ \_\ \_\
+    \/_/\/_/ `/___/> \\/__,_ / \/____//\ \_\ \\/__/\/_/ \/____/  \/_/\/_/
+                /\___/                \ \____/
+                \/__/                  \/___/
+
+Powered by Hydejack v9.1.6 <https://hydejack.com/>
+-->
+
+
+
+
+
+
+
+<head>
+  
+
+
+
+
+  <meta name="robots" content="noindex">
+
+
+
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Session? Cookie? | Dev Been</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Session? Cookie?" />
+<meta name="author" content="<firstname> <lastname>" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="세션과 쿠키 그리고 로컬스토리지가 무엇인지 알아보자." />
+<meta property="og:description" content="세션과 쿠키 그리고 로컬스토리지가 무엇인지 알아보자." />
+<link rel="canonical" href="http://localhost:4000/example/2023-05-04-Session-Cookie/" />
+<meta property="og:url" content="http://localhost:4000/example/2023-05-04-Session-Cookie/" />
+<meta property="og:site_name" content="Dev Been" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-05-04T00:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Session? Cookie?" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"<firstname> <lastname>"},"dateModified":"2023-05-27T12:20:29+09:00","datePublished":"2023-05-04T00:00:00+09:00","description":"세션과 쿠키 그리고 로컬스토리지가 무엇인지 알아보자.","headline":"Session? Cookie?","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/example/2023-05-04-Session-Cookie/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/logo.png"},"name":"<firstname> <lastname>"},"url":"http://localhost:4000/example/2023-05-04-Session-Cookie/"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  
+
+
+
+  <meta name="theme-color" content="rgb(25,55,71)">
+
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Dev Been">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+<meta name="application-name" content="Dev Been">
+
+<meta name="generator" content="Hydejack v9.1.6" />
+
+
+<link rel="alternate" href="http://localhost:4000/example/2023-05-04-Session-Cookie/" hreflang="en">
+
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Dev Been" />
+
+
+<link rel="shortcut icon"    href="/assets/icons/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/icons/icon-192x192.png">
+
+<link rel="manifest" href="/assets/site.webmanifest">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com"><link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+
+
+<link rel="preload" href="/assets/img/swipe.svg" as="image" id="_hrefSwipeSVG">
+
+
+
+
+
+
+<script>!function(r,c){"use strict";function a(e,t,n,o){e.addEventListener?e.addEventListener(t,n,o):e.attachEvent?e.attachEvent("on"+t,n):e["on"+t]=n}r.loadJS=function(e,t){var n=c.createElement("script"),e=(n.src=e,t&&a(n,"load",t,{once:!0}),c.scripts[0]);return e.parentNode.insertBefore(n,e),n},r._loaded=!1,r.loadJSDeferred=function(e,t){var n=c.createElement("script");function o(){r._loaded=!0,t&&a(n,"load",t,{once:!0});var e=c.scripts[0];e.parentNode.insertBefore(n,e)}return n.src=e,r._loaded?o():a(r,"load",o,{once:!0}),n},r.setRel=r.setRelStylesheet=function(e){a(c.getElementById(e),"load",function(){this.rel="stylesheet"},{once:!0})}}(window,document);
+!function(a){"use strict";var b=function(b,c,d){function e(a){return h.body?a():void setTimeout(function(){e(a)})}function f(){i.addEventListener&&i.removeEventListener("load",f),i.media=d||"all"}var g,h=a.document,i=h.createElement("link");if(c)g=c;else{var j=(h.body||h.getElementsByTagName("head")[0]).childNodes;g=j[j.length-1]}var k=h.styleSheets;i.rel="stylesheet",i.href=b,i.media="only x",e(function(){g.parentNode.insertBefore(i,c?g:g.nextSibling)});var l=function(a){for(var b=i.href,c=k.length;c--;)if(k[c].href===b)return a();setTimeout(function(){l(a)})};return i.addEventListener&&i.addEventListener("load",f),i.onloadcssdefined=l,l(f),i};"undefined"!=typeof exports?exports.loadCSS=b:a.loadCSS=b}("undefined"!=typeof global?global:this);
+!function(a){if(a.loadCSS){var b=loadCSS.relpreload={};if(b.support=function(){try{return a.document.createElement("link").relList.supports("preload")}catch(b){return!1}},b.poly=function(){for(var b=a.document.getElementsByTagName("link"),c=0;c<b.length;c++){var d=b[c];"preload"===d.rel&&"style"===d.getAttribute("as")&&(a.loadCSS(d.href,d,d.getAttribute("media")),d.rel=null)}},!b.support()){b.poly();var c=a.setInterval(b.poly,300);a.addEventListener&&a.addEventListener("load",function(){b.poly(),a.clearInterval(c)}),a.attachEvent&&a.attachEvent("onload",function(){a.clearInterval(c)})}}}(this);
+!function(w) {
+  w._baseURL = '/';
+  w._publicPath = '/assets/js/';
+  w._noPushState = false;
+  w._noDrawer = false;
+  w._noNavbar = false;
+  w._noToc = false;
+  w._noSearch = false;
+  w._search = {
+    DATA_URL: '/assets/sitedata.json?no-cache',
+    STORAGE_KEY: 'mini-search/',
+    INDEX_KEY: 'index--2023-05-27T12:26:47+09:00',
+  };
+  w._clapButton = true;
+}(window);</script>
+
+
+<script async src="/assets/bower_components/MathJax/es5/tex-mml-chtml.js" id="_MathJax"></script>
+
+
+<!--[if gt IE 8]><!---->
+
+  
+
+
+
+
+<link rel="stylesheet" href="/assets/css/hydejack-9.1.6.css" id="_stylePreload">
+<link rel="stylesheet" href="/assets/icomoon/style.css" id="_iconsPreload">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:700%7CNoto+Sans:400,400i,700,700i&display=swap" id="_fontsPreload">
+
+
+
+  <style id="_pageStyle">
+
+html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.5);--accent-color-highlight: rgba(79, 177, 186, 0.1);--accent-color-darkened: #409ba3;--theme-color: rgb(25,55,71)}
+</style>
+
+
+<!--<![endif]-->
+
+
+
+
+</head>
+
+<body class="no-break-layout">
+  
+
+
+<hy-push-state
+  id="_pushState"
+  replace-selector="#_main"
+  link-selector="a[href]:not([href^='/assets/']):not(.external):not(.no-push-state)"
+  script-selector="script"
+  duration="500"
+  hashchange
+>
+  
+  
+  <div id="_navbar" class="navbar fixed-top">
+  <div class="content">
+    <span class="sr-only">Jump to:</span>
+    <div class="nav-btn-bar">
+      <a id="_menu" class="nav-btn no-hover" href="#_drawer--opened">
+        <span class="sr-only">Navigation</span>
+        <span class="icon-menu"></span>
+      </a>
+      <div class="nav-span"></div>
+    </div>
+  </div>
+</div>
+<hr class="sr-only" hidden />
+
+  <main
+  id="_main"
+  class="content layout-post"
+  role="main"
+>
+  <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+    <li><a href="/">home</a></li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/example/">example</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2023-05-04-Session-Cookie</span>
+        
+      </li>
+    
+  
+</ul></nav>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-example-Session-Cookie" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        Session? Cookie?
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2023-05-04T00:00:00+09:00">04 May 2023</time> in <a href="/example/" class="flip-title">Example</a> 
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 27 May 2023">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2023-05-27T12:20:29+09:00">2023-05-27</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  
+    <p class="note-sm" >
+      세션과 쿠키 그리고 로컬스토리지가 무엇인지 알아보자.
+
+    </p>
+  
+
+
+  </header>
+
+  
+    <hr />
+
+<h2 id="1-쿠키cookie란">1. 쿠키(Cookie)란?</h2>
+<ul>
+  <li>쿠키는 클라이언트(브라우저) 로컬에 저장되는 키와 값이 들어있는 작은 데이터 파일로 클라이언트의 상태 정보를 로컬에 저장했다가 참조한다.</li>
+  <li>사용자 인증이 유효한 시간을 명시할 수 있고, 유효 시간이 정해지면 브라우저가 종료되어도 인증이 유지된다는 특징이 있다.</li>
+  <li>하나의 쿠기값은 4KB로 클라이언트에 300개까지 쿠키를 저장가능하며 도메인당 20개의 값만 가질 수 있다.</li>
+  <li><a href="#단어정리">Response Header</a>에 Set-Cookie 속성을 사용하면 클라이언트에 쿠키를 만들 수 있습니다.</li>
+  <li>쿠키는 사용자가 따로 요청하지 않아도 브라우저가 Request시에 <a href="#단어정리">Request Header</a>를 넣어서 자동으로 서버에 전송합니다.</li>
+</ul>
+
+<p>[쿠키를 사용하는 이유]</p>
+<ul>
+  <li>세션관리(Session Management) : 서버에 저장해야 할 정보를 관리한다.</li>
+  <li>개인화(Personalization) : 사용자 선호, 테마 등을 세팅한다.</li>
+  <li>트래킹(Tracking) : 사용자의 행동을 기록하고 분석한다.</li>
+</ul>
+
+<p>[쿠키의 구성요소]</p>
+<ul>
+  <li>이름 : 쿠키를 구별하는데 사용되는 이름</li>
+  <li>값 : 쿠키의 이름과 관련된 값</li>
+  <li>유효시간 : 쿠키의 유지시간</li>
+  <li>도메인 : 쿠키를 전송할 도메인</li>
+  <li>경로 : 쿠키를 전송할 경로</li>
+  <li>보안 : 보안 연결 설정</li>
+  <li>HttpOnly : HTTP 외 다른 통신 사용 가능</li>
+</ul>
+
+<p>[쿠키의 동작순서]<br />
+1) 클라이언트가 페이지를 요청<br />
+2) 서버에서 쿠키를 생성하여 HTTP 헤더에 쿠키를 포함하여 응답<br />
+3) 브라우저가 종료되어도 쿠키 만료시간이 있다면 클러이언트에서 보관<br />
+4) 같은 요청 시 HTTP 헤더에 쿠키를 포함시켜 보냄<br />
+5) 서버에서 쿠키를 읽어 이전 상태 정보를 변경 할 필요가 있을 때 쿠키를 업데이트 하여 변경된 쿠키를 HTTP 헤더에 포함시켜 응답<br /></p>
+
+<p><img src="https://velog.velcdn.com/images%2Fxchdtk%2Fpost%2F0051a36c-41be-4b63-a618-c8b8e490f254%2Fimage.png" alt="image" /></p>
+
+<p>[쿠키의 단점]</p>
+<ul>
+  <li>쿠키에 대한 정보를 매번 헤더에 추가하여 보내기에 트래픽을 많이 발생시킨다.</li>
+  <li>쿠기의 대한 정보가 유출되면 보안 문제도 발생하기에 보안이 취약하다.</li>
+</ul>
+
+<hr />
+
+<h2 id="2-세션session이란">2. 세션(Session)이란?</h2>
+<ul>
+  <li>세션은 쿠키를 기반하고 있지만 사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 서버 측에서 관리하는 데이터 파일이다.</li>
+  <li>서버에서는 클라이언트를 구분하기 위해 세션 ID를 부여하며 웹 브라우저가 서버에 접속해서 브라우저를 종료할 때까지 인증상태를 유지하고 접속시간에 제한을 두어 일정 시간 응답이 없다면 정보가 유지되지 않게 설정이 가능하다.</li>
+  <li>클라이언트가 Request를 보내면, 해당 서버의 엔진이 클라이언트에게 유일한 ID를 부여하는 데 이것이 세션 ID입니다.</li>
+</ul>
+
+<p>[세션의 동작순서]<br />
+1) 클라이언트가 서버에 Resource를 요청합니다.<br />
+2) 서버에서는 HTTP Request를 통해 쿠키에서 세션 ID를 확인을 한 후에 없으면 쿠키를 셋팅하여 새로 발행한 세션 ID 보냅니다.<br />
+3) 클라이언트는 HTTP Request 헤더에 세션 ID를 포함하여 원하는 Resource를 요청을 합니다.<br />
+4) 서버는 세션 ID를 통해 해당 세션을 찾아 클라이언트 상태 정보를 유지하며 적절한 응답을 합니다.<br /></p>
+
+<p>[세션의 장점]</p>
+<ul>
+  <li>신뢰할 수 있는 유저인지 서버에서 추가로 확인 가능 (최초 접속 때를 제외하고 세션ID만 사용)</li>
+  <li>저장 개수나 용량 제한 없어 서버 용량이 충분하다면 큰 용량을 허용한다.</li>
+  <li>데이터를 <a href="#단어정리">Hash Table</a>에 저장. 한 번에 많은 정보를 하나의 세션 객체에 저장 가능</li>
+  <li>세션 ID만 보내므로, 세션의 크기가 커도 네트워크 부하가 거의 없다.</li>
+  <li>서버에 저장되므로 클라이언트의 웹브라우저에 의존하지 않아도 된다.</li>
+</ul>
+
+<p>[세션의 단점]</p>
+<ul>
+  <li>사용자에 대한 정보를 서버에 두기 때문에 사용자가 많아질수록 서버 메모리를 많이 차지한다.</li>
+</ul>
+
+<hr />
+
+<h2 id="3-쿠키-or-세션">3. 쿠키 or 세션?</h2>
+<ul>
+  <li>세션은 결국 쿠키를 사용한 것이기에 쿠키와 세션은 비슷한 역할을 하며, 동작원리도 비슷하다.</li>
+  <li>둘이 비슷한 역할을 하나 쿠키는 서버 자원을 전혀 사용하지 않고, 세션은 서버의 자원을 사용해 사용자의 정보가 저장되는 위치가 다르다는 차이점이 있다.</li>
+  <li>보안 면에서 세션이 더 우수하며, 요청 속도는 쿠키가 세션보다 더 빠릅니다. 그 이유는 세션은 서버의 처리가 필요하기 때문입니다.
+보안면에서 쿠키는 클라이언트 로컬에 저장되기에 request에서 <a href="#단어정리">스니핑</a>을 당할 우려가 있어 보안에 취약하지만 세션은 세션 ID만 저장하고 서버에서 그것을 구분해서 처리하기에 보안성이 좋다.<br />
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASUAAACsCAMAAAAKcUrhAAABhlBMVEX6bm5Vuvrb0urDYx3////86fPIZRzGZB36a2v6aWlOuPr8bnDe1e7/amXKZhz6Z2f+a2hKvf/6Y2PAYhb+2tp7fpD/9fX+39//aGL/7/i9YR2VUiOFjKI7gq6h1vzW7P3ua11+yfv3/P/7iYn0h7WyXR/6eHj7mZn9vr7m9P77hYWLzvtCv//haU2DSyXybGJWPCnhz9dxRSesWyBlQSh8SSaKgo9qwvvP6v254P3+6en8o6P7kZH9zs76XFzrdHmLptdftfA6m9TKiJ+TjqDt3+/VxMy8rrXKwtndaEfgw9/um8ObVCPrpcoFKC87Myywqb6onadINysAHirMZSxdPinWgZJfoNGinMP8ra20lLbleYLBjquXoMx+rOEqcp1OeJlCqOVLgqhwiaRidoyuyO/Ftr0dRVNNa3Vod3ybXjd7sckIlrHJW11MXGKJSkxraGYALT1PTk1NXG28XzAsLy1eSz0ADSE4QEJ/jpRPo73ltNWrwdoeKix3WUcAJi8+UVnFz+9RWOFlAAAOaUlEQVR4nO2di1fbRhbGLSwkWXZsbCWklYp5RWDw4pewDQHSwhowRAHbMe2y3d0mhZCkzbJ9bNK0Ddv0P987MzIYDDYaY804J985yPLYgaNf7ty582kk+Xz8a+jLqMBWrAlcR0N//0ips2598ZFSZ32yyhhSP1BSPmcdSv1AaeivHyl11q2/faTUWbf+xRpSP1DysWbUD5SUr//CGlIfUBr6B/O01AeUbv3zI6XOYl9T9gEl5XPWiIQ+oMTeEOgLSswNgX6gxN4Q6AdKn7AmhMQaQicpU+xrSv4pcWAICPxT4sAQEPqAEntDQOCekuJbZU0IiTWGDuLBEBC4p8SDISBwT4kHQ0DgnhIPhoDAOyVlijUfItYc2osLQ0DgnhIPhoDAOyUuDAGBd0pDq6z5ELHm0FbK51zUlJxT4sMQEDinxIchIHBO6RMuDAGBb0rK1CprPI5Yk2gn5WvqDhc904dOicYQiKqqujbyzZMnh58hHRw8+WZkZE3tEhZrEu3k2hCIPl379qC6mR389JyyR5t3now87QIUaxLt5NIQiK4dEkCDLYK27ObhmvoBUlJ87v73vzm6DFATqY3Dpx8eJZeGwEi2HSMCqkqJiTWKNnJpCBx0hAQa+eAouTQEDrIdGX16tMaKUjDY/e+4VMqqmwNRnxU6dLlPB4+qdJC6oxQEKel0sCegXF4yoD4bKBWOBq8CBYl9s1AJeU8J2MzV/fmUptXTPcDk0hAASqFQuVRdX18/TwdXTBvVUqkcCg14TSkYTG/5Nan243PTb2tjN4/JpSEQ/Sw0AJxggxUCWuvZzaPNzWqhUCpVyuQTjykBI03zy9aLl99J/pzkJ42OboSSS0MgeqcB6EzlSqWMyJ3B85RSMIgYgWRLl/x6TtLmMJz0GCid9t0IKncHchmlgdC5tm1vKQV9dcwIYYIfE2JpK71V92uaFpZg46/X58a6JOXWELiU0jlcD+95SUnxpeUGJCQpZct63tQBmJ6r5SC4QMCqPpfugpNbQ6ANpe2B0PevgNJDDykF/31syDiMJIlQqvklI2XlLFmaf/7y12NbdujtZupj1JzcGgJXU3p0bzv02ysSUt5R+s+xjikYuZSMQyklhWuWZEGrbtR+eb4bdij98N7UqDm5XSEQPbyS0kOUyDGkslczlGBa1wmcH19mIJhkE7b6joQzlF+SzFQjlmTzJwCn1X10mFyeZIr+XGmXmDCkgYJHlILp03yUqeGYmpehw2XC8mmaOt2TcY80TZpiyvUKgehxtlAOha4kBR9VqhvezOOCimU2IITDDSrhXVu3mvCcl23MucfkeoVA9LAA8zRUYLegwi2VUjWbLdBBch1L/93VL0CQbb/5Wvbb+Zzhl86HkR9/V5a1LdeYXK8QgOxdqg4OQqkNhXa53IAzAPuVaqlQ3RjMejWPg2KyNVZMKwOpCLjYe3mZxJNupyDkpDcvdhEtWdfcR9OqywMBSqFyeR2btxvVZh0hm3ejCoy8mccFx7TmSAEOJknT5L0ctmu4WgqfvHj/OgztBgom6c0vuuaSkft7CJxWAiFnvguT3PUsaGOziuKL9ENPKDls7O+cnRyqnKT6mIWGPYBi6TXodpJk/PQGj3Q4ssI/vLDc9jn3KwQuqZdCaB6HdDYL9oCS09+k1C8vUqgG0KFKAgj5/8rWaxtCJ5WSZdnIZPK2GQ6fDXqy9daU/a4gUawQuKyqbM3kvacU9JGj1o9/fYN3MCTJqMkI2J4eNkzSG61ULpNJnQ16wE7W3FVN7lcItJ/HIW3fe+RB9g7OOVnJNnDymbcRJGsHj2xSaifVGOJkNHex8vPzuNdBB5R0w3LDCHqc6wPpQOm370Pb9373Ipb8ToGNBzLJyOHKeydlGCgrSXrmJHVWCqBZnqSjbpnP7WXm7bqrUKJYIdCG0r2HoXevvscfF3tNCQa4zI7VyDayRVLTyc7J48cnJuZmZk7yunQGCoUdFFOmLksuzUyKFQJXU0IxNPCO7Pd8hhLcsh+/tM5yMhrV9B0jc/zr8fP/4S5oWub8HzDIhU+rcDll41e3QxzFJQPRn8sd53Gh3s/jgnXrxe65SYhknhhhyZx/W0NpO/z2+Hkt7DdqO7t5S5fCKB/5rTB2mtzO5ChWnUZ/OCqVr57GIUaV0kbvKWmybZKJv056mH1ipaAACOs4dqTc+2PohfDWzu+evK7N5yFjpVL1LfdmnNsVApjS4eZgtVQZaJ3GkaZyqbqR7XksBdMa6WWSbOwhXFJ+by9s750lbKmRk2QpHNYtO//Ha9u25iiMXZpLBqKflQvZYZiboBMmzikB58RAGWa61U2owSuhnlMa01AX0o35miGZKUOrb2kZU7JqKGHLcosfIIffvn+cD1Odg6K5ZACdaaqQ05aAqtAkNJHLbhbQySYPKNm5+czefMqE/iVbOuRjeW9PkiV7rzZv2Jap48FfRsWShLpgePfle0t2VwE4orlkAFGC+W6FTONOV3gNrmePNguN83E9p+TzoVgiAPz4bG4wDV0PmQGQiQzDMKGCyqds28jncnh+p0MhpVGd9XW3QuCM0vlTSyhdl8gJy0Zz7ymduSaafw7PN4JK3ZAacxDJgo1ppVKGbeLzKX7TtmU6SF9THAih1Jq2m7g92vYglnx1Das+18jHweBYXdMapRGqpdCUrTF7s/xbdJY31SUDl1Fq0rs/B36HeZwHlILpua25sXNLcdBqAQQPoBips6obn7mcozwtQHfJQBtKj36HGcpvoYFHXuQlZx1Aa1t6bKsua5qlNYRqpC7WNVFdMnA1pW2Yx/356p03eelqOUso8CKBsbRyKUw3ukWz5rjNbPfRNjrLhMV+xeBNLTihvGRgpNJufoIVKj1lTummRHkPgehIodLmfBzSF5Sn43ikRH0PgehXh5dP5IieCR/Sqvgh+uu9oqtffXunVG2cjQvdDCMeKSlTXV1ZE40KX62NPHlycHBw5867P7GeJYtqF4x4pHQj9xBAl3ypWIJAtl2JNZNW8XIPgWaxZtIqXu4h0CzWTFrFyz0EmsWaSYu6uAy1d2INpUXc3EOgWayhtIibewg0izWUFvFxU8ELYg2lRVSGQK/FGspFcXJTwQtiTeWiOLmp4AWxpnJRnNxU8IJYU7koHmtK7ihx8ZSBVrHGckFDX/KYvLmjxKEhIHBHiUdDQOCOEid3hL0o1ljOi0tDQOCNEpeGgMAbJS4NAYE7SjwaAgJvlDh47OClYo3lnPg0BATOKPFpCAicUeLTEBB4o7TKGscVYg2mWZwaAgJflHh5ykCrWJNpFqeGgMAXpVtfdLs2pFfq1RErEcX1v+nRYwe7XpdDR0kJBK5AEIgEnJ3lxJRbTLRPGeiwPEmNx6l+bbPcMwpElpeWpmKXfRS7K4rOrigOR1z+YjpDQC0m4+NtOKlxUVz0fJVXZHJYBCUupXRbHCZ7iijedUuJyhBAEERxInklBzUpinGvKQWWRaIplHtiMdLDArEYykOEUiASURTfMvoEfePaHY/GEEAMkEYRh8bSwPOvarF44cNOfbR7SjGIpP1YZGU24IvMrtxeWUZdLza9cjsxGyGUItOJxGQkkdh3vjF5zZhSaAwBdVQUi2pxAdEQFkcXUEypyYXRRSCjxkfRa3FxcVxtalxMwhcXe0opMC2KKwAGIieyhP8XEzFfZAXvTQcQpcAsdDYlBptYZNppvx4lGkMAUYqT0ChOoD+2qKqL+K8W0UfQF0mPcxqTKrTOTDSCr1eUIglRXMJHrUxBgk7cBwgxwHU/gTohjqVh8X6AUIIUfn8JgbvWr6YyBHBamsBBMiNOxIFFsSiKC+Oji+o4IEvOJAkl2MwgUBjrxAJwcvVnKCjhjEN4PQBUtx/AyDb1YB964gNAclcchhoAUUJNy1MQWrPXSk10hsBpkAAUGPEnYANAYNBDDQtFeMWURhGg+Oke/KNxN8FEQYnEUmwFHX4EIufBMIz6gUnoikBJxEFEKK04iX75WpQoTzJB3kF/Q4g7fyyOuSFOqMfNFAmlCXEGc1tErWqvKTl5SYkEEKXJQEQklAJo7EsQSuJ+hFACordXVlZuXyuWKA0BvPIdjjwJMEYXQJB6kqM4L6nxmdO8NAE73lHyBdAYp/hWEigbJR4gaChmltFmGlHah50pkpeWUCd8ELheLUBnCKjjE0lBXYCDRumIXC2QdHpZEtMooq6Iv4HeJb2h5IxswAXVBJC8xVk0qqG9+3iMi6BUFSNjHPrGXRRa16FEZwig8Qp+ZjCqmdGJBbUI2RmCqJgUZ9ArIVZEvU9E3c4TSlAOkdpbUaYQo+HliNN0HyIIzVBiCRRC8D5GviGuXIsSnSGgJmdEkn4wJsRhfIZUBMkJktZJJYDfzRQFjyj5Ar7lfTyPUyLL+9O+AG6a3l+GEkqZnZyEt5OTswH4gfeRyf2l2UunfK2UVikgobw0Ho+TI1aL8TiiBS1J9CqQV2F8vIhqziT5WnF83Nn0lBJAaXgCSiBw2oRbFEVxtmSvjX1wQfSPHWy6ZMnZUc+/trSetfWSUi/E6woBItZ0GuJ1hQARazoN8bpCgIg1HUf8PHbwUrHG44jX5V2OWONxxO0KASLWeBxxu0KAiDUeR5yuOm2INR6iLu8h0HOx5kPE7woBItZ8iPhdIUDEmg8RvysEiFjzIaK5qaCXYs0Hi94Q8EisAWHxbQgInFDi2xAQOKFEdVNBL8UaEBLnhoDACSXOa0o+KHFuCAh8UOLcEBD4oMS5ISBwQUlx+9hB78UakY9/Q0DggxLnhoDABSXeDQGBC0quHzvovVgTonnsoPdizagPDAGBB0rcGwICD5S4NwQEDihRXTLgtVhD6gNDQOCAEv+GgMABJf4NAYEHSqusEVxDrCH1gSEgsKfUB4aAwAEl/g0BgT2lPjAEBPaU+sAQAP0fTFsuDVUr3CUAAAAASUVORK5CYII=" alt="image" /></li>
+</ul>
+
+<hr />
+
+<h2 id="4-로컬스토리지localstorage">4. 로컬스토리지(LocalStorage)</h2>
+<ul>
+  <li>LocalStorage는 Local:헌지의,Storage:저장소로 말 그대로 현지의 저장소. 즉, 사용자의 로컬에 존재하는 저장소를 말한다.</li>
+  <li>로컬 스토리지는 만료시간이 존재하지 않아 페이지나 브러우저를 닫아도 반 영구적으로 유지되는 저장소이다.</li>
+  <li>로컬 스토리지는 key와 value 형태로 이루어진다.<br /></li>
+</ul>
+
+<p>[로컬 스토리지 메소드,속성]<br /></p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">이름</th>
+      <th style="text-align: center">구분</th>
+      <th style="text-align: center">쿠키</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center">setitem(key,value)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값으로 데이터를 저장</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">getitem(key)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값의 이름을 가진 데이터를 가져옴</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">removeitem</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 키 값의 이름을 가진 데이터를 삭제</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">key(index)</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">해당 인덱스를 가진 키 값을 가져옴</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">clear()</td>
+      <td style="text-align: center">메서드</td>
+      <td style="text-align: center">모든 데이터를 삭제</td>
+    </tr>
+    <tr>
+      <td style="text-align: center">length</td>
+      <td style="text-align: center">속성</td>
+      <td style="text-align: center">저장된 데이터 수를 가져옴</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="단어정리">단어정리</h2>
+<ul>
+  <li>Response Header : 위치 또는 서버 자체에 대한 정보(이름, 버전 등)와 같이 응답에 대한 부가적인 정보를 갖는 헤더이다.</li>
+  <li>Request Header : HTTP 요청에서 사용되지만 메시지의 컨텐츠와는 관련이 없는 헤더이다.</li>
+  <li>Hash Table : 해시 테이블은 (Key, Value)로 데이터를 저장하는 자료구조 중 하나로 빠르게 데이터를 검색할 수 있는 자료구조이다.</li>
+  <li>스니핑 : 네트워크 트래픽을 도청하는 과정을 말한다.<br />
+<img src="data:image/png;base64,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" alt="image" /></li>
+</ul>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="https://via.placeholder.com/128x128"
+    srcset="https://via.placeholder.com/128x128 1x,https://via.placeholder.com/256x256 2x"
+    
+  
+  alt="<firstname> <lastname>"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+<p>Open <code class="language-plaintext highlighter-rouge">_data/authors.yml</code> to edit this text.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://twitter.com/<username>" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/<username>" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/example/2023-05-26-JS-Operaiting/" class="flip-title"><span>JavaScript의 동작원리</span></a>  <time class="faded fine" datetime="2023-05-26T00:00:00+09:00">26 May 2023</time></li>                        <li class="h4">  <a href="/example/2023-05-14-DOM/" class="flip-title"><span>DOM이란?</span></a>  <time class="faded fine" datetime="2023-05-14T00:00:00+09:00">14 May 2023</time></li>                        <li class="h4">  <a href="/example/2023-05-13-PWA/" class="flip-title"><span>PWA란?</span></a>  <time class="faded fine" datetime="2023-05-13T00:00:00+09:00">13 May 2023</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+
+  
+
+
+  
+<footer class="content" role="contentinfo">
+  <hr/>
+  
+    <p><small class="copyright">© 2021. All rights reserved.
+</small></p>
+  
+  
+    <nav class="legal"><small>
+    
+      
+      <a class="heading flip-title" href="/LICENSE/">LICENSE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/NOTICE/">NOTICE</a>
+      |
+    
+      
+      <a class="heading flip-title" href="/CHANGELOG/">CHANGELOG</a>
+      
+    
+    </small></nav>
+  
+    <p><small>Powered by <a class="external" href="https://hydejack.com/">Hydejack</a> v<span id="_version">9.1.6</span></small></p>
+  <hr class="sr-only"/>
+</footer>
+
+
+</main>
+
+  <hy-drawer
+  id="_drawer"
+  class=""
+  side="left"
+  threshold="10"
+  noscroll
+  
+>
+  <header id="_sidebar" class="sidebar" role="banner">
+    
+
+
+
+
+<div class="sidebar-bg sidebar-overlay" style="background-color:rgb(25,55,71);background-image:url(/assets/img/sidebar-bg.jpg)"></div>
+
+    <div class="sidebar-sticky">
+  <div class="sidebar-about">
+    
+      <a class="no-hover" href="/" tabindex="-1">
+        <img src="/assets/img/logo.png" class="avatar" alt="Dev Been" width="120" height="120" loading="lazy" />
+      </a>
+    
+    <a class="sidebar-title" href="/"><h2 class="h1">Dev Been</h2></a>
+    
+    
+      <p class="">
+        Developer HappyBeen Blog
+
+      </p>
+    
+  </div>
+
+  <nav class="sidebar-nav heading" role="navigation">
+    <span class="sr-only">Navigation:</span>
+<ul>
+  
+    
+      
+      <li>
+        <a
+          id="_drawer--opened"
+          href="/example/"
+          class="sidebar-nav-item "
+          
+        >
+          Example
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/docs/"
+          class="sidebar-nav-item "
+          
+        >
+          Documentation
+        </a>
+      </li>
+    
+      
+      <li>
+        <a
+          
+          href="/about/"
+          class="sidebar-nav-item "
+          
+        >
+          About
+        </a>
+      </li>
+    
+  
+</ul>
+
+  </nav>
+
+  
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://twitter.com/<username>" title="Twitter" class="no-mark-external">
+      <span class="icon-twitter"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  </li>
+
+
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/<username>" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+  </header>
+</hy-drawer>
+<hr class="sr-only" hidden />
+
+</hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
+
+
+
+<div hidden>
+  
+  <h2 class="sr-only">Templates (for web app):</h2>
+
+  <template id="_animation-template">
+  <div class="animation-main fixed-top">
+    <nav id="breadcrumbs" class="screen-only"><ul>
+  
+  
+</ul></nav>
+    <div class="content">
+      <div class="page"></div>
+    </div>
+  </div>
+</template>
+
+  <template id="_loading-template">
+  <div class="loading nav-btn fr">
+    <span class="sr-only">Loading…</span>
+    <span class="icon-cog"></span>
+  </div>
+</template>
+
+  <template id="_error-template">
+  <div class="page">
+    <h1 class="page-title">Error</h1>
+    
+    
+    <p class="lead">
+      Sorry, an error occurred while loading <a class="this-link" href=""></a>.
+
+    </p>
+  </div>
+</template>
+
+  <template id="_permalink-template">
+  <a href="#" class="permalink">
+    <span class="sr-only">Permalink</span>
+    <span class="content-hash"></span>
+  </a>
+</template>
+
+</div>
+
+
+</body>
+</html>
